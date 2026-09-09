@@ -1,0 +1,233 @@
+{
+  "format": 1,
+  "startedAt": "2026-09-09T05:36:16.690Z",
+  "environment": {
+    "platform": "win32",
+    "osRelease": "10.0.26200",
+    "node": "v24.19.0"
+  },
+  "archive": "[WORKSPACE]/release\\Museum-of-Impossible-Rooms.zip",
+  "extractTo": "[WORKSPACE]/release\\Final clean installation with spaces",
+  "method": "Extract the exact stored ZIP with Windows Expand-Archive, verify every manifest file digest, launch its shipped Windows command file from an unrelated working directory, and request local resources. No npm install or project dependencies are used.",
+  "checks": [
+    {
+      "name": "Archive SHA-256 matches sidecar",
+      "passed": true
+    },
+    {
+      "name": "Windows extraction and every manifest file digest",
+      "passed": true,
+      "files": 42
+    },
+    {
+      "name": "Exact shipped Windows launcher starts from unrelated directory and serves local assets",
+      "passed": true,
+      "resources": 8
+    },
+    {
+      "name": "Final runtime and test files match the browser-verified candidate",
+      "passed": true,
+      "runtimeFiles": 25
+    }
+  ],
+  "failures": [],
+  "archiveBytes": 5615152,
+  "archiveSha256": "159cc8a35b8c58ba3f3bfa6196c29294db8afa4dade6e9c04b5be8e3b8ea9aab",
+  "extractedRoot": "[WORKSPACE]/release\\Final clean installation with spaces\\Museum of Impossible Rooms",
+  "manifestFilesVerified": 42,
+  "runtimeFiles": [
+    {
+      "path": "Start Museum.cmd",
+      "sha256": "827157c7fc7b1200b5cde2a41dcd03dba74c4101735bd54edcdaf580d49e389e"
+    },
+    {
+      "path": "Start-Museum.ps1",
+      "sha256": "a5b78211a39675ad3646cc2b2d5772c597dd8c6a4ff7971ba469b987581535ba"
+    },
+    {
+      "path": "assets/curators-study.png",
+      "sha256": "b4b0637380bc9177ec87d25b07c705b53dfbbfb9dab9827f9d2977bb2c6cf865"
+    },
+    {
+      "path": "index.html",
+      "sha256": "d3406b659bbb975acd6d27d3c25622371687bf3ff7e8c5c3888be9eb045f4721"
+    },
+    {
+      "path": "package.json",
+      "sha256": "5256afce079fd253edbbdd4ca4ddd28dc534e1e905fcfcc27b7b84ed75502f09"
+    },
+    {
+      "path": "src/audio.mjs",
+      "sha256": "50b111c48ebe8376aeff322572f0e8461efba0bfd6eea32221fbfae43fa61fed"
+    },
+    {
+      "path": "src/campaign.mjs",
+      "sha256": "0e9e9e75478c8ccc275aeb5ce0052c40d531e89ec92fb2f92d71ebd9a24bb7b3"
+    },
+    {
+      "path": "src/engine.mjs",
+      "sha256": "8ee07304679da40dfe5f3bd205608f23debe9dfa52832c977c8fb1ce187603de"
+    },
+    {
+      "path": "src/main.mjs",
+      "sha256": "7791e162b6ecef53a95e1f3f02149163079a6e4d75cf22812ca3262f38a8f366"
+    },
+    {
+      "path": "src/render.mjs",
+      "sha256": "afbaad1c60d2141120c1a7251814859522eb362c7ffa25ae33a18a61ae00b112"
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "c180e97cbb06d62c1828c6c9b9d712a59d7c5abbe092b8aa96333304f538ac09"
+    },
+    {
+      "path": "tests/authoring.test.mjs",
+      "sha256": "ea5c7290cb3bcb6aefef8cc2128e5bd2d2ec7b0e045f8586170ef79880bb36c9"
+    },
+    {
+      "path": "tests/campaign.test.mjs",
+      "sha256": "b035e8717a89f18bdd4414a425de07c1fef6868be79a34c4bdc18d0e644816b6"
+    },
+    {
+      "path": "tests/engine.test.mjs",
+      "sha256": "5f80b5be5d8ee903caf13e39ba7d99c0c418915325dd85e52fda771fddb95c4f"
+    },
+    {
+      "path": "tests/replay.mjs",
+      "sha256": "38f11bc52047d3f38bf2fd279db27e383e6c6e47b07f799b97f7e35dcc71ff4b"
+    },
+    {
+      "path": "tests/server.test.mjs",
+      "sha256": "cafcf71c0c7e4bbde149490e9883885f58a760313eb9c8503c4b2236b63eac4b"
+    },
+    {
+      "path": "tools/browser-verify.mjs",
+      "sha256": "6f06d1f81a93282d909a0b5c07d5e95af39561a5924f3b51b1e3188c7f674e7b"
+    },
+    {
+      "path": "tools/package.mjs",
+      "sha256": "14e9577604023adf909540e5dc27eff4088822a2122b6f0c9c3ce81779070323"
+    },
+    {
+      "path": "tools/render-replay.mjs",
+      "sha256": "7a008b8f8e6177c8066782813e4d576d7c521d39165bdd413f9beb9d4e1645ce"
+    },
+    {
+      "path": "tools/serve.mjs",
+      "sha256": "385a3c6a64b686c0ef7186d9c666d521200d1039404c192947b087bc45a04838"
+    },
+    {
+      "path": "tools/validate-world.mjs",
+      "sha256": "fb798ca448ffb075cc52e2931e3890812207bcd3fcf8598ba1942da7151f1e0d"
+    },
+    {
+      "path": "tools/verify-package.mjs",
+      "sha256": "9e04688edee365016f071dcba4ab1f9c64392694c76049592e691eaea3d6cc8c"
+    },
+    {
+      "path": "tools/visual-probes.mjs",
+      "sha256": "c236e7c898c2c1a3e273f53bb6070a99174a4793ab522ee087c85cfedd06ab4b"
+    },
+    {
+      "path": "vendor/THREE-LICENSE.txt",
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+    }
+  ],
+  "updatedAt": "2026-09-09T05:36:18.130Z",
+  "launch": {
+    "launcher": "[WORKSPACE]/release\\Final clean installation with spaces\\Museum of Impossible Rooms\\Start Museum.cmd",
+    "arguments": [
+      "--port",
+      "4183",
+      "--no-open"
+    ],
+    "workingDirectory": "[SYSTEM_TEMP_DIRECTORY]",
+    "url": "http://127.0.0.1:4183/",
+    "hidden": true,
+    "pid": 40260,
+    "output": "\nTHE MUSEUM OF IMPOSSIBLE ROOMS\n\nEnter: http://127.0.0.1:4183/\nLocal server PID: 11216\n\nKeep this window open while playing. Press Ctrl+C to close the museum.\n\n",
+    "serverPid": 11216,
+    "stoppedAfterVerification": true,
+    "cleanupMethod": "Terminate only the server-reported PID and the directly spawned launcher PID; verify that the local URL stops responding. No process enumeration."
+  },
+  "resources": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "d3406b659bbb975acd6d27d3c25622371687bf3ff7e8c5c3888be9eb045f4721"
+    },
+    {
+      "path": "src/main.mjs",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "7791e162b6ecef53a95e1f3f02149163079a6e4d75cf22812ca3262f38a8f366"
+    },
+    {
+      "path": "src/engine.mjs",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "8ee07304679da40dfe5f3bd205608f23debe9dfa52832c977c8fb1ce187603de"
+    },
+    {
+      "path": "src/campaign.mjs",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "0e9e9e75478c8ccc275aeb5ce0052c40d531e89ec92fb2f92d71ebd9a24bb7b3"
+    },
+    {
+      "path": "src/render.mjs",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "afbaad1c60d2141120c1a7251814859522eb362c7ffa25ae33a18a61ae00b112"
+    },
+    {
+      "path": "src/style.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "c180e97cbb06d62c1828c6c9b9d712a59d7c5abbe092b8aa96333304f538ac09"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+    },
+    {
+      "path": "assets/curators-study.png",
+      "status": 200,
+      "contentType": "image/png",
+      "sha256": "b4b0637380bc9177ec87d25b07c705b53dfbbfb9dab9827f9d2977bb2c6cf865"
+    }
+  ],
+  "browserVerification": {
+    "performedOnThisExtraction": false,
+    "passed": true,
+    "checksPassed": 17,
+    "report": "[WORKSPACE]/release\\clean-install-browser.json",
+    "browserVersion": "152.0.4191.66",
+    "output": "PASS Fresh offline page initializes its 3D renderer and title screen\nPASS Comfort preferences work from the title screen\nPASS Enter starts onboarding; a user gesture starts local audio\nPASS W A S D move; arrow keys and actual mouse movement change the view\nPASS Walk from the entrance and read the curator’s note with E\nPASS Pause freezes motion and traps keyboard focus inside the dialog\nPASS Notebook shows ten exhibitions and the collected curator note\nPASS Walk across the court and through exhibition 01’s spatial boundary\nPASS Three graduated hints persist and stop at the explicit solution\nPASS F3 exposes a read-only spatial inspector and pauses movement\nPASS Export produces a valid save; reload restores pose, hints, notes, and preferences\nPASS Malformed imports retain the current visit; a valid exported file restores it\nPASS Saving and browser reload preserve quarter scale and a carried transformed weight\nPASS Saving and browser reload preserve the wall floor; recovery restores orientation\nPASS Starting a new visit requires confirmation and cancel keeps progress\nPASS Missing WebGL 2 displays practical launch and graphics guidance\nPASS Game has no runtime errors, failed assets, or external network dependencies\n\n17 passed; 0 failed. Report: [WORKSPACE]/release\\clean-install-browser.json\n",
+    "mouse": {
+      "pointerLockActive": true,
+      "forward": [
+        0.6301695625107693,
+        -0.4166890009430718,
+        -0.6551767692600604
+      ]
+    },
+    "reusedFrom": "[WORKSPACE]/release\\clean-install-candidate.json",
+    "testedArchiveSha256": "56c2e4aadd5be5afbd3c888eda0d283b7db85bec8e6a6390af9eff6e5c0dcc17",
+    "reason": "Every runtime, asset, bundled dependency, launcher, tool and test digest is identical to the successful candidate extraction. Only non-runtime documents/evidence changed."
+  },
+  "passed": true,
+  "finishedAt": "2026-09-09T05:36:18.130Z",
+  "publicSharing": {
+    "sanitizedCopy": true,
+    "note": "Public-sharing copy: machine-specific filesystem paths and antivirus-injected identifiers were replaced with labeled placeholders. Test outcomes, versions, source digests, timings, and limitations were retained. Original evidence remains in the verified local delivery.",
+    "refersToArchiveSha256": "159cc8a35b8c58ba3f3bfa6196c29294db8afa4dade6e9c04b5be8e3b8ea9aab"
+  }
+}

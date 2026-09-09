@@ -1,0 +1,763 @@
+{
+  "method": "Diagnostic poses for rendered edge/carry/angle inspection; not a played walkthrough. Benchmarks explicitly synchronize GPU completion for each frame. Screenshots contain the actual WebGL output.",
+  "browser": "152.0.4191.66",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "probes": [
+    {
+      "id": "01-hub-initial",
+      "room": "hub",
+      "p": [
+        10,
+        2.7,
+        12
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.025,
+      "views": 3,
+      "framebufferColors": 87,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/01-hub-initial.png"
+    },
+    {
+      "id": "02-hub-evolved",
+      "room": "hub",
+      "p": [
+        0,
+        1.6,
+        -10
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.025,
+      "views": 4,
+      "framebufferColors": 68,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/02-hub-evolved.png"
+    },
+    {
+      "id": "03-door-front",
+      "room": "c1",
+      "p": [
+        4,
+        1.6,
+        1
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.025,
+      "views": 3,
+      "framebufferColors": 61,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/03-door-front.png"
+    },
+    {
+      "id": "04-door-millimetre",
+      "room": "c1",
+      "p": [
+        5.999,
+        1.6,
+        1
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.0002000000000000668,
+      "views": 3,
+      "framebufferColors": 61,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/04-door-millimetre.png"
+    },
+    {
+      "id": "05-door-ten-microns",
+      "room": "c1",
+      "p": [
+        5.99999,
+        1.6,
+        1
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.0001,
+      "views": 3,
+      "framebufferColors": 61,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/05-door-ten-microns.png"
+    },
+    {
+      "id": "05b-door-exact-plane",
+      "room": "c1",
+      "p": [
+        6,
+        1.6,
+        1
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.0001,
+      "views": 3,
+      "framebufferColors": 61,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/05b-door-exact-plane.png"
+    },
+    {
+      "id": "05c-hub-float-plane",
+      "room": "hub",
+      "p": [
+        -17.999999999999957,
+        1.6,
+        -12
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.0001,
+      "views": 4,
+      "framebufferColors": 83,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/05c-hub-float-plane.png"
+    },
+    {
+      "id": "05d-wall-float-plane",
+      "room": "c9",
+      "p": [
+        4.399999949137366,
+        6,
+        -10.00000000000001
+      ],
+      "scale": 1,
+      "up": [
+        -1,
+        0,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.0001,
+      "views": 2,
+      "framebufferColors": 67,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/05d-wall-float-plane.png"
+    },
+    {
+      "id": "06-door-oblique",
+      "room": "c1",
+      "p": [
+        4.8,
+        1.6,
+        2.65
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.025,
+      "views": 3,
+      "framebufferColors": 83,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/06-door-oblique.png"
+    },
+    {
+      "id": "07-door-low-angle",
+      "room": "c1",
+      "p": [
+        4,
+        1.6,
+        1
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.025,
+      "views": 3,
+      "framebufferColors": 87,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/07-door-low-angle.png"
+    },
+    {
+      "id": "08-weight-straddling",
+      "room": "c1",
+      "p": [
+        4.9,
+        1.6,
+        1
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": "weight1",
+      "object": {
+        "id": "weight1",
+        "room": "c1-gallery",
+        "p": [
+          0.37000000000000005,
+          1.28,
+          10.849992
+        ],
+        "size": 0.8,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c1",
+          "p": [
+            0,
+            0.4,
+            -5.8
+          ],
+          "size": 0.8
+        },
+        "velocity": [
+          0,
+          0,
+          0
+        ]
+      },
+      "near": 0.025,
+      "views": 3,
+      "framebufferColors": 53,
+      "webglError": 0,
+      "ghosts": 1,
+      "screenshot": "omitted-screenshots/08-weight-straddling.png"
+    },
+    {
+      "id": "09-quarter-passage",
+      "room": "c3",
+      "p": [
+        0,
+        1.6,
+        -6.9
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": "weight3",
+      "object": {
+        "id": "weight3",
+        "room": "c3-cabinet",
+        "p": [
+          0.0925,
+          0.32,
+          6.962491999999999
+        ],
+        "size": 0.2,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c3",
+          "p": [
+            2,
+            0.4,
+            -2
+          ],
+          "size": 0.8
+        },
+        "velocity": [
+          0,
+          0,
+          0
+        ]
+      },
+      "near": 0.025,
+      "views": 2,
+      "framebufferColors": 49,
+      "webglError": 0,
+      "ghosts": 1,
+      "screenshot": "omitted-screenshots/09-quarter-passage.png"
+    },
+    {
+      "id": "10-quarter-interior",
+      "room": "c3-cabinet",
+      "p": [
+        0,
+        0.4,
+        1.4
+      ],
+      "scale": 0.25,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": "weight3",
+      "object": {
+        "id": "weight3",
+        "room": "c3-cabinet",
+        "p": [
+          0.0925,
+          0.32,
+          1.0875
+        ],
+        "size": 0.2,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c3",
+          "p": [
+            2,
+            0.4,
+            -2
+          ],
+          "size": 0.8
+        },
+        "velocity": [
+          0,
+          0,
+          0
+        ]
+      },
+      "near": 0.00625,
+      "views": 1,
+      "framebufferColors": 21,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/10-quarter-interior.png"
+    },
+    {
+      "id": "11-winter",
+      "room": "c4",
+      "p": [
+        1,
+        1.6,
+        -5
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.025,
+      "views": 2,
+      "framebufferColors": 62,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/11-winter.png"
+    },
+    {
+      "id": "12-summer",
+      "room": "c4",
+      "p": [
+        1,
+        1.6,
+        -5
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.025,
+      "views": 2,
+      "framebufferColors": 62,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/12-summer.png"
+    },
+    {
+      "id": "13-perspective-before",
+      "room": "c5",
+      "p": [
+        0,
+        1.6,
+        5
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.025,
+      "views": 1,
+      "framebufferColors": 40,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/13-perspective-before.png"
+    },
+    {
+      "id": "14-perspective-settled",
+      "room": "c5",
+      "p": [
+        0,
+        1.6,
+        5
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.025,
+      "views": 2,
+      "framebufferColors": 41,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/14-perspective-settled.png"
+    },
+    {
+      "id": "15-wall-floor",
+      "room": "c9",
+      "p": [
+        4.4,
+        6,
+        2
+      ],
+      "scale": 1,
+      "up": [
+        -1,
+        0,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.025,
+      "views": 1,
+      "framebufferColors": 28,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/15-wall-floor.png"
+    },
+    {
+      "id": "16-wall-connected",
+      "room": "c9",
+      "p": [
+        4.4,
+        6,
+        -7
+      ],
+      "scale": 1,
+      "up": [
+        -1,
+        0,
+        0
+      ],
+      "held": "weight9",
+      "object": {
+        "id": "weight9",
+        "room": "c9",
+        "p": [
+          4.720000000000001,
+          6.37,
+          -8.25
+        ],
+        "size": 0.8,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c9",
+          "p": [
+            -2,
+            0.4,
+            3
+          ],
+          "size": 0.8
+        },
+        "velocity": [
+          0,
+          0,
+          0
+        ]
+      },
+      "near": 0.025,
+      "views": 2,
+      "framebufferColors": 40,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/16-wall-connected.png"
+    },
+    {
+      "id": "17-courtyard",
+      "room": "courtyard",
+      "p": [
+        0,
+        1.6,
+        6
+      ],
+      "scale": 1,
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "held": null,
+      "object": null,
+      "near": 0.025,
+      "views": 1,
+      "framebufferColors": 46,
+      "webglError": 0,
+      "ghosts": 0,
+      "screenshot": "omitted-screenshots/17-courtyard.png"
+    }
+  ],
+  "benchmarks": [
+    {
+      "room": "hub",
+      "quality": "high",
+      "medianMs": 2,
+      "p95Ms": 3.1,
+      "minMs": 1.5,
+      "maxMs": 3.5,
+      "passes": 11,
+      "triangles": 21198,
+      "calls": 667,
+      "allocatedTargets": 10,
+      "targetSize": [
+        1224,
+        765
+      ],
+      "textureCount": 107,
+      "gpu": {
+        "vendor": "Google Inc. (NVIDIA)",
+        "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4080 (0x00002704) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "room": "c1",
+      "quality": "high",
+      "medianMs": 0.6,
+      "p95Ms": 1.1,
+      "minMs": 0.4,
+      "maxMs": 1.3,
+      "passes": 3,
+      "triangles": 6364,
+      "calls": 161,
+      "allocatedTargets": 10,
+      "targetSize": [
+        1224,
+        765
+      ],
+      "textureCount": 107,
+      "gpu": {
+        "vendor": "Google Inc. (NVIDIA)",
+        "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4080 (0x00002704) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "room": "c2-archive",
+      "quality": "high",
+      "medianMs": 0.3,
+      "p95Ms": 0.4,
+      "minMs": 0.1,
+      "maxMs": 0.4,
+      "passes": 1,
+      "triangles": 10204,
+      "calls": 101,
+      "allocatedTargets": 10,
+      "targetSize": [
+        1224,
+        765
+      ],
+      "textureCount": 108,
+      "gpu": {
+        "vendor": "Google Inc. (NVIDIA)",
+        "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4080 (0x00002704) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "room": "c9",
+      "quality": "high",
+      "medianMs": 0.3,
+      "p95Ms": 0.6,
+      "minMs": 0.1,
+      "maxMs": 0.6,
+      "passes": 2,
+      "triangles": 2270,
+      "calls": 99,
+      "allocatedTargets": 10,
+      "targetSize": [
+        1224,
+        765
+      ],
+      "textureCount": 108,
+      "gpu": {
+        "vendor": "Google Inc. (NVIDIA)",
+        "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4080 (0x00002704) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "room": "hub",
+      "quality": "low",
+      "medianMs": 0.9,
+      "p95Ms": 1.4,
+      "minMs": 0.6,
+      "maxMs": 1.7,
+      "passes": 5,
+      "triangles": 13362,
+      "calls": 379,
+      "allocatedTargets": 10,
+      "targetSize": [
+        936,
+        585
+      ],
+      "textureCount": 102,
+      "gpu": {
+        "vendor": "Google Inc. (NVIDIA)",
+        "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4080 (0x00002704) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "room": "c1",
+      "quality": "low",
+      "medianMs": 0.3,
+      "p95Ms": 0.4,
+      "minMs": 0.1,
+      "maxMs": 0.5,
+      "passes": 2,
+      "triangles": 5622,
+      "calls": 95,
+      "allocatedTargets": 10,
+      "targetSize": [
+        936,
+        585
+      ],
+      "textureCount": 102,
+      "gpu": {
+        "vendor": "Google Inc. (NVIDIA)",
+        "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4080 (0x00002704) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "room": "c2-archive",
+      "quality": "low",
+      "medianMs": 0.3,
+      "p95Ms": 0.5,
+      "minMs": 0.1,
+      "maxMs": 0.9,
+      "passes": 1,
+      "triangles": 10204,
+      "calls": 101,
+      "allocatedTargets": 10,
+      "targetSize": [
+        936,
+        585
+      ],
+      "textureCount": 102,
+      "gpu": {
+        "vendor": "Google Inc. (NVIDIA)",
+        "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4080 (0x00002704) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "room": "c9",
+      "quality": "low",
+      "medianMs": 0.2,
+      "p95Ms": 0.6,
+      "minMs": 0.1,
+      "maxMs": 0.7,
+      "passes": 2,
+      "triangles": 2270,
+      "calls": 99,
+      "allocatedTargets": 10,
+      "targetSize": [
+        936,
+        585
+      ],
+      "textureCount": 102,
+      "gpu": {
+        "vendor": "Google Inc. (NVIDIA)",
+        "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4080 (0x00002704) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    }
+  ],
+  "errors": [],
+  "audio": {
+    "context": "running",
+    "sampleRate": 48000,
+    "rms": 0.030444533517752823,
+    "peak": 0.061728861182928085,
+    "signalVerified": true,
+    "scope": "Actual browser audio graph sampled; no subjective listening or hardware-speaker check."
+  },
+  "passed": true,
+  "completedAt": "2026-09-09T05:20:00.960Z",
+  "publicSharing": {
+    "sanitizedCopy": true,
+    "note": "Public-sharing copy: machine-specific filesystem paths and antivirus-injected identifiers were replaced with labeled placeholders. Test outcomes, versions, source digests, timings, and limitations were retained. Original evidence remains in the verified local delivery."
+  }
+}

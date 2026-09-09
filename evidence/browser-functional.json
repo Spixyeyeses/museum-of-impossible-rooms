@@ -1,0 +1,461 @@
+{
+  "format": 1,
+  "startedAt": "2026-09-09T05:33:27.573Z",
+  "url": "http://127.0.0.1:4183/",
+  "environment": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "architecture": "x64",
+    "node": "v24.19.0",
+    "browserExecutable": "[BROWSER_EXECUTABLE]",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "browserVersion": "152.0.4191.66",
+    "graphics": {
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "renderer": "WebKit WebGL",
+      "passes": 3
+    },
+    "browserScriptSources": [
+      "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "http://127.0.0.1:4183/src/main.mjs"
+    ]
+  },
+  "scope": "Real keyboard/button/file UI checks in a fresh isolated headless browser. Diagnostic pose setup and unavailable-WebGL injection are explicitly labeled fixtures. This is not a full ten-chamber human playthrough or an audible listening test.",
+  "checks": [
+    {
+      "name": "Fresh offline page initializes its 3D renderer and title screen",
+      "kind": "real UI / renderer observation",
+      "status": "passed",
+      "milliseconds": 1708,
+      "details": {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "WebKit WebGL",
+        "passes": 3
+      }
+    },
+    {
+      "name": "Comfort preferences work from the title screen",
+      "kind": "real UI",
+      "status": "passed",
+      "milliseconds": 190,
+      "details": {
+        "volume": 0.05,
+        "sensitivity": 1,
+        "fov": 95,
+        "quality": "low",
+        "reducedMotion": true,
+        "invertY": true
+      }
+    },
+    {
+      "name": "Enter starts onboarding; a user gesture starts local audio",
+      "kind": "real UI",
+      "status": "passed",
+      "milliseconds": 74,
+      "details": {
+        "state": "running",
+        "oscillators": 4,
+        "listening": "Not performed: audio initialization and controls only."
+      }
+    },
+    {
+      "name": "W A S D move; arrow keys and actual mouse movement change the view",
+      "kind": "real keyboard and mouse controls",
+      "status": "passed",
+      "milliseconds": 933,
+      "details": {
+        "movements": [
+          {
+            "key": "w",
+            "distance": 0.2063999999999968
+          },
+          {
+            "key": "s",
+            "distance": 0.2063999999999968
+          },
+          {
+            "key": "a",
+            "distance": 0.20610000000000084
+          },
+          {
+            "key": "d",
+            "distance": 0.2124000000000005
+          }
+        ],
+        "mouse": {
+          "pointerLockActive": true,
+          "forward": [
+            0.6301695625107693,
+            -0.4166890009430718,
+            -0.6551767692600604
+          ]
+        },
+        "mouseMethod": "Actual mouse move events with canvas pointer lock active",
+        "recovery": {
+          "room": "hub",
+          "p": [
+            0,
+            1.6,
+            15
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        }
+      }
+    },
+    {
+      "name": "Walk from the entrance and read the curator’s note with E",
+      "kind": "real keyboard route and interaction",
+      "status": "passed",
+      "milliseconds": 1990
+    },
+    {
+      "name": "Pause freezes motion and traps keyboard focus inside the dialog",
+      "kind": "real UI / keyboard focus",
+      "status": "passed",
+      "milliseconds": 308
+    },
+    {
+      "name": "Notebook shows ten exhibitions and the collected curator note",
+      "kind": "real UI",
+      "status": "passed",
+      "milliseconds": 76
+    },
+    {
+      "name": "Walk across the court and through exhibition 01’s spatial boundary",
+      "kind": "real keyboard route; no pose fixture",
+      "status": "passed",
+      "milliseconds": 13132,
+      "details": {
+        "arrival": {
+          "room": "c1",
+          "p": [
+            -0.09119999999959205,
+            1.6,
+            7.756991999999479
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        }
+      }
+    },
+    {
+      "name": "Three graduated hints persist and stop at the explicit solution",
+      "kind": "real UI",
+      "status": "passed",
+      "milliseconds": 92,
+      "details": {
+        "hints": [
+          "A doorway promises a destination. It does not promise a direction.",
+          "The weight is behind the glass. The east arch and the arch beyond it reach the other side.",
+          "Enter the arch on the right, then the far arch in the long gallery. Take the weight behind the glass. Retrace both arches and place it on the entrance plinth."
+        ]
+      }
+    },
+    {
+      "name": "F3 exposes a read-only spatial inspector and pauses movement",
+      "kind": "real UI",
+      "status": "passed",
+      "milliseconds": 279,
+      "details": {
+        "suppressedActionKeys": [
+          "E",
+          "Q",
+          "R",
+          "H",
+          "J"
+        ]
+      }
+    },
+    {
+      "name": "Export produces a valid save; reload restores pose, hints, notes, and preferences",
+      "kind": "real UI / browser storage / download",
+      "status": "passed",
+      "milliseconds": 1244,
+      "details": {
+        "bytes": 2409,
+        "pose": {
+          "room": "c1",
+          "p": [
+            -0.09119999999959205,
+            1.6,
+            7.756991999999479
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "settings": {
+          "volume": 0.05,
+          "sensitivity": 1,
+          "fov": 95,
+          "quality": "low",
+          "reducedMotion": true,
+          "invertY": true
+        }
+      }
+    },
+    {
+      "name": "Malformed imports retain the current visit; a valid exported file restores it",
+      "kind": "real file input UI",
+      "status": "passed",
+      "milliseconds": 76
+    },
+    {
+      "name": "Saving and browser reload preserve quarter scale and a carried transformed weight",
+      "kind": "diagnostic pose fixture; real browser reload/autosave",
+      "status": "passed",
+      "milliseconds": 1036,
+      "details": {
+        "player": {
+          "room": "c3-cabinet",
+          "p": [
+            0,
+            0.4,
+            3
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 0.25
+        },
+        "held": "weight3",
+        "object": {
+          "id": "weight3",
+          "room": "c3-cabinet",
+          "p": [
+            0.0925,
+            0.32,
+            2.6875
+          ],
+          "size": 0.2,
+          "label": "Index weight",
+          "color": 13282148,
+          "home": {
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8
+          },
+          "velocity": [
+            0,
+            0,
+            0
+          ]
+        },
+        "drop": "Q released the weight after restoration"
+      }
+    },
+    {
+      "name": "Saving and browser reload preserve the wall floor; recovery restores orientation",
+      "kind": "diagnostic gravity pose fixture; real browser reload/autosave/recovery UI",
+      "status": "passed",
+      "milliseconds": 1004,
+      "details": {
+        "recovery": {
+          "room": "c6",
+          "p": [
+            0,
+            1.6,
+            6
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        }
+      }
+    },
+    {
+      "name": "Starting a new visit requires confirmation and cancel keeps progress",
+      "kind": "real UI",
+      "status": "passed",
+      "milliseconds": 112
+    },
+    {
+      "name": "Missing WebGL 2 displays practical launch and graphics guidance",
+      "kind": "injected unavailable-WebGL fixture, separate page",
+      "status": "passed",
+      "milliseconds": 712,
+      "details": {
+        "expectedFailureDisplayed": true,
+        "text": "The museum could not open its 3D view.\n\nThis game requires a desktop browser with WebGL 2 and hardware acceleration. Try a current Chrome, Edge or Firefox browser.\n\nError creating WebGL context.\n\nLaunch with Start Museum.cmd or node tools/serve.mjs; opening index.html directly is not supported."
+      }
+    },
+    {
+      "name": "Game has no runtime errors, failed assets, or external network dependencies",
+      "kind": "browser instrumentation; host injection recorded separately",
+      "status": "passed",
+      "milliseconds": 4,
+      "details": {
+        "pageErrors": 0,
+        "gameConsoleErrors": 0,
+        "gameExternalRequests": 0,
+        "gameFailedRequests": 0,
+        "blockedHostInjectedRequests": 5,
+        "limitation": "The host injected antivirus scripts. Those failed requests and their console messages are retained in the report and excluded from game-source checks; no system protection was disabled."
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    }
+  ],
+  "failedRequests": [
+    {
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "error": "net::ERR_FAILED"
+    }
+  ],
+  "externalRequests": [
+    "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+    "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+    "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+    "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+    "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]"
+  ],
+  "environmentRequests": [
+    {
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "classification": "Host antivirus-injected Kaspersky script; external request blocked by the offline test context. Not present in shipped game source."
+    },
+    {
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "classification": "Host antivirus-injected Kaspersky script; external request blocked by the offline test context. Not present in shipped game source."
+    },
+    {
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "classification": "Host antivirus-injected Kaspersky script; external request blocked by the offline test context. Not present in shipped game source."
+    },
+    {
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "classification": "Host antivirus-injected Kaspersky script; external request blocked by the offline test context. Not present in shipped game source."
+    },
+    {
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "classification": "Host antivirus-injected Kaspersky script; external request blocked by the offline test context. Not present in shipped game source."
+    }
+  ],
+  "screenshots": [],
+  "finishedAt": "2026-09-09T05:33:51.055Z",
+  "passed": 17,
+  "failed": 0,
+  "publicSharing": {
+    "sanitizedCopy": true,
+    "note": "Public-sharing copy: machine-specific filesystem paths and antivirus-injected identifiers were replaced with labeled placeholders. Test outcomes, versions, source digests, timings, and limitations were retained. Original evidence remains in the verified local delivery."
+  }
+}

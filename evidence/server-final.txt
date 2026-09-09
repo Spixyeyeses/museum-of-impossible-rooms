@@ -1,0 +1,19 @@
+# Public-sharing copy. Public-sharing copy: machine-specific filesystem paths and antivirus-injected identifiers were replaced with labeled placeholders. Test outcomes, versions, source digests, timings, and limitations were retained. Original evidence remains in the verified local delivery.
+
+✔ static launch works from a folder with spaces, including module MIME and query strings (32.2585ms)
+✔ HEAD, missing assets, directories, malformed encoding, and unsupported methods respond correctly (12.5723ms)
+✔ traversal, hidden files, Windows separators, and non-local Host values are rejected (8.5575ms)
+✔ the requested occupied port fails clearly without silently changing the save origin (5.3241ms)
+✔ linked directories cannot expose files outside the museum root (8.3155ms)
+✔ actual CLI starts from an unrelated working directory with an explicit root (119.4673ms)
+✔ CLI flags support stable origin and a separate extracted root (0.8728ms)
+✔ ZIP CRC and directory metadata are standards-compatible and deterministic (0.2769ms)
+✔ portable package includes source and manifest while excluding unshipped artifacts (19.0584ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 294.5041

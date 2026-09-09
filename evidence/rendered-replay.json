@@ -1,0 +1,10072 @@
+{
+  "format": 1,
+  "startedAt": "2026-09-09T05:21:12.446Z",
+  "url": "http://127.0.0.1:4173/",
+  "method": "Accelerated deterministic campaign input replay inside the actual browser and WebGL renderer. One createState(world) at the hub; afterward only ordinary step(input,dt), aim vectors, traced pickup/interact, graduated hints, and genuine serialize/restore. No position, room, scale, up-vector, or puzzle-state assignment after initialization. Main UI is paused through its actual pause dialog, then overlays are hidden for diagnostic screenshots. This is not a full human keyboard playthrough.",
+  "sampling": "Render immediately before and after every portal crossing, after interactions and save restoration, and at completion. Screenshot every crossing and newly completed chamber, plus the initial hub. Rendering is sampled, not performed for every accelerated simulation tick.",
+  "timingMethod": "Sample timings use performance.now around renderer.render(0) and gl.finish, preceded by gl.finish. They include CPU submission plus GPU completion waiting; they are not a normal-play FPS benchmark. A preceding untimed render advances decorative/gravity display interpolation by accumulated simulated time.",
+  "environment": {
+    "platform": "win32",
+    "osRelease": "10.0.26200",
+    "architecture": "x64",
+    "node": "v24.19.0",
+    "browserExecutable": "[BROWSER_EXECUTABLE]",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "browserVersion": "152.0.4191.66",
+    "graphics": {
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "vendor": "Google Inc. (NVIDIA)",
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4080 (0x00002704) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "quality": "high",
+      "fieldOfView": 72
+    }
+  },
+  "sourceHashes": {
+    "src/engine.mjs": "8ee07304679da40dfe5f3bd205608f23debe9dfa52832c977c8fb1ce187603de",
+    "src/campaign.mjs": "0e9e9e75478c8ccc275aeb5ce0052c40d531e89ec92fb2f92d71ebd9a24bb7b3",
+    "src/render.mjs": "afbaad1c60d2141120c1a7251814859522eb362c7ffa25ae33a18a61ae00b112",
+    "src/main.mjs": "7791e162b6ecef53a95e1f3f02149163079a6e4d75cf22812ca3262f38a8f366",
+    "tests/replay.mjs": "38f11bc52047d3f38bf2fd279db27e383e6c6e47b07f799b97f7e35dcc71ff4b"
+  },
+  "commandStream": {
+    "commands": 32391,
+    "sha256": "e99aad81a5cd18ed762ec10665fb533d0de842f6c609c044b31955f502863ea3",
+    "ticks": 32338,
+    "simulationSeconds": 538.9666666666667,
+    "expectedCrossings": 58
+  },
+  "samples": [
+    {
+      "label": "initial-hub",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          0,
+          1.6,
+          15
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [],
+      "simulationSeconds": 0,
+      "milliseconds": 1.5,
+      "metrics": {
+        "passes": 3,
+        "triangles": 12316,
+        "calls": 301
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 47,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/000-initial-hub.png"
+    },
+    {
+      "label": "cross-1-before-hub-1",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          -17.999999999999957,
+          1.6,
+          -12
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [],
+      "simulationSeconds": 11.550000000000153,
+      "milliseconds": 0.5,
+      "metrics": {
+        "passes": 4,
+        "triangles": 6820,
+        "calls": 199
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 55,
+        "channelMin": [
+          3,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/001-cross-1-before-hub-1.png"
+    },
+    {
+      "label": "cross-1-after-hub-1",
+      "room": "c1",
+      "player": {
+        "room": "c1",
+        "p": [
+          0,
+          1.5999999999999985,
+          7.949992000000042
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [],
+      "simulationSeconds": 11.566666666666821,
+      "milliseconds": 0.8000000044703484,
+      "metrics": {
+        "passes": 3,
+        "triangles": 6242,
+        "calls": 150
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 57,
+        "channelMin": [
+          3,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/002-cross-1-after-hub-1.png"
+    },
+    {
+      "label": "cross-2-before-c1-east",
+      "room": "c1",
+      "player": {
+        "room": "c1",
+        "p": [
+          5.99394518346922,
+          1.5999999999999985,
+          1.0080154145619926
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [],
+      "simulationSeconds": 14.716666666666978,
+      "milliseconds": 0.6000000014901161,
+      "metrics": {
+        "passes": 3,
+        "triangles": 6304,
+        "calls": 156
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 53,
+        "channelMin": [
+          4,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/003-cross-2-before-c1-east.png"
+    },
+    {
+      "label": "cross-2-after-c1-east",
+      "room": "c1-gallery",
+      "player": {
+        "room": "c1-gallery",
+        "p": [
+          0.008015414561992618,
+          1.5999999999999985,
+          10.95604681653078
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [],
+      "simulationSeconds": 14.733333333333645,
+      "milliseconds": 1,
+      "metrics": {
+        "passes": 4,
+        "triangles": 12466,
+        "calls": 311
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 55,
+        "channelMin": [
+          4,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/004-cross-2-after-c1-east.png"
+    },
+    {
+      "label": "cross-3-before-c1-gallery-out",
+      "room": "c1-gallery",
+      "player": {
+        "room": "c1-gallery",
+        "p": [
+          0.0000022861347131608584,
+          1.5999999999999985,
+          -10.993951669076981
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [],
+      "simulationSeconds": 22.05000000000003,
+      "milliseconds": 0.8999999985098839,
+      "metrics": {
+        "passes": 3,
+        "triangles": 6076,
+        "calls": 138
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 50,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/005-cross-3-before-c1-gallery-out.png"
+    },
+    {
+      "label": "cross-3-after-c1-gallery-out",
+      "room": "c1",
+      "player": {
+        "room": "c1",
+        "p": [
+          -5.956040330923018,
+          1.5999999999999985,
+          -5.4999977138652865
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [],
+      "simulationSeconds": 22.066666666666695,
+      "milliseconds": 0.7999999970197678,
+      "metrics": {
+        "passes": 3,
+        "triangles": 6502,
+        "calls": 176
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 50,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/006-cross-3-after-c1-gallery-out.png"
+    },
+    {
+      "label": "take-weight1",
+      "room": "c1",
+      "player": {
+        "room": "c1",
+        "p": [
+          0,
+          1.5999999999999985,
+          -4.65
+        ],
+        "forward": [
+          0,
+          -0.721988205115424,
+          -0.6919053632356152
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0.9733579429874604,
+          0,
+          0.13890974210100993
+        ],
+        "scale": 1
+      },
+      "held": "weight1",
+      "solved": [],
+      "simulationSeconds": 24.083333333333247,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 290,
+        "calls": 26
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 31,
+        "channelMin": [
+          51,
+          75,
+          74
+        ],
+        "channelMax": [
+          210,
+          199,
+          187
+        ]
+      }
+    },
+    {
+      "label": "cross-4-before-c1-enclosure",
+      "room": "c1",
+      "player": {
+        "room": "c1",
+        "p": [
+          -6.000000000000011,
+          1.5999999999999985,
+          -5.5
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": "weight1",
+      "solved": [],
+      "simulationSeconds": 26.116666666666465,
+      "milliseconds": 0.8999999985098839,
+      "metrics": {
+        "passes": 3,
+        "triangles": 6268,
+        "calls": 153
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 44,
+        "channelMin": [
+          4,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/008-cross-4-before-c1-enclosure.png"
+    },
+    {
+      "label": "cross-4-after-c1-enclosure",
+      "room": "c1-gallery",
+      "player": {
+        "room": "c1-gallery",
+        "p": [
+          0,
+          1.5999999999999985,
+          -10.94999199999999
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": "weight1",
+      "solved": [],
+      "simulationSeconds": 26.13333333333313,
+      "milliseconds": 1.3999999985098839,
+      "metrics": {
+        "passes": 4,
+        "triangles": 17520,
+        "calls": 358
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 49,
+        "channelMin": [
+          4,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/009-cross-4-after-c1-enclosure.png"
+    },
+    {
+      "label": "cross-5-before-c1-gallery-in",
+      "room": "c1-gallery",
+      "player": {
+        "room": "c1-gallery",
+        "p": [
+          0,
+          1.5999999999999985,
+          11.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": "weight1",
+      "solved": [],
+      "simulationSeconds": 33.449999999999385,
+      "milliseconds": 1.6000000014901161,
+      "metrics": {
+        "passes": 4,
+        "triangles": 7324,
+        "calls": 251
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 43,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/010-cross-5-before-c1-gallery-in.png"
+    },
+    {
+      "label": "cross-5-after-c1-gallery-in",
+      "room": "c1",
+      "player": {
+        "room": "c1",
+        "p": [
+          5.949991999999988,
+          1.5999999999999985,
+          1
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": "weight1",
+      "solved": [],
+      "simulationSeconds": 33.46666666666605,
+      "milliseconds": 1.5,
+      "metrics": {
+        "passes": 4,
+        "triangles": 7788,
+        "calls": 293
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 44,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/011-cross-5-after-c1-gallery-in.png"
+    },
+    {
+      "label": "chapter-1-complete",
+      "room": "c1",
+      "player": {
+        "room": "c1",
+        "p": [
+          -2.4,
+          1.5999999999999985,
+          3.1499999999999995
+        ],
+        "forward": [
+          0,
+          -0.46256600669501907,
+          -0.886584846165455
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -1.2984627089634415,
+          0,
+          0.3343350298145875
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 36.34999999999922,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 2,
+        "triangles": 1008,
+        "calls": 89
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 34,
+        "channelMin": [
+          3,
+          20,
+          24
+        ],
+        "channelMax": [
+          208,
+          196,
+          186
+        ]
+      },
+      "screenshot": "omitted-screenshots/012-chapter-1-complete.png"
+    },
+    {
+      "label": "save-restore-2184",
+      "room": "c1",
+      "player": {
+        "room": "c1",
+        "p": [
+          -2.4,
+          1.5999999999999985,
+          3.1499999999999995
+        ],
+        "forward": [
+          0,
+          -0.46256600669501907,
+          -0.886584846165455
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -1.2984627089634415,
+          0,
+          0.3343350298145875
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 36.34999999999922,
+      "milliseconds": 0.30000000447034836,
+      "metrics": {
+        "passes": 2,
+        "triangles": 1008,
+        "calls": 89
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 34,
+        "channelMin": [
+          3,
+          20,
+          24
+        ],
+        "channelMax": [
+          208,
+          196,
+          186
+        ]
+      }
+    },
+    {
+      "label": "cross-6-before-c1-hub",
+      "room": "c1",
+      "player": {
+        "room": "c1",
+        "p": [
+          -0.00039879254752803184,
+          1.5999999999999985,
+          7.999318729397984
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 38.18333333333245,
+      "milliseconds": 0.4000000059604645,
+      "metrics": {
+        "passes": 2,
+        "triangles": 6616,
+        "calls": 197
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 56,
+        "channelMin": [
+          3,
+          9,
+          11
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/014-cross-6-before-c1-hub.png"
+    },
+    {
+      "label": "cross-6-after-c1-hub",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          -17.950673270602017,
+          1.5999999999999985,
+          -11.999601207452471
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 38.199999999999115,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 1,
+        "triangles": 6338,
+        "calls": 173
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 56,
+        "channelMin": [
+          3,
+          9,
+          11
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/015-cross-6-after-c1-hub.png"
+    },
+    {
+      "label": "cross-7-before-hub-2",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          -17.999999999999957,
+          1.5999999999999985,
+          -6
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 55.08333333333149,
+      "milliseconds": 0.6000000014901161,
+      "metrics": {
+        "passes": 3,
+        "triangles": 11784,
+        "calls": 245
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 49,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/016-cross-7-before-hub-2.png"
+    },
+    {
+      "label": "cross-7-after-hub-2",
+      "room": "c2",
+      "player": {
+        "room": "c2",
+        "p": [
+          0,
+          1.599999999999997,
+          10.949992000000043
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 55.099999999998154,
+      "milliseconds": 0.4000000059604645,
+      "metrics": {
+        "passes": 2,
+        "triangles": 11122,
+        "calls": 189
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 53,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/017-cross-7-after-hub-2.png"
+    },
+    {
+      "label": "cross-8-before-pavilion-front",
+      "room": "c2",
+      "player": {
+        "room": "c2",
+        "p": [
+          0,
+          1.599999999999997,
+          -3.8163916471489756e-16
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 58.74999999999795,
+      "milliseconds": 0.3999999985098839,
+      "metrics": {
+        "passes": 2,
+        "triangles": 10790,
+        "calls": 159
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 45,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          210,
+          203,
+          185
+        ]
+      },
+      "screenshot": "omitted-screenshots/018-cross-8-before-pavilion-front.png"
+    },
+    {
+      "label": "cross-8-after-pavilion-front",
+      "room": "c2-archive",
+      "player": {
+        "room": "c2-archive",
+        "p": [
+          -10,
+          1.599999999999997,
+          19.949992
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 58.76666666666461,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 10274,
+        "calls": 111
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 49,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/019-cross-8-after-pavilion-front.png"
+    },
+    {
+      "label": "take-weight2",
+      "room": "c2-archive",
+      "player": {
+        "room": "c2-archive",
+        "p": [
+          -10,
+          1.599999999999997,
+          11.15
+        ],
+        "forward": [
+          0,
+          -0.7219882051154233,
+          -0.6919053632356158
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -2.9995200000093547
+        ],
+        "scale": 1
+      },
+      "held": "weight2",
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 61.69999999999778,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 1,
+        "triangles": 746,
+        "calls": 69
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 47,
+        "channelMin": [
+          50,
+          74,
+          69
+        ],
+        "channelMax": [
+          211,
+          201,
+          189
+        ]
+      }
+    },
+    {
+      "label": "cross-9-before-archive-west",
+      "room": "c2-archive",
+      "player": {
+        "room": "c2-archive",
+        "p": [
+          -10,
+          1.599999999999997,
+          19.99999999999984
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": "weight2",
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 64.64999999999762,
+      "milliseconds": 0.8999999985098839,
+      "metrics": {
+        "passes": 3,
+        "triangles": 7830,
+        "calls": 310
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 35,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          205,
+          203,
+          191
+        ]
+      },
+      "screenshot": "omitted-screenshots/021-cross-9-before-archive-west.png"
+    },
+    {
+      "label": "cross-9-after-archive-west",
+      "room": "c2",
+      "player": {
+        "room": "c2",
+        "p": [
+          0,
+          1.5999999999999912,
+          0.05000799999984013
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": "weight2",
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 64.66666666666428,
+      "milliseconds": 0.5,
+      "metrics": {
+        "passes": 2,
+        "triangles": 7276,
+        "calls": 263
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 38,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          205,
+          203,
+          191
+        ]
+      },
+      "screenshot": "omitted-screenshots/022-cross-9-after-archive-west.png"
+    },
+    {
+      "label": "cross-10-before-pavilion-rear",
+      "room": "c2",
+      "player": {
+        "room": "c2",
+        "p": [
+          6.473988012345444e-15,
+          1.5999999999999912,
+          -3.0000000000000027
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": "weight2",
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 68.71666666666405,
+      "milliseconds": 1.3999999985098839,
+      "metrics": {
+        "passes": 3,
+        "triangles": 17734,
+        "calls": 389
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 36,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          210,
+          203,
+          190
+        ]
+      },
+      "screenshot": "omitted-screenshots/023-cross-10-before-pavilion-rear.png"
+    },
+    {
+      "label": "cross-10-after-pavilion-rear",
+      "room": "c2-archive",
+      "player": {
+        "room": "c2-archive",
+        "p": [
+          9.999999999999993,
+          1.5999999999999912,
+          19.949992
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": "weight2",
+      "solved": [
+        1
+      ],
+      "simulationSeconds": 68.73333333333072,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 1,
+        "triangles": 10352,
+        "calls": 114
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 42,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/024-cross-10-after-pavilion-rear.png"
+    },
+    {
+      "label": "chapter-2-complete",
+      "room": "c2-archive",
+      "player": {
+        "room": "c2-archive",
+        "p": [
+          9.999999999999993,
+          1.5999999999999912,
+          11.15
+        ],
+        "forward": [
+          5.477881931111752e-15,
+          -0.46256600669501435,
+          -0.8865848461654574
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          4.263256414560601e-13,
+          0,
+          -2.9995200000093547
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 71.66666666666389,
+      "milliseconds": 0.30000000447034836,
+      "metrics": {
+        "passes": 1,
+        "triangles": 10160,
+        "calls": 93
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 30,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          204,
+          202,
+          190
+        ]
+      },
+      "screenshot": "omitted-screenshots/025-chapter-2-complete.png"
+    },
+    {
+      "label": "save-restore-4307",
+      "room": "c2-archive",
+      "player": {
+        "room": "c2-archive",
+        "p": [
+          9.999999999999993,
+          1.5999999999999912,
+          11.15
+        ],
+        "forward": [
+          5.477881931111752e-15,
+          -0.46256600669501435,
+          -0.8865848461654574
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          4.263256414560601e-13,
+          0,
+          -2.9995200000093547
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 71.66666666666389,
+      "milliseconds": 0.19999999552965164,
+      "metrics": {
+        "passes": 1,
+        "triangles": 10160,
+        "calls": 93
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 30,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          204,
+          202,
+          190
+        ]
+      }
+    },
+    {
+      "label": "cross-11-before-archive-east",
+      "room": "c2-archive",
+      "player": {
+        "room": "c2-archive",
+        "p": [
+          9.999999999999993,
+          1.5999999999999912,
+          19.99999999999984
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 74.61666666666372,
+      "milliseconds": 0.3999999985098839,
+      "metrics": {
+        "passes": 2,
+        "triangles": 1020,
+        "calls": 90
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 35,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          201,
+          200,
+          186
+        ]
+      },
+      "screenshot": "omitted-screenshots/027-cross-11-before-archive-east.png"
+    },
+    {
+      "label": "cross-11-after-archive-east",
+      "room": "c2",
+      "player": {
+        "room": "c2",
+        "p": [
+          7.105427357601002e-15,
+          1.5999999999999854,
+          -3.0500079999998397
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 74.63333333333038,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 466,
+        "calls": 43
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 36,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          201,
+          200,
+          186
+        ]
+      },
+      "screenshot": "omitted-screenshots/028-cross-11-after-archive-east.png"
+    },
+    {
+      "label": "cross-12-before-c2-hub",
+      "room": "c2",
+      "player": {
+        "room": "c2",
+        "p": [
+          -1.734723475976807e-18,
+          1.5999999999999854,
+          11.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 80.8499999999967,
+      "milliseconds": 0.5,
+      "metrics": {
+        "passes": 2,
+        "triangles": 6708,
+        "calls": 203
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 50,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/029-cross-12-before-c2-hub.png"
+    },
+    {
+      "label": "cross-12-after-c2-hub",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          -17.94999199999999,
+          1.5999999999999854,
+          -6
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 80.86666666666336,
+      "milliseconds": 0.29999999701976776,
+      "metrics": {
+        "passes": 1,
+        "triangles": 6334,
+        "calls": 171
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 49,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/030-cross-12-after-c2-hub.png"
+    },
+    {
+      "label": "cross-13-before-hub-3",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          -17.999999999999954,
+          1.5999999999999854,
+          1.734723475976807e-18
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 95.08333333332922,
+      "milliseconds": 0.4000000059604645,
+      "metrics": {
+        "passes": 3,
+        "triangles": 1808,
+        "calls": 159
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 53,
+        "channelMin": [
+          4,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/031-cross-13-before-hub-3.png"
+    },
+    {
+      "label": "cross-13-after-hub-3",
+      "room": "c3",
+      "player": {
+        "room": "c3",
+        "p": [
+          -1.734723475976807e-18,
+          1.5999999999999837,
+          7.949992000000045
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 95.09999999999589,
+      "milliseconds": 0.30000000447034836,
+      "metrics": {
+        "passes": 2,
+        "triangles": 1170,
+        "calls": 105
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 52,
+        "channelMin": [
+          3,
+          12,
+          15
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/032-cross-13-after-hub-3.png"
+    },
+    {
+      "label": "take-weight3",
+      "room": "c3",
+      "player": {
+        "room": "c3",
+        "p": [
+          2,
+          1.5999999999999837,
+          -0.8500000000000002
+        ],
+        "forward": [
+          0,
+          -0.7219882051154196,
+          -0.6919053632356198
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0.3245006096625148,
+          0,
+          -1.427801384512593
+        ],
+        "scale": 1
+      },
+      "held": "weight3",
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 98.11666666666238,
+      "milliseconds": 0.19999999552965164,
+      "metrics": {
+        "passes": 2,
+        "triangles": 752,
+        "calls": 67
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 52,
+        "channelMin": [
+          51,
+          77,
+          73
+        ],
+        "channelMax": [
+          212,
+          202,
+          192
+        ]
+      }
+    },
+    {
+      "label": "cross-14-before-quarter-in",
+      "room": "c3",
+      "player": {
+        "room": "c3",
+        "p": [
+          0.0015575459891425981,
+          1.5999999999999837,
+          -7.995015852834755
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": "weight3",
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 100.59999999999557,
+      "milliseconds": 0.29999999701976776,
+      "metrics": {
+        "passes": 2,
+        "triangles": 838,
+        "calls": 74
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 41,
+        "channelMin": [
+          6,
+          18,
+          25
+        ],
+        "channelMax": [
+          212,
+          213,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/034-cross-14-before-quarter-in.png"
+    },
+    {
+      "label": "cross-14-after-quarter-in",
+      "room": "c3-cabinet",
+      "player": {
+        "room": "c3-cabinet",
+        "p": [
+          0.00038938649728564954,
+          0.3999999999999959,
+          6.988738036791311
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -0.75
+        ],
+        "scale": 0.25
+      },
+      "held": "weight3",
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 100.61666666666224,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 534,
+        "calls": 47
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 41,
+        "channelMin": [
+          6,
+          18,
+          25
+        ],
+        "channelMax": [
+          212,
+          213,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/035-cross-14-after-quarter-in.png"
+    },
+    {
+      "label": "save-restore-6047",
+      "room": "c3-cabinet",
+      "player": {
+        "room": "c3-cabinet",
+        "p": [
+          0.00038938649728564954,
+          0.3999999999999959,
+          6.988738036791311
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -0.75
+        ],
+        "scale": 0.25
+      },
+      "held": "weight3",
+      "solved": [
+        1,
+        2
+      ],
+      "simulationSeconds": 100.61666666666224,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 1,
+        "triangles": 534,
+        "calls": 47
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 41,
+        "channelMin": [
+          6,
+          18,
+          25
+        ],
+        "channelMax": [
+          212,
+          213,
+          208
+        ]
+      }
+    },
+    {
+      "label": "chapter-3-complete",
+      "room": "c3-cabinet",
+      "player": {
+        "room": "c3-cabinet",
+        "p": [
+          1.9870105615262212e-7,
+          0.3999999999999959,
+          -2.7112619086219225
+        ],
+        "forward": [
+          -6.275023394981794e-7,
+          -0.41054288142335194,
+          -0.9118412923926059
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -0.00012036735965860243,
+          0,
+          -0.7499999903411324
+        ],
+        "scale": 0.25
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 113.54999999999484,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 326,
+        "calls": 28
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 35,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          204,
+          202,
+          212
+        ]
+      },
+      "screenshot": "omitted-screenshots/037-chapter-3-complete.png"
+    },
+    {
+      "label": "cross-15-before-quarter-out",
+      "room": "c3-cabinet",
+      "player": {
+        "room": "c3-cabinet",
+        "p": [
+          1.9870105615262212e-7,
+          0.3999999999999959,
+          6.999999999999989
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0.75
+        ],
+        "scale": 0.25
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 126.4999999999941,
+      "milliseconds": 0.8999999985098839,
+      "metrics": {
+        "passes": 3,
+        "triangles": 7618,
+        "calls": 293
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 51,
+        "channelMin": [
+          4,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/038-cross-15-before-quarter-out.png"
+    },
+    {
+      "label": "cross-15-after-quarter-out",
+      "room": "c3",
+      "player": {
+        "room": "c3",
+        "p": [
+          7.948042246104885e-7,
+          1.599999999999982,
+          -7.949992000000042
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 126.51666666666077,
+      "milliseconds": 1.2000000029802322,
+      "metrics": {
+        "passes": 2,
+        "triangles": 7388,
+        "calls": 273
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 55,
+        "channelMin": [
+          4,
+          12,
+          15
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/039-cross-15-after-quarter-out.png"
+    },
+    {
+      "label": "save-restore-7603",
+      "room": "c3",
+      "player": {
+        "room": "c3",
+        "p": [
+          7.948042246104885e-7,
+          1.599999999999982,
+          -7.949992000000042
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 126.51666666666077,
+      "milliseconds": 1,
+      "metrics": {
+        "passes": 2,
+        "triangles": 7388,
+        "calls": 273
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 55,
+        "channelMin": [
+          4,
+          12,
+          15
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      }
+    },
+    {
+      "label": "cross-16-before-c3-hub",
+      "room": "c3",
+      "player": {
+        "room": "c3",
+        "p": [
+          7.948042246104885e-7,
+          1.599999999999982,
+          8.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 131.8333333333304,
+      "milliseconds": 0.29999999701976776,
+      "metrics": {
+        "passes": 2,
+        "triangles": 6606,
+        "calls": 192
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 42,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/041-cross-16-before-c3-hub.png"
+    },
+    {
+      "label": "cross-16-after-c3-hub",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          -17.94999199999999,
+          1.599999999999982,
+          -7.948042246104885e-7
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 131.84999999999707,
+      "milliseconds": 0.3999999985098839,
+      "metrics": {
+        "passes": 1,
+        "triangles": 6304,
+        "calls": 166
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 45,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/042-cross-16-after-c3-hub.png"
+    },
+    {
+      "label": "cross-17-before-hub-4",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          -17.999999999999957,
+          1.599999999999982,
+          6
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 144.4500000000071,
+      "milliseconds": 0.30000000447034836,
+      "metrics": {
+        "passes": 3,
+        "triangles": 10880,
+        "calls": 154
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 51,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/043-cross-17-before-hub-4.png"
+    },
+    {
+      "label": "cross-17-after-hub-4",
+      "room": "c4",
+      "player": {
+        "room": "c4",
+        "p": [
+          0,
+          1.5999999999999805,
+          8.949992000000043
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 144.46666666667377,
+      "milliseconds": 0.6000000014901161,
+      "metrics": {
+        "passes": 2,
+        "triangles": 10242,
+        "calls": 100
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 54,
+        "channelMin": [
+          3,
+          11,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/044-cross-17-after-hub-4.png"
+    },
+    {
+      "label": "cross-18-before-garden-winter",
+      "room": "c4",
+      "player": {
+        "room": "c4",
+        "p": [
+          0,
+          1.5999999999999805,
+          -9.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 150.45000000001187,
+      "milliseconds": 0.4000000059604645,
+      "metrics": {
+        "passes": 2,
+        "triangles": 5350,
+        "calls": 70
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 56,
+        "channelMin": [
+          4,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/045-cross-18-before-garden-winter.png"
+    },
+    {
+      "label": "cross-18-after-garden-winter",
+      "room": "c4-winter",
+      "player": {
+        "room": "c4-winter",
+        "p": [
+          0,
+          1.5999999999999805,
+          7.949991999999988
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 150.46666666667855,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 5034,
+        "calls": 42
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 52,
+        "channelMin": [
+          4,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/046-cross-18-after-garden-winter.png"
+    },
+    {
+      "label": "take-weight4",
+      "room": "c4-winter",
+      "player": {
+        "room": "c4-winter",
+        "p": [
+          1.9994234938379607,
+          1.5999999999999805,
+          0.1522483717259291
+        ],
+        "forward": [
+          0.0003465343413121764,
+          -0.7213126883217168,
+          -0.6926094755199702
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0.7451267678899152,
+          0,
+          -2.9059914142636294
+        ],
+        "scale": 1
+      },
+      "held": "weight4",
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 153.15000000001402,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 4908,
+        "calls": 29
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 54,
+        "channelMin": [
+          51,
+          55,
+          21
+        ],
+        "channelMax": [
+          212,
+          204,
+          194
+        ]
+      }
+    },
+    {
+      "label": "cross-19-before-winter-return",
+      "room": "c4-winter",
+      "player": {
+        "room": "c4-winter",
+        "p": [
+          0,
+          1.5999999999999805,
+          8.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": "weight4",
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 155.86666666668285,
+      "milliseconds": 0.7000000029802322,
+      "metrics": {
+        "passes": 3,
+        "triangles": 12238,
+        "calls": 298
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 40,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/048-cross-19-before-winter-return.png"
+    },
+    {
+      "label": "cross-19-after-winter-return",
+      "room": "c4",
+      "player": {
+        "room": "c4",
+        "p": [
+          0,
+          1.5999999999999805,
+          -8.94999199999999
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": "weight4",
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 155.88333333334953,
+      "milliseconds": 0.7999999970197678,
+      "metrics": {
+        "passes": 2,
+        "triangles": 11960,
+        "calls": 274
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 45,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/049-cross-19-after-winter-return.png"
+    },
+    {
+      "label": "use-garden-shutter",
+      "room": "c4",
+      "player": {
+        "room": "c4",
+        "p": [
+          2.3,
+          1.5999999999999805,
+          -3.1500000000000004
+        ],
+        "forward": [
+          0,
+          -0.39872611141443676,
+          0.9170700562532407
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0.8710686130692835,
+          0,
+          2.196604777066424
+        ],
+        "scale": 1
+      },
+      "held": "weight4",
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 157.96666666668452,
+      "milliseconds": 0.6000000014901161,
+      "metrics": {
+        "passes": 2,
+        "triangles": 7126,
+        "calls": 248
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 39,
+        "channelMin": [
+          78,
+          94,
+          48
+        ],
+        "channelMax": [
+          207,
+          205,
+          193
+        ]
+      }
+    },
+    {
+      "label": "cross-20-before-garden-summer",
+      "room": "c4",
+      "player": {
+        "room": "c4",
+        "p": [
+          0,
+          1.5999999999999805,
+          -9.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": "weight4",
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 161.33333333335386,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 2,
+        "triangles": 5456,
+        "calls": 77
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 48,
+        "channelMin": [
+          4,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/051-cross-20-before-garden-summer.png"
+    },
+    {
+      "label": "cross-20-after-garden-summer",
+      "room": "c4-summer",
+      "player": {
+        "room": "c4-summer",
+        "p": [
+          0,
+          1.5999999999999805,
+          7.949991999999988
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": "weight4",
+      "solved": [
+        1,
+        2,
+        3
+      ],
+      "simulationSeconds": 161.35000000002054,
+      "milliseconds": 0.19999999552965164,
+      "metrics": {
+        "passes": 1,
+        "triangles": 5140,
+        "calls": 49
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 49,
+        "channelMin": [
+          4,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/052-cross-20-after-garden-summer.png"
+    },
+    {
+      "label": "chapter-4-complete",
+      "room": "c4-summer",
+      "player": {
+        "room": "c4-summer",
+        "p": [
+          -1.9994234938379607,
+          1.5999999999999805,
+          0.1522483717259291
+        ],
+        "forward": [
+          -0.000443771424725436,
+          -0.4618560431225723,
+          -0.8869547894329693
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -0.7451267678899152,
+          0,
+          -2.9059914142636294
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 164.033333333356,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 4990,
+        "calls": 34
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 34,
+        "channelMin": [
+          3,
+          23,
+          27
+        ],
+        "channelMax": [
+          209,
+          197,
+          165
+        ]
+      },
+      "screenshot": "omitted-screenshots/053-chapter-4-complete.png"
+    },
+    {
+      "label": "save-restore-9859",
+      "room": "c4-summer",
+      "player": {
+        "room": "c4-summer",
+        "p": [
+          -1.9994234938379607,
+          1.5999999999999805,
+          0.1522483717259291
+        ],
+        "forward": [
+          -0.0004437714247254361,
+          -0.4618560431225724,
+          -0.8869547894329696
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -0.7451267678899152,
+          0,
+          -2.9059914142636294
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 164.033333333356,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 4990,
+        "calls": 34
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 34,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          209,
+          197,
+          165
+        ]
+      }
+    },
+    {
+      "label": "cross-21-before-summer-return",
+      "room": "c4-summer",
+      "player": {
+        "room": "c4-summer",
+        "p": [
+          0,
+          1.5999999999999805,
+          8.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 166.75000000002484,
+      "milliseconds": 0.7000000029802322,
+      "metrics": {
+        "passes": 3,
+        "triangles": 12226,
+        "calls": 296
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 51,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/055-cross-21-before-summer-return.png"
+    },
+    {
+      "label": "cross-21-after-summer-return",
+      "room": "c4",
+      "player": {
+        "room": "c4",
+        "p": [
+          0,
+          1.5999999999999805,
+          -8.94999199999999
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 166.76666666669152,
+      "milliseconds": 0.7999999970197678,
+      "metrics": {
+        "passes": 2,
+        "triangles": 11948,
+        "calls": 272
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 56,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/056-cross-21-after-summer-return.png"
+    },
+    {
+      "label": "cross-22-before-c4-hub",
+      "room": "c4",
+      "player": {
+        "room": "c4",
+        "p": [
+          0,
+          1.5999999999999805,
+          9.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 172.75000000002962,
+      "milliseconds": 1,
+      "metrics": {
+        "passes": 2,
+        "triangles": 6580,
+        "calls": 189
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 42,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/057-cross-22-before-c4-hub.png"
+    },
+    {
+      "label": "cross-22-after-c4-hub",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          -17.94999199999999,
+          1.5999999999999805,
+          6
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 172.7666666666963,
+      "milliseconds": 0.29999999701976776,
+      "metrics": {
+        "passes": 1,
+        "triangles": 6278,
+        "calls": 163
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 43,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/058-cross-22-after-c4-hub.png"
+    },
+    {
+      "label": "cross-23-before-hub-5",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          -17.999999999999957,
+          1.5999999999999805,
+          12
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 184.93333333337264,
+      "milliseconds": 0.6000000014901161,
+      "metrics": {
+        "passes": 2,
+        "triangles": 1472,
+        "calls": 117
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 54,
+        "channelMin": [
+          4,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/059-cross-23-before-hub-5.png"
+    },
+    {
+      "label": "cross-23-after-hub-5",
+      "room": "c5",
+      "player": {
+        "room": "c5",
+        "p": [
+          0,
+          1.599999999999979,
+          9.949992000000043
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 184.95000000003932,
+      "milliseconds": 0.09999999403953552,
+      "metrics": {
+        "passes": 1,
+        "triangles": 918,
+        "calls": 70
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 52,
+        "channelMin": [
+          4,
+          11,
+          13
+        ],
+        "channelMax": [
+          248,
+          232,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/060-cross-23-after-hub-5.png"
+    },
+    {
+      "label": "cross-24-before-sight-in",
+      "room": "c5",
+      "player": {
+        "room": "c5",
+        "p": [
+          0,
+          1.599999999999979,
+          -10.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 192.8500000000456,
+      "milliseconds": 0.19999999552965164,
+      "metrics": {
+        "passes": 2,
+        "triangles": 5340,
+        "calls": 70
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 49,
+        "channelMin": [
+          3,
+          15,
+          17
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/061-cross-24-before-sight-in.png"
+    },
+    {
+      "label": "cross-24-after-sight-in",
+      "room": "c5-beyond",
+      "player": {
+        "room": "c5-beyond",
+        "p": [
+          0,
+          1.599999999999979,
+          6.949991999999988
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 192.8666666667123,
+      "milliseconds": 0.19999999552965164,
+      "metrics": {
+        "passes": 1,
+        "triangles": 5012,
+        "calls": 41
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 55,
+        "channelMin": [
+          3,
+          14,
+          17
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/062-cross-24-after-sight-in.png"
+    },
+    {
+      "label": "take-weight5",
+      "room": "c5-beyond",
+      "player": {
+        "room": "c5-beyond",
+        "p": [
+          2,
+          1.599999999999979,
+          0.14999999999999994
+        ],
+        "forward": [
+          0,
+          -0.7219882051154182,
+          -0.6919053632356211
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0.6435157120744072,
+          0,
+          -2.187950846990098
+        ],
+        "scale": 1
+      },
+      "held": "weight5",
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 195.23333333338084,
+      "milliseconds": 0,
+      "metrics": {
+        "passes": 1,
+        "triangles": 4886,
+        "calls": 28
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 60,
+        "channelMin": [
+          52,
+          78,
+          47
+        ],
+        "channelMax": [
+          214,
+          206,
+          195
+        ]
+      }
+    },
+    {
+      "label": "cross-25-before-sight-out",
+      "room": "c5-beyond",
+      "player": {
+        "room": "c5-beyond",
+        "p": [
+          -1.734723475976807e-18,
+          1.599999999999979,
+          7.000000000000011
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": "weight5",
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 197.63333333338275,
+      "milliseconds": 0.7000000029802322,
+      "metrics": {
+        "passes": 3,
+        "triangles": 7896,
+        "calls": 304
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 42,
+        "channelMin": [
+          4,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/064-cross-25-before-sight-out.png"
+    },
+    {
+      "label": "cross-25-after-sight-out",
+      "room": "c5",
+      "player": {
+        "room": "c5",
+        "p": [
+          -1.734723475976807e-18,
+          1.599999999999979,
+          -9.94999199999999
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": "weight5",
+      "solved": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "simulationSeconds": 197.65000000004943,
+      "milliseconds": 1.2000000029802322,
+      "metrics": {
+        "passes": 2,
+        "triangles": 7654,
+        "calls": 283
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 48,
+        "channelMin": [
+          4,
+          11,
+          13
+        ],
+        "channelMax": [
+          248,
+          232,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/065-cross-25-after-sight-out.png"
+    },
+    {
+      "label": "chapter-5-complete",
+      "room": "c5",
+      "player": {
+        "room": "c5",
+        "p": [
+          -3,
+          1.599999999999979,
+          1.8499999999999999
+        ],
+        "forward": [
+          0,
+          -0.46256600669500697,
+          0.8865848461654612
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -0.3751756562090769,
+          0,
+          1.47568991395397
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "simulationSeconds": 201.71666666671933,
+      "milliseconds": 0.6000000014901161,
+      "metrics": {
+        "passes": 3,
+        "triangles": 9984,
+        "calls": 278
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 43,
+        "channelMin": [
+          4,
+          14,
+          19
+        ],
+        "channelMax": [
+          231,
+          202,
+          163
+        ]
+      },
+      "screenshot": "omitted-screenshots/066-chapter-5-complete.png"
+    },
+    {
+      "label": "save-restore-12196",
+      "room": "c5",
+      "player": {
+        "room": "c5",
+        "p": [
+          -1.7000000000000046,
+          1.599999999999979,
+          4.149999999999994
+        ],
+        "forward": [
+          9.325873406850022e-14,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          2.7977620220550067e-13,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "simulationSeconds": 202.9166666667203,
+      "milliseconds": 0.5,
+      "metrics": {
+        "passes": 3,
+        "triangles": 9778,
+        "calls": 273
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 40,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          203,
+          201,
+          190
+        ]
+      }
+    },
+    {
+      "label": "cross-26-before-c5-hub",
+      "room": "c5",
+      "player": {
+        "room": "c5",
+        "p": [
+          0,
+          1.599999999999979,
+          10.000000000000009
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "simulationSeconds": 204.96666666672192,
+      "milliseconds": 0.6000000014901161,
+      "metrics": {
+        "passes": 3,
+        "triangles": 9550,
+        "calls": 249
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 44,
+        "channelMin": [
+          3,
+          9,
+          11
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/068-cross-26-before-c5-hub.png"
+    },
+    {
+      "label": "cross-26-after-c5-hub",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          -17.949991999999995,
+          1.599999999999979,
+          12
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "simulationSeconds": 204.9833333333886,
+      "milliseconds": 1.4000000059604645,
+      "metrics": {
+        "passes": 3,
+        "triangles": 9648,
+        "calls": 260
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 44,
+        "channelMin": [
+          3,
+          9,
+          11
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/069-cross-26-after-c5-hub.png"
+    },
+    {
+      "label": "cross-27-before-hub-6",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          17.999999999999957,
+          1.599999999999979,
+          -12
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "simulationSeconds": 220.33333333340082,
+      "milliseconds": 0.3999999985098839,
+      "metrics": {
+        "passes": 3,
+        "triangles": 4030,
+        "calls": 157
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 54,
+        "channelMin": [
+          4,
+          12,
+          14
+        ],
+        "channelMax": [
+          210,
+          209,
+          200
+        ]
+      },
+      "screenshot": "omitted-screenshots/070-cross-27-before-hub-6.png"
+    },
+    {
+      "label": "cross-27-after-hub-6",
+      "room": "c6",
+      "player": {
+        "room": "c6",
+        "p": [
+          0,
+          1.5999999999999774,
+          8.949992000000043
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "simulationSeconds": 220.3500000000675,
+      "milliseconds": 0.30000000447034836,
+      "metrics": {
+        "passes": 2,
+        "triangles": 3464,
+        "calls": 109
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 53,
+        "channelMin": [
+          4,
+          11,
+          14
+        ],
+        "channelMax": [
+          210,
+          209,
+          200
+        ]
+      },
+      "screenshot": "omitted-screenshots/071-cross-27-after-hub-6.png"
+    },
+    {
+      "label": "use-gravity6",
+      "room": "c6",
+      "player": {
+        "room": "c6",
+        "p": [
+          -0.7,
+          0.8999999999999775,
+          3.15
+        ],
+        "forward": [
+          0.39872611141443487,
+          -2.441493280400793e-17,
+          -0.9170700562532417
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "simulationSeconds": 222.28333333340237,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 2,
+        "triangles": 3290,
+        "calls": 92
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 30,
+        "channelMin": [
+          3,
+          9,
+          12
+        ],
+        "channelMax": [
+          240,
+          232,
+          217
+        ]
+      }
+    },
+    {
+      "label": "save-restore-13674",
+      "room": "c6",
+      "player": {
+        "room": "c6",
+        "p": [
+          4.399999949137369,
+          6,
+          -5
+        ],
+        "forward": [
+          0,
+          0.5304663336577389,
+          -0.8477060037865229
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0.4513918131069161,
+          -0.7213418189846976
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "simulationSeconds": 227.5000000000732,
+      "milliseconds": 0.29999999701976776,
+      "metrics": {
+        "passes": 2,
+        "triangles": 1968,
+        "calls": 76
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 44,
+        "channelMin": [
+          2,
+          9,
+          12
+        ],
+        "channelMax": [
+          253,
+          247,
+          232
+        ]
+      }
+    },
+    {
+      "label": "cross-28-before-wall6-in",
+      "room": "c6",
+      "player": {
+        "room": "c6",
+        "p": [
+          4.399999949137369,
+          6.999891886047562,
+          -8.999648629654587
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "simulationSeconds": 228.88333333340762,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 2,
+        "triangles": 730,
+        "calls": 67
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 48,
+        "channelMin": [
+          3,
+          14,
+          15
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/074-cross-28-before-wall6-in.png"
+    },
+    {
+      "label": "cross-28-after-wall6-in",
+      "room": "c6-record",
+      "player": {
+        "room": "c6-record",
+        "p": [
+          -0.00010811395243770505,
+          1.6000000508626313,
+          6.950343370345412
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "simulationSeconds": 228.9000000000743,
+      "milliseconds": 0,
+      "metrics": {
+        "passes": 1,
+        "triangles": 414,
+        "calls": 39
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 52,
+        "channelMin": [
+          3,
+          13,
+          15
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/075-cross-28-after-wall6-in.png"
+    },
+    {
+      "label": "chapter-6-complete",
+      "room": "c6-record",
+      "player": {
+        "room": "c6-record",
+        "p": [
+          -1.3747699879010445e-8,
+          1.6000000508626313,
+          -0.8496566260930439
+        ],
+        "forward": [
+          1.143345396155982e-8,
+          -0.2910821085199259,
+          -0.9566980746816595
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0.00012011133859758435,
+          0,
+          -2.9999999975955447
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 231.50000000007637,
+      "milliseconds": 0,
+      "metrics": {
+        "passes": 1,
+        "triangles": 254,
+        "calls": 22
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 42,
+        "channelMin": [
+          53,
+          77,
+          75
+        ],
+        "channelMax": [
+          206,
+          203,
+          191
+        ]
+      },
+      "screenshot": "omitted-screenshots/076-chapter-6-complete.png"
+    },
+    {
+      "label": "cross-29-before-wall6-out",
+      "room": "c6-record",
+      "player": {
+        "room": "c6-record",
+        "p": [
+          -1.3747699879010445e-8,
+          1.6000000508626313,
+          7.000000000000011
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 234.11666666674512,
+      "milliseconds": 0.5999999940395355,
+      "metrics": {
+        "passes": 3,
+        "triangles": 9960,
+        "calls": 299
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 49,
+        "channelMin": [
+          3,
+          11,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/077-cross-29-before-wall6-out.png"
+    },
+    {
+      "label": "cross-29-after-wall6-out",
+      "room": "c6",
+      "player": {
+        "room": "c6",
+        "p": [
+          4.399999949137369,
+          6.9999999862523,
+          -8.94999199999999
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 234.1333333334118,
+      "milliseconds": 1.3999999985098839,
+      "metrics": {
+        "passes": 7,
+        "triangles": 17950,
+        "calls": 600
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 51,
+        "channelMin": [
+          3,
+          11,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/078-cross-29-after-wall6-out.png"
+    },
+    {
+      "label": "use-gravity6wall",
+      "room": "c6",
+      "player": {
+        "room": "c6",
+        "p": [
+          5.099999949137369,
+          7.6999999862523,
+          -6.550000000000001
+        ],
+        "forward": [
+          1.1132561802248363e-8,
+          -0.36439938429872526,
+          0.9312427657290606
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 234.93333333341243,
+      "milliseconds": 1.6000000014901161,
+      "metrics": {
+        "passes": 7,
+        "triangles": 17932,
+        "calls": 596
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 42,
+        "channelMin": [
+          3,
+          12,
+          17
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      }
+    },
+    {
+      "label": "save-restore-14243",
+      "room": "c6",
+      "player": {
+        "room": "c6",
+        "p": [
+          5.099999949137369,
+          1.600000189702824,
+          -6.550000000000001
+        ],
+        "forward": [
+          1.1132561802248363e-8,
+          -0.36439938429872526,
+          0.9312427657290606
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 236.93333333341403,
+      "milliseconds": 2.9000000059604645,
+      "metrics": {
+        "passes": 7,
+        "triangles": 16658,
+        "calls": 584
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 46,
+        "channelMin": [
+          3,
+          14,
+          20
+        ],
+        "channelMax": [
+          208,
+          206,
+          195
+        ]
+      }
+    },
+    {
+      "label": "cross-30-before-c6-hub",
+      "room": "c6",
+      "player": {
+        "room": "c6",
+        "p": [
+          0.0013269372616213013,
+          1.600000189702824,
+          8.996149280065136
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 242.40000000008504,
+      "milliseconds": 1.2000000029802322,
+      "metrics": {
+        "passes": 7,
+        "triangles": 14972,
+        "calls": 531
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 57,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/081-cross-30-before-c6-hub.png"
+    },
+    {
+      "label": "cross-30-after-c6-hub",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          17.953842719934865,
+          1.600000189702824,
+          -11.998673062738378
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 242.41666666675172,
+      "milliseconds": 1.7999999970197678,
+      "metrics": {
+        "passes": 12,
+        "triangles": 46356,
+        "calls": 892
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 56,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/082-cross-30-after-c6-hub.png"
+    },
+    {
+      "label": "cross-31-before-hub-7",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          17.999999999999957,
+          1.600000189702824,
+          -6
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 259.30000000009284,
+      "milliseconds": 0.5,
+      "metrics": {
+        "passes": 5,
+        "triangles": 2912,
+        "calls": 262
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 50,
+        "channelMin": [
+          3,
+          11,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/083-cross-31-before-hub-7.png"
+    },
+    {
+      "label": "cross-31-after-hub-7",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          0,
+          1.6000001897028224,
+          9.949992000000043
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 259.3166666667595,
+      "milliseconds": 1,
+      "metrics": {
+        "passes": 6,
+        "triangles": 3978,
+        "calls": 367
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 55,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/084-cross-31-after-hub-7.png"
+    },
+    {
+      "label": "take-weight7",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          2,
+          1.6000001897028224,
+          5.15
+        ],
+        "forward": [
+          0,
+          -0.7219882597560908,
+          -0.6919053062192626
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          1.1536773780252043,
+          0,
+          -2.7688210925509793
+        ],
+        "scale": 1
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 261.05000000009125,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 504,
+        "calls": 43
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 56,
+        "channelMin": [
+          52,
+          76,
+          69
+        ],
+        "channelMax": [
+          213,
+          190,
+          125
+        ]
+      }
+    },
+    {
+      "label": "cross-32-before-half7-in",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          3.5,
+          1.6000001897028224,
+          -10.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 266.13333333341996,
+      "milliseconds": 0.5,
+      "metrics": {
+        "passes": 3,
+        "triangles": 1714,
+        "calls": 158
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 44,
+        "channelMin": [
+          54,
+          59,
+          27
+        ],
+        "channelMax": [
+          210,
+          212,
+          204
+        ]
+      },
+      "screenshot": "omitted-screenshots/086-cross-32-before-half7-in.png"
+    },
+    {
+      "label": "cross-32-after-half7-in",
+      "room": "c7-loop",
+      "player": {
+        "room": "c7-loop",
+        "p": [
+          0,
+          0.8000000948514112,
+          6.974991999999994
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -1.5
+        ],
+        "scale": 0.5
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 266.1500000000866,
+      "milliseconds": 1,
+      "metrics": {
+        "passes": 4,
+        "triangles": 13284,
+        "calls": 390
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 46,
+        "channelMin": [
+          54,
+          59,
+          26
+        ],
+        "channelMax": [
+          210,
+          212,
+          204
+        ]
+      },
+      "screenshot": "omitted-screenshots/087-cross-32-after-half7-in.png"
+    },
+    {
+      "label": "cross-33-before-neutral7-out",
+      "room": "c7-loop",
+      "player": {
+        "room": "c7-loop",
+        "p": [
+          0,
+          0.8000000948514112,
+          -7.000000000000005
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -1.5
+        ],
+        "scale": 0.5
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 275.4666666667448,
+      "milliseconds": 0.7000000029802322,
+      "metrics": {
+        "passes": 4,
+        "triangles": 9828,
+        "calls": 351
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 42,
+        "channelMin": [
+          3,
+          11,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/088-cross-33-before-neutral7-out.png"
+    },
+    {
+      "label": "cross-33-after-neutral7-out",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          -3.5,
+          0.8000000948514112,
+          -9.974991999999997
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          1.5
+        ],
+        "scale": 0.5
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 275.48333333341145,
+      "milliseconds": 2.6999999955296516,
+      "metrics": {
+        "passes": 8,
+        "triangles": 17780,
+        "calls": 648
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 48,
+        "channelMin": [
+          4,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/089-cross-33-after-neutral7-out.png"
+    },
+    {
+      "label": "cross-34-before-half7-in",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          3.499985851319222,
+          0.8000000948514112,
+          -10.00000055707891
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -1.5
+        ],
+        "scale": 0.5
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 281.43333333340604,
+      "milliseconds": 0.30000000447034836,
+      "metrics": {
+        "passes": 3,
+        "triangles": 1652,
+        "calls": 152
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 49,
+        "channelMin": [
+          3,
+          11,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/090-cross-34-before-half7-in.png"
+    },
+    {
+      "label": "cross-34-after-half7-in",
+      "room": "c7-loop",
+      "player": {
+        "room": "c7-loop",
+        "p": [
+          -0.000007074340389046085,
+          0.4000000474257056,
+          6.987491721460546
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -0.75
+        ],
+        "scale": 0.25
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 281.4500000000727,
+      "milliseconds": 0.8999999985098839,
+      "metrics": {
+        "passes": 4,
+        "triangles": 13272,
+        "calls": 389
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 50,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/091-cross-34-after-half7-in.png"
+    },
+    {
+      "label": "cross-35-before-neutral7-out",
+      "room": "c7-loop",
+      "player": {
+        "room": "c7-loop",
+        "p": [
+          4.235164736271502e-22,
+          0.4000000474257056,
+          -6.99999999999999
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -0.75
+        ],
+        "scale": 0.25
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 300.10000000005573,
+      "milliseconds": 1.1000000014901161,
+      "metrics": {
+        "passes": 4,
+        "triangles": 9804,
+        "calls": 349
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 43,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/092-cross-35-before-neutral7-out.png"
+    },
+    {
+      "label": "cross-35-after-neutral7-out",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          -3.5,
+          0.4000000474257053,
+          -9.98749200000001
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0.75
+        ],
+        "scale": 0.25
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 300.1166666667224,
+      "milliseconds": 1.6999999955296516,
+      "metrics": {
+        "passes": 8,
+        "triangles": 17768,
+        "calls": 647
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 48,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/093-cross-35-after-neutral7-out.png"
+    },
+    {
+      "label": "save-restore-18037",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          -3.5,
+          0.4000000474257053,
+          -9.98749200000001
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0.75
+        ],
+        "scale": 0.25
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 300.1166666667224,
+      "milliseconds": 1.6000000014901161,
+      "metrics": {
+        "passes": 8,
+        "triangles": 17768,
+        "calls": 647
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 48,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      }
+    },
+    {
+      "label": "cross-36-before-cabinet7-in",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          -7.999999999999989,
+          0.4000000474257053,
+          -8.673617379884035e-19
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -0.75,
+          0,
+          0
+        ],
+        "scale": 0.25
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 314.8833333333756,
+      "milliseconds": 0.30000000447034836,
+      "metrics": {
+        "passes": 2,
+        "triangles": 5572,
+        "calls": 85
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 46,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          222,
+          212,
+          195
+        ]
+      },
+      "screenshot": "omitted-screenshots/095-cross-36-before-cabinet7-in.png"
+    },
+    {
+      "label": "cross-36-after-cabinet7-in",
+      "room": "c7-cabinet",
+      "player": {
+        "room": "c7-cabinet",
+        "p": [
+          8.673617379884035e-19,
+          0.4000000474257049,
+          8.987492000000012
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -0.75
+        ],
+        "scale": 0.25
+      },
+      "held": "weight7",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simulationSeconds": 314.90000000004227,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 5162,
+        "calls": 50
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 50,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          211,
+          208,
+          195
+        ]
+      },
+      "screenshot": "omitted-screenshots/096-cross-36-after-cabinet7-in.png"
+    },
+    {
+      "label": "chapter-7-complete",
+      "room": "c7-cabinet",
+      "player": {
+        "room": "c7-cabinet",
+        "p": [
+          8.673617379884035e-19,
+          0.4000000474257049,
+          3.2875
+        ],
+        "forward": [
+          -2.7489444794074524e-18,
+          -0.41201138699338874,
+          -0.9111786965177489
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -5.2041704279304225e-17,
+          0,
+          -0.7495200000171032
+        ],
+        "scale": 0.25
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 322.50000000003536,
+      "milliseconds": 0.19999999552965164,
+      "metrics": {
+        "passes": 1,
+        "triangles": 5050,
+        "calls": 39
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 35,
+        "channelMin": [
+          3,
+          14,
+          19
+        ],
+        "channelMax": [
+          208,
+          203,
+          191
+        ]
+      },
+      "screenshot": "omitted-screenshots/097-chapter-7-complete.png"
+    },
+    {
+      "label": "save-restore-19382",
+      "room": "c7-cabinet",
+      "player": {
+        "room": "c7-cabinet",
+        "p": [
+          8.673617379884035e-19,
+          0.4000000474257049,
+          3.2875
+        ],
+        "forward": [
+          -2.7489444794074524e-18,
+          -0.41201138699338874,
+          -0.9111786965177489
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -5.2041704279304225e-17,
+          0,
+          -0.7495200000171032
+        ],
+        "scale": 0.25
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 322.50000000003536,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 5050,
+        "calls": 39
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 35,
+        "channelMin": [
+          3,
+          14,
+          19
+        ],
+        "channelMax": [
+          208,
+          203,
+          191
+        ]
+      }
+    },
+    {
+      "label": "cross-37-before-cabinet7-out",
+      "room": "c7-cabinet",
+      "player": {
+        "room": "c7-cabinet",
+        "p": [
+          8.673617379884035e-19,
+          0.4000000474257049,
+          8.999999999999726
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0.75
+        ],
+        "scale": 0.25
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 330.1166666666951,
+      "milliseconds": 0.5,
+      "metrics": {
+        "passes": 4,
+        "triangles": 2142,
+        "calls": 191
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 47,
+        "channelMin": [
+          3,
+          11,
+          14
+        ],
+        "channelMax": [
+          218,
+          206,
+          192
+        ]
+      },
+      "screenshot": "omitted-screenshots/099-cross-37-before-cabinet7-out.png"
+    },
+    {
+      "label": "cross-37-after-cabinet7-out",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          -7.987492000000274,
+          0.400000047425695,
+          -8.673617379884035e-19
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0.75,
+          0,
+          0
+        ],
+        "scale": 0.25
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 330.13333333336175,
+      "milliseconds": 0.5,
+      "metrics": {
+        "passes": 3,
+        "triangles": 1888,
+        "calls": 169
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 50,
+        "channelMin": [
+          3,
+          11,
+          14
+        ],
+        "channelMax": [
+          218,
+          206,
+          192
+        ]
+      },
+      "screenshot": "omitted-screenshots/100-cross-37-after-cabinet7-out.png"
+    },
+    {
+      "label": "cross-38-before-neutral7-in",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          -3.501013543182741,
+          0.400000047425695,
+          -9.997783752599293
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -0.75
+        ],
+        "scale": 0.25
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 344.7666666666818,
+      "milliseconds": 1,
+      "metrics": {
+        "passes": 3,
+        "triangles": 1666,
+        "calls": 153
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 58,
+        "channelMin": [
+          3,
+          11,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/101-cross-38-before-neutral7-in.png"
+    },
+    {
+      "label": "cross-38-after-neutral7-in",
+      "room": "c7-loop",
+      "player": {
+        "room": "c7-loop",
+        "p": [
+          0.0010135431827409391,
+          0.400000047425695,
+          -6.989708247400707
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0.75
+        ],
+        "scale": 0.25
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 344.7833333333484,
+      "milliseconds": 1.5,
+      "metrics": {
+        "passes": 4,
+        "triangles": 13272,
+        "calls": 389
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 61,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/102-cross-38-after-neutral7-in.png"
+    },
+    {
+      "label": "cross-39-before-half7-out",
+      "room": "c7-loop",
+      "player": {
+        "room": "c7-loop",
+        "p": [
+          3.5375488542822136e-7,
+          0.400000047425695,
+          6.997791627547505
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0.75
+        ],
+        "scale": 0.25
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 363.43333333333146,
+      "milliseconds": 1.3999999985098839,
+      "metrics": {
+        "passes": 4,
+        "triangles": 8076,
+        "calls": 332
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 52,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/103-cross-39-before-half7-out.png"
+    },
+    {
+      "label": "cross-39-after-half7-out",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          3.5000007075097708,
+          0.80000009485139,
+          -9.979408744904992
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          1.5
+        ],
+        "scale": 0.5
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 363.4499999999981,
+      "milliseconds": 2.3000000044703484,
+      "metrics": {
+        "passes": 8,
+        "triangles": 16078,
+        "calls": 634
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 56,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/104-cross-39-after-half7-out.png"
+    },
+    {
+      "label": "cross-40-before-neutral7-in",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          -3.499422785112468,
+          0.80000009485139,
+          -9.975025277705587
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -1.5
+        ],
+        "scale": 0.5
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 368.9166666666598,
+      "milliseconds": 1.1999999955296516,
+      "metrics": {
+        "passes": 3,
+        "triangles": 1702,
+        "calls": 156
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 58,
+        "channelMin": [
+          3,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/105-cross-40-before-neutral7-in.png"
+    },
+    {
+      "label": "cross-40-after-neutral7-in",
+      "room": "c7-loop",
+      "player": {
+        "room": "c7-loop",
+        "p": [
+          -0.0005772148875320404,
+          0.80000009485139,
+          -6.999966722294414
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          1.5
+        ],
+        "scale": 0.5
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 368.93333333332646,
+      "milliseconds": 0.8999999985098839,
+      "metrics": {
+        "passes": 5,
+        "triangles": 13284,
+        "calls": 390
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 59,
+        "channelMin": [
+          4,
+          11,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/106-cross-40-after-neutral7-in.png"
+    },
+    {
+      "label": "cross-41-before-half7-out",
+      "room": "c7-loop",
+      "player": {
+        "room": "c7-loop",
+        "p": [
+          0,
+          0.80000009485139,
+          7.000000000000006
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          1.5
+        ],
+        "scale": 0.5
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 378.2666666666513,
+      "milliseconds": 1.0999999940395355,
+      "metrics": {
+        "passes": 4,
+        "triangles": 8102,
+        "calls": 335
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 53,
+        "channelMin": [
+          3,
+          11,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/107-cross-41-before-half7-out.png"
+    },
+    {
+      "label": "cross-41-after-half7-out",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          3.5,
+          1.60000018970278,
+          -9.949991999999988
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 378.28333333331796,
+      "milliseconds": 1.6000000014901161,
+      "metrics": {
+        "passes": 8,
+        "triangles": 16092,
+        "calls": 636
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 61,
+        "channelMin": [
+          3,
+          10,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/108-cross-41-after-half7-out.png"
+    },
+    {
+      "label": "cross-42-before-c7-hub",
+      "room": "c7",
+      "player": {
+        "room": "c7",
+        "p": [
+          -4.336808689942018e-19,
+          1.60000018970278,
+          10.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 385.04999999997847,
+      "milliseconds": 1.1000000014901161,
+      "metrics": {
+        "passes": 7,
+        "triangles": 14966,
+        "calls": 528
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 51,
+        "channelMin": [
+          3,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/109-cross-42-before-c7-hub.png"
+    },
+    {
+      "label": "cross-42-after-c7-hub",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          17.94999199999999,
+          1.60000018970278,
+          -6
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 385.0666666666451,
+      "milliseconds": 1.7999999970197678,
+      "metrics": {
+        "passes": 12,
+        "triangles": 46302,
+        "calls": 885
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 52,
+        "channelMin": [
+          3,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/110-cross-42-after-c7-hub.png"
+    },
+    {
+      "label": "cross-43-before-hub-8",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          17.999999999999954,
+          1.60000018970278,
+          1.734723475976807e-18
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 399.28333333329886,
+      "milliseconds": 0.29999999701976776,
+      "metrics": {
+        "passes": 3,
+        "triangles": 2002,
+        "calls": 177
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 53,
+        "channelMin": [
+          3,
+          11,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/111-cross-43-before-hub-8.png"
+    },
+    {
+      "label": "cross-43-after-hub-8",
+      "room": "c8",
+      "player": {
+        "room": "c8",
+        "p": [
+          1.734723475976807e-18,
+          1.6000001897027782,
+          9.949992000000046
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 399.2999999999655,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 2,
+        "triangles": 1352,
+        "calls": 122
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 55,
+        "channelMin": [
+          4,
+          11,
+          13
+        ],
+        "channelMax": [
+          237,
+          229,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/112-cross-43-after-hub-8.png"
+    },
+    {
+      "label": "cross-44-before-transit-collection",
+      "room": "c8",
+      "player": {
+        "room": "c8",
+        "p": [
+          1.734723475976807e-18,
+          1.6000001897027782,
+          -10.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 405.94999999995946,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 2,
+        "triangles": 1008,
+        "calls": 90
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 48,
+        "channelMin": [
+          4,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/113-cross-44-before-transit-collection.png"
+    },
+    {
+      "label": "cross-44-after-transit-collection",
+      "room": "c8-collection",
+      "player": {
+        "room": "c8-collection",
+        "p": [
+          8.94999199999999,
+          1.6000001897027782,
+          5
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 405.9666666666261,
+      "milliseconds": 0.09999999403953552,
+      "metrics": {
+        "passes": 1,
+        "triangles": 680,
+        "calls": 61
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 51,
+        "channelMin": [
+          5,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/114-cross-44-after-transit-collection.png"
+    },
+    {
+      "label": "take-weight8",
+      "room": "c8-collection",
+      "player": {
+        "room": "c8-collection",
+        "p": [
+          2,
+          1.6000001897027782,
+          6.15
+        ],
+        "forward": [
+          0,
+          -0.721988259756078,
+          -0.691905306219276
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -2.6337978625453746,
+          0,
+          0.4358087810644661
+        ],
+        "scale": 1
+      },
+      "held": "weight8",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 408.316666666624,
+      "milliseconds": 0.19999999552965164,
+      "metrics": {
+        "passes": 1,
+        "triangles": 468,
+        "calls": 40
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 50,
+        "channelMin": [
+          51,
+          75,
+          69
+        ],
+        "channelMax": [
+          212,
+          189,
+          124
+        ]
+      }
+    },
+    {
+      "label": "cross-45-before-collection-return",
+      "room": "c8-collection",
+      "player": {
+        "room": "c8-collection",
+        "p": [
+          8.995161863931045,
+          1.6000001897027782,
+          5.000890217036689
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": "weight8",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 410.6833333332885,
+      "milliseconds": 0.6000000014901161,
+      "metrics": {
+        "passes": 3,
+        "triangles": 7846,
+        "calls": 313
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 44,
+        "channelMin": [
+          4,
+          11,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/116-cross-45-before-collection-return.png"
+    },
+    {
+      "label": "cross-45-after-collection-return",
+      "room": "c8",
+      "player": {
+        "room": "c8",
+        "p": [
+          -0.0008902170366891227,
+          1.6000001897027782,
+          -9.954830136068955
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": "weight8",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 410.69999999995514,
+      "milliseconds": 1.3999999985098839,
+      "metrics": {
+        "passes": 7,
+        "triangles": 15668,
+        "calls": 600
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 47,
+        "channelMin": [
+          4,
+          11,
+          13
+        ],
+        "channelMax": [
+          237,
+          230,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/117-cross-45-after-collection-return.png"
+    },
+    {
+      "label": "use-transit-shutter",
+      "room": "c8",
+      "player": {
+        "room": "c8",
+        "p": [
+          2.3999999999999995,
+          1.6000001897027782,
+          -3.1500000000000004
+        ],
+        "forward": [
+          3.5413990616794746e-16,
+          -0.3987262386426406,
+          0.9170700009366198
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0.31848556786578713,
+          0,
+          0.9026819197052571
+        ],
+        "scale": 1
+      },
+      "held": "weight8",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 413.1166666666196,
+      "milliseconds": 1.5,
+      "metrics": {
+        "passes": 7,
+        "triangles": 15492,
+        "calls": 582
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 40,
+        "channelMin": [
+          78,
+          94,
+          48
+        ],
+        "channelMax": [
+          206,
+          204,
+          194
+        ]
+      }
+    },
+    {
+      "label": "cross-46-before-transit-conservation",
+      "room": "c8",
+      "player": {
+        "room": "c8",
+        "p": [
+          0,
+          1.6000001897027782,
+          -10.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": "weight8",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 416.81666666661624,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 2,
+        "triangles": 5610,
+        "calls": 89
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 41,
+        "channelMin": [
+          4,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/119-cross-46-before-transit-conservation.png"
+    },
+    {
+      "label": "cross-46-after-transit-conservation",
+      "room": "c8-conservation",
+      "player": {
+        "room": "c8-conservation",
+        "p": [
+          0,
+          0.8000000948513891,
+          11.974991999999997
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -1.5
+        ],
+        "scale": 0.5
+      },
+      "held": "weight8",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simulationSeconds": 416.8333333332829,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 1,
+        "triangles": 5282,
+        "calls": 60
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 40,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/120-cross-46-after-transit-conservation.png"
+    },
+    {
+      "label": "chapter-8-complete",
+      "room": "c8-conservation",
+      "player": {
+        "room": "c8-conservation",
+        "p": [
+          0,
+          0.8000000948513891,
+          5.575
+        ],
+        "forward": [
+          0,
+          -0.3987262386426406,
+          -0.9170700009366198
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -1.4995200000112519
+        ],
+        "scale": 0.5
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 421.0999999999457,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 1,
+        "triangles": 5122,
+        "calls": 45
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 31,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          213,
+          203,
+          196
+        ]
+      },
+      "screenshot": "omitted-screenshots/121-chapter-8-complete.png"
+    },
+    {
+      "label": "save-restore-25303",
+      "room": "c8-conservation",
+      "player": {
+        "room": "c8-conservation",
+        "p": [
+          0,
+          0.8000000948513891,
+          5.575
+        ],
+        "forward": [
+          0,
+          -0.3987262386426406,
+          -0.9170700009366198
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -1.4995200000112519
+        ],
+        "scale": 0.5
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 421.0999999999457,
+      "milliseconds": 0,
+      "metrics": {
+        "passes": 1,
+        "triangles": 5122,
+        "calls": 45
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 31,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          213,
+          203,
+          196
+        ]
+      }
+    },
+    {
+      "label": "cross-47-before-conservation-return",
+      "room": "c8-conservation",
+      "player": {
+        "room": "c8-conservation",
+        "p": [
+          0,
+          0.8000000948513891,
+          11.999999999999806
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          1.5
+        ],
+        "scale": 0.5
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 425.3833333332751,
+      "milliseconds": 0.7999999970197678,
+      "metrics": {
+        "passes": 3,
+        "triangles": 7762,
+        "calls": 305
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 55,
+        "channelMin": [
+          4,
+          11,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/123-cross-47-before-conservation-return.png"
+    },
+    {
+      "label": "cross-47-after-conservation-return",
+      "room": "c8",
+      "player": {
+        "room": "c8",
+        "p": [
+          0,
+          1.6000001897027643,
+          -9.949992000000387
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 425.39999999994177,
+      "milliseconds": 1.3000000044703484,
+      "metrics": {
+        "passes": 7,
+        "triangles": 15656,
+        "calls": 598
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 56,
+        "channelMin": [
+          4,
+          11,
+          13
+        ],
+        "channelMax": [
+          237,
+          229,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/124-cross-47-after-conservation-return.png"
+    },
+    {
+      "label": "cross-48-before-c8-hub",
+      "room": "c8",
+      "player": {
+        "room": "c8",
+        "p": [
+          0,
+          1.6000001897027643,
+          10.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 432.0499999999357,
+      "milliseconds": 0.8999999985098839,
+      "metrics": {
+        "passes": 7,
+        "triangles": 14838,
+        "calls": 514
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 47,
+        "channelMin": [
+          3,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/125-cross-48-before-c8-hub.png"
+    },
+    {
+      "label": "cross-48-after-c8-hub",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          17.94999199999999,
+          1.6000001897027643,
+          0
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 432.0666666666024,
+      "milliseconds": 1.7999999970197678,
+      "metrics": {
+        "passes": 11,
+        "triangles": 40940,
+        "calls": 810
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 45,
+        "channelMin": [
+          3,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/126-cross-48-after-c8-hub.png"
+    },
+    {
+      "label": "cross-49-before-hub-9",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          17.99999999999996,
+          1.6000001897027643,
+          6
+        ],
+        "forward": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 444.6666666665909,
+      "milliseconds": 0.3999999985098839,
+      "metrics": {
+        "passes": 2,
+        "triangles": 3796,
+        "calls": 126
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 57,
+        "channelMin": [
+          4,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/127-cross-49-before-hub-9.png"
+    },
+    {
+      "label": "cross-49-after-hub-9",
+      "room": "c9",
+      "player": {
+        "room": "c9",
+        "p": [
+          0,
+          1.600000189702763,
+          9.949992000000039
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 444.68333333325756,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 1,
+        "triangles": 3182,
+        "calls": 74
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 53,
+        "channelMin": [
+          4,
+          12,
+          15
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/128-cross-49-after-hub-9.png"
+    },
+    {
+      "label": "take-weight9",
+      "room": "c9",
+      "player": {
+        "room": "c9",
+        "p": [
+          -2,
+          1.600000189702763,
+          4.15
+        ],
+        "forward": [
+          0,
+          -0.7219882597560736,
+          -0.6919053062192805
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -0.687262824584627,
+          0,
+          -1.9930594422441676
+        ],
+        "scale": 1
+      },
+      "held": "weight9",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 446.7333333332557,
+      "milliseconds": 0.30000000447034836,
+      "metrics": {
+        "passes": 1,
+        "triangles": 1574,
+        "calls": 38
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 54,
+        "channelMin": [
+          20,
+          30,
+          32
+        ],
+        "channelMax": [
+          243,
+          238,
+          217
+        ]
+      }
+    },
+    {
+      "label": "use-gravity9",
+      "room": "c9",
+      "player": {
+        "room": "c9",
+        "p": [
+          -0.7000000000000028,
+          0.900000189702763,
+          4.15
+        ],
+        "forward": [
+          0.39872623864263035,
+          2.3051616296665527e-15,
+          -0.9170700009366244
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": "weight9",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 447.39999999992176,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 2926,
+        "calls": 59
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 37,
+        "channelMin": [
+          3,
+          9,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      }
+    },
+    {
+      "label": "save-restore-27367",
+      "room": "c9",
+      "player": {
+        "room": "c9",
+        "p": [
+          4.399999949137366,
+          7.1,
+          -6.7
+        ],
+        "forward": [
+          0,
+          0.125438113889377,
+          -0.9921014462159985
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0.14499020807583918,
+          -1.1467407365998383
+        ],
+        "scale": 1
+      },
+      "held": "weight9",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 455.4333333332478,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 2,
+        "triangles": 936,
+        "calls": 83
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 49,
+        "channelMin": [
+          2,
+          8,
+          11
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      }
+    },
+    {
+      "label": "cross-50-before-wall9-in",
+      "room": "c9",
+      "player": {
+        "room": "c9",
+        "p": [
+          4.399999949137366,
+          6,
+          -10.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": "weight9",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 456.61666666658004,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 2,
+        "triangles": 852,
+        "calls": 76
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 45,
+        "channelMin": [
+          4,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/132-cross-50-before-wall9-in.png"
+    },
+    {
+      "label": "cross-50-after-wall9-in",
+      "room": "c9-record",
+      "player": {
+        "room": "c9-record",
+        "p": [
+          0,
+          1.600000050862634,
+          7.949991999999988
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": "weight9",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "simulationSeconds": 456.6333333332467,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 560,
+        "calls": 50
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 51,
+        "channelMin": [
+          4,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/133-cross-50-after-wall9-in.png"
+    },
+    {
+      "label": "chapter-9-complete",
+      "room": "c9-record",
+      "player": {
+        "room": "c9-record",
+        "p": [
+          0,
+          1.600000050862634,
+          -0.8500000000000001
+        ],
+        "forward": [
+          0,
+          -0.46256603751709724,
+          -0.8865848300843702
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -2.9995199999965383
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 459.56666666657736,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 394,
+        "calls": 32
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 33,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          205,
+          203,
+          191
+        ]
+      },
+      "screenshot": "omitted-screenshots/134-chapter-9-complete.png"
+    },
+    {
+      "label": "save-restore-27617",
+      "room": "c9-record",
+      "player": {
+        "room": "c9-record",
+        "p": [
+          0,
+          1.600000050862634,
+          -0.8500000000000001
+        ],
+        "forward": [
+          0,
+          -0.46256603751709713,
+          -0.88658483008437
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -2.9995199999965383
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 459.56666666657736,
+      "milliseconds": 0.19999999552965164,
+      "metrics": {
+        "passes": 1,
+        "triangles": 394,
+        "calls": 32
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 33,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          205,
+          203,
+          191
+        ]
+      }
+    },
+    {
+      "label": "cross-51-before-wall9-out",
+      "room": "c9-record",
+      "player": {
+        "room": "c9-record",
+        "p": [
+          0,
+          1.600000050862634,
+          8.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 462.5166666665747,
+      "milliseconds": 0.5,
+      "metrics": {
+        "passes": 3,
+        "triangles": 9928,
+        "calls": 280
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 52,
+        "channelMin": [
+          3,
+          11,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/136-cross-51-before-wall9-out.png"
+    },
+    {
+      "label": "cross-51-after-wall9-out",
+      "room": "c9",
+      "player": {
+        "room": "c9",
+        "p": [
+          4.399999949137366,
+          6,
+          -9.94999199999999
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 462.53333333324133,
+      "milliseconds": 1.3999999985098839,
+      "metrics": {
+        "passes": 8,
+        "triangles": 18292,
+        "calls": 613
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 51,
+        "channelMin": [
+          3,
+          10,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/137-cross-51-after-wall9-out.png"
+    },
+    {
+      "label": "use-gravity9wall",
+      "room": "c9",
+      "player": {
+        "room": "c9",
+        "p": [
+          5.099999949137366,
+          6.7,
+          -7.15
+        ],
+        "forward": [
+          2.2313026979635126e-17,
+          -0.36439938429872715,
+          0.93124276572906
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 463.4666666665738,
+      "milliseconds": 1.3000000044703484,
+      "metrics": {
+        "passes": 8,
+        "triangles": 18818,
+        "calls": 666
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 44,
+        "channelMin": [
+          3,
+          12,
+          17
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      }
+    },
+    {
+      "label": "cross-52-before-c9-hub",
+      "room": "c9",
+      "player": {
+        "room": "c9",
+        "p": [
+          8.673617379884035e-19,
+          1.6000000508626318,
+          10.000000000000009
+        ],
+        "forward": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 471.4499999998999,
+      "milliseconds": 1.2000000029802322,
+      "metrics": {
+        "passes": 7,
+        "triangles": 14828,
+        "calls": 514
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 49,
+        "channelMin": [
+          4,
+          12,
+          14
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/139-cross-52-before-c9-hub.png"
+    },
+    {
+      "label": "cross-52-after-c9-hub",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          17.949991999999995,
+          1.6000000508626318,
+          6
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 471.46666666656654,
+      "milliseconds": 1.5999999940395355,
+      "metrics": {
+        "passes": 11,
+        "triangles": 40942,
+        "calls": 811
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 49,
+        "channelMin": [
+          5,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/140-cross-52-after-c9-hub.png"
+    },
+    {
+      "label": "cross-53-before-hub-10",
+      "room": "hub",
+      "player": {
+        "room": "hub",
+        "p": [
+          6.473988012345444e-15,
+          1.6000000508626318,
+          -17.999999999999957
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 488.1499999998847,
+      "milliseconds": 1.2999999970197678,
+      "metrics": {
+        "passes": 4,
+        "triangles": 7266,
+        "calls": 243
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 50,
+        "channelMin": [
+          3,
+          12,
+          13
+        ],
+        "channelMax": [
+          232,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/141-cross-53-before-hub-10.png"
+    },
+    {
+      "label": "cross-53-after-hub-10",
+      "room": "c10",
+      "player": {
+        "room": "c10",
+        "p": [
+          6.473988012345444e-15,
+          1.6000000508626302,
+          12.949992000000043
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 488.16666666655135,
+      "milliseconds": 0.7000000029802322,
+      "metrics": {
+        "passes": 4,
+        "triangles": 7338,
+        "calls": 248
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 50,
+        "channelMin": [
+          3,
+          12,
+          13
+        ],
+        "channelMax": [
+          233,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/142-cross-53-after-hub-10.png"
+    },
+    {
+      "label": "cross-54-before-final-pavilion",
+      "room": "c10",
+      "player": {
+        "room": "c10",
+        "p": [
+          -4,
+          1.6000000508626302,
+          -3.8163916471489756e-16
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 492.69999999988056,
+      "milliseconds": 0.29999999701976776,
+      "metrics": {
+        "passes": 3,
+        "triangles": 6700,
+        "calls": 189
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 48,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/143-cross-54-before-final-pavilion.png"
+    },
+    {
+      "label": "cross-54-after-final-pavilion",
+      "room": "c10-inside",
+      "player": {
+        "room": "c10-inside",
+        "p": [
+          0,
+          1.6000000508626302,
+          15.949992
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 492.7166666665472,
+      "milliseconds": 0.5,
+      "metrics": {
+        "passes": 3,
+        "triangles": 6962,
+        "calls": 215
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 53,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/144-cross-54-after-final-pavilion.png"
+    },
+    {
+      "label": "take-weight10",
+      "room": "c10-inside",
+      "player": {
+        "room": "c10-inside",
+        "p": [
+          1.9994234938379576,
+          1.6000000508626302,
+          8.15224837172594
+        ],
+        "forward": [
+          0.00034653433367197076,
+          -0.7213127029879354,
+          -0.6926094602459557
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0.7451267678899034,
+          0,
+          -2.905991414263632
+        ],
+        "scale": 1
+      },
+      "held": "weight10",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 495.3999999998781,
+      "milliseconds": 0.19999999552965164,
+      "metrics": {
+        "passes": 1,
+        "triangles": 612,
+        "calls": 52
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 50,
+        "channelMin": [
+          51,
+          75,
+          69
+        ],
+        "channelMax": [
+          212,
+          189,
+          122
+        ]
+      }
+    },
+    {
+      "label": "cross-55-before-final-half",
+      "room": "c10-inside",
+      "player": {
+        "room": "c10-inside",
+        "p": [
+          0,
+          1.6000000508626302,
+          -16.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": "weight10",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 503.4833333332041,
+      "milliseconds": 0.7000000029802322,
+      "metrics": {
+        "passes": 3,
+        "triangles": 1988,
+        "calls": 179
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 47,
+        "channelMin": [
+          4,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/146-cross-55-before-final-half.png"
+    },
+    {
+      "label": "cross-55-after-final-half",
+      "room": "c10-measure",
+      "player": {
+        "room": "c10-measure",
+        "p": [
+          0,
+          0.8000000254313151,
+          7.974991999999994
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -1.5
+        ],
+        "scale": 0.5
+      },
+      "held": "weight10",
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 503.49999999987074,
+      "milliseconds": 1,
+      "metrics": {
+        "passes": 4,
+        "triangles": 13746,
+        "calls": 431
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 48,
+        "channelMin": [
+          4,
+          12,
+          13
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/147-cross-55-after-final-half.png"
+    },
+    {
+      "label": "use-plinth10",
+      "room": "c10-measure",
+      "player": {
+        "room": "c10-measure",
+        "p": [
+          0,
+          0.8000000254313151,
+          0.575
+        ],
+        "forward": [
+          0,
+          -0.3987261455265537,
+          -0.9170700414218849
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -1.499519999994865
+        ],
+        "scale": 0.5
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 508.4333333331996,
+      "milliseconds": 0.6999999955296516,
+      "metrics": {
+        "passes": 4,
+        "triangles": 13248,
+        "calls": 382
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 30,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          210,
+          204,
+          191
+        ]
+      }
+    },
+    {
+      "label": "save-restore-30554",
+      "room": "c10-measure",
+      "player": {
+        "room": "c10-measure",
+        "p": [
+          0,
+          0.8000000254313151,
+          0.575
+        ],
+        "forward": [
+          0,
+          -0.3987261455265537,
+          -0.9170700414218849
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -1.499519999994865
+        ],
+        "scale": 0.5
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 508.4333333331996,
+      "milliseconds": 0.7999999970197678,
+      "metrics": {
+        "passes": 4,
+        "triangles": 13248,
+        "calls": 382
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 30,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          210,
+          204,
+          191
+        ]
+      }
+    },
+    {
+      "label": "cross-56-before-final-restore",
+      "room": "c10-measure",
+      "player": {
+        "room": "c10-measure",
+        "p": [
+          0.0000069613886639263364,
+          0.8000000254313151,
+          -7.999953880800106
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -1.5
+        ],
+        "scale": 0.5
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 515.2166666665267,
+      "milliseconds": 0.8999999985098839,
+      "metrics": {
+        "passes": 4,
+        "triangles": 3006,
+        "calls": 278
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 53,
+        "channelMin": [
+          5,
+          12,
+          14
+        ],
+        "channelMax": [
+          205,
+          198,
+          183
+        ]
+      },
+      "screenshot": "omitted-screenshots/150-cross-56-before-final-restore.png"
+    },
+    {
+      "label": "cross-56-after-final-restore",
+      "room": "c10",
+      "player": {
+        "room": "c10",
+        "p": [
+          9.950084238399787,
+          1.6000000508626302,
+          2.999986077222672
+        ],
+        "forward": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -3,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 515.2333333331934,
+      "milliseconds": 1,
+      "metrics": {
+        "passes": 6,
+        "triangles": 4822,
+        "calls": 446
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 52,
+        "channelMin": [
+          5,
+          12,
+          14
+        ],
+        "channelMax": [
+          200,
+          198,
+          184
+        ]
+      },
+      "screenshot": "omitted-screenshots/151-cross-56-after-final-restore.png"
+    },
+    {
+      "label": "use-final-shutter",
+      "room": "c10",
+      "player": {
+        "room": "c10",
+        "p": [
+          2.5,
+          1.6000000508626302,
+          -2.8499999999999996
+        ],
+        "forward": [
+          0,
+          -0.39872614552655355,
+          -0.9170700414218849
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          -1.0563921942512524,
+          0,
+          -0.8295046647396997
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 518.3999999998572,
+      "milliseconds": 0.30000000447034836,
+      "metrics": {
+        "passes": 1,
+        "triangles": 550,
+        "calls": 50
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 37,
+        "channelMin": [
+          3,
+          23,
+          27
+        ],
+        "channelMax": [
+          204,
+          202,
+          190
+        ]
+      }
+    },
+    {
+      "label": "cross-57-before-final-hold-in",
+      "room": "c10",
+      "player": {
+        "room": "c10",
+        "p": [
+          0.0005426206565901088,
+          1.6000000508626302,
+          -12.99635668987719
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 523.1833333331862,
+      "milliseconds": 0.20000000298023224,
+      "metrics": {
+        "passes": 2,
+        "triangles": 3554,
+        "calls": 104
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 59,
+        "channelMin": [
+          3,
+          12,
+          15
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/153-cross-57-before-final-hold-in.png"
+    },
+    {
+      "label": "cross-57-after-final-hold-in",
+      "room": "c10-hold",
+      "player": {
+        "room": "c10-hold",
+        "p": [
+          0.0005426206565901088,
+          1.6000000508626302,
+          9.95363531012281
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 523.1999999998528,
+      "milliseconds": 0.19999999552965164,
+      "metrics": {
+        "passes": 1,
+        "triangles": 3156,
+        "calls": 70
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 57,
+        "channelMin": [
+          3,
+          12,
+          15
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      },
+      "screenshot": "omitted-screenshots/154-cross-57-after-final-hold-in.png"
+    },
+    {
+      "label": "use-gravity10",
+      "room": "c10-hold",
+      "player": {
+        "room": "c10-hold",
+        "p": [
+          -0.699999660108188,
+          0.9000000508626302,
+          4.153635335473556
+        ],
+        "forward": [
+          0.39766864195889523,
+          -2.7032860308530593e-7,
+          -0.9175291010112405
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 525.1333333331844,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 2914,
+        "calls": 57
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 34,
+        "channelMin": [
+          3,
+          10,
+          12
+        ],
+        "channelMax": [
+          230,
+          225,
+          208
+        ]
+      }
+    },
+    {
+      "label": "cross-58-before-exit-created",
+      "room": "c10-hold",
+      "player": {
+        "room": "c10-hold",
+        "p": [
+          4.399999848219719,
+          6,
+          -10.00000000000001
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 534.3499999998427,
+      "milliseconds": 0.6000000014901161,
+      "metrics": {
+        "passes": 2,
+        "triangles": 7294,
+        "calls": 128
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 32,
+        "channelMin": [
+          147,
+          155,
+          93
+        ],
+        "channelMax": [
+          233,
+          219,
+          216
+        ]
+      },
+      "screenshot": "omitted-screenshots/156-cross-58-before-exit-created.png"
+    },
+    {
+      "label": "cross-58-after-exit-created",
+      "room": "courtyard",
+      "player": {
+        "room": "courtyard",
+        "p": [
+          0,
+          1.6000001517802815,
+          11.94999199999999
+        ],
+        "forward": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -3
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "simulationSeconds": 534.3666666665093,
+      "milliseconds": 0.29999999701976776,
+      "metrics": {
+        "passes": 1,
+        "triangles": 7002,
+        "calls": 102
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 36,
+        "channelMin": [
+          148,
+          161,
+          96
+        ],
+        "channelMax": [
+          233,
+          219,
+          215
+        ]
+      },
+      "screenshot": "omitted-screenshots/157-cross-58-after-exit-created.png"
+    },
+    {
+      "label": "chapter-10-complete",
+      "room": "courtyard",
+      "player": {
+        "room": "courtyard",
+        "p": [
+          0,
+          1.6000001517802815,
+          -1.85
+        ],
+        "forward": [
+          0,
+          -0.3987262132091161,
+          -0.9170700119946779
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -2.999519999993341
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "simulationSeconds": 538.9666666665051,
+      "milliseconds": 0.09999999403953552,
+      "metrics": {
+        "passes": 1,
+        "triangles": 590,
+        "calls": 50
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 28,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          223,
+          220,
+          200
+        ]
+      },
+      "screenshot": "omitted-screenshots/158-chapter-10-complete.png"
+    },
+    {
+      "label": "save-restore-32390",
+      "room": "courtyard",
+      "player": {
+        "room": "courtyard",
+        "p": [
+          0,
+          1.6000001517802815,
+          -1.85
+        ],
+        "forward": [
+          0,
+          -0.3987262132091161,
+          -0.9170700119946779
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -2.999519999993341
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "simulationSeconds": 538.9666666665051,
+      "milliseconds": 0.10000000149011612,
+      "metrics": {
+        "passes": 1,
+        "triangles": 590,
+        "calls": 50
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 28,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          223,
+          220,
+          200
+        ]
+      }
+    },
+    {
+      "label": "finished-courtyard",
+      "room": "courtyard",
+      "player": {
+        "room": "courtyard",
+        "p": [
+          0,
+          1.6000001517802815,
+          -1.85
+        ],
+        "forward": [
+          0,
+          -0.3987262132091161,
+          -0.9170700119946779
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          -2.999519999993341
+        ],
+        "scale": 1
+      },
+      "held": null,
+      "solved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "simulationSeconds": 538.9666666665051,
+      "milliseconds": 0.09999999403953552,
+      "metrics": {
+        "passes": 1,
+        "triangles": 590,
+        "calls": 50
+      },
+      "glError": 0,
+      "framebuffer": {
+        "sampledPixels": 63,
+        "distinctColors": 28,
+        "channelMin": [
+          3,
+          23,
+          31
+        ],
+        "channelMax": [
+          223,
+          220,
+          200
+        ]
+      },
+      "screenshot": "omitted-screenshots/160-finished-courtyard.png"
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    }
+  ],
+  "failedRequests": [
+    {
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "error": "net::ERR_FAILED"
+    }
+  ],
+  "externalRequests": [
+    "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]"
+  ],
+  "environmentRequests": [
+    {
+      "url": "http://me.kis.v2.scr.kaspersky-labs.com/[HOST-INJECTED-SCRIPT]",
+      "reason": "Host antivirus injection, blocked and retained separately; not part of the museum source."
+    }
+  ],
+  "failures": [],
+  "updatedAt": "2026-09-09T05:21:43.798Z",
+  "final": {
+    "room": "courtyard",
+    "solved": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "finished": true,
+    "visited": [
+      "hub",
+      "c1",
+      "c1-gallery",
+      "c2",
+      "c2-archive",
+      "c3",
+      "c3-cabinet",
+      "c4",
+      "c4-winter",
+      "c4-summer",
+      "c5",
+      "c5-beyond",
+      "c6",
+      "c6-record",
+      "c7",
+      "c7-loop",
+      "c7-cabinet",
+      "c8",
+      "c8-collection",
+      "c8-conservation",
+      "c9",
+      "c9-record",
+      "c10",
+      "c10-inside",
+      "c10-measure",
+      "c10-hold",
+      "courtyard"
+    ],
+    "hints": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1
+    },
+    "crossings": [
+      {
+        "type": "crossing",
+        "portal": "hub-1",
+        "from": "hub",
+        "to": "c1",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "c1-east",
+        "from": "c1",
+        "to": "c1-gallery",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "c1-gallery-out",
+        "from": "c1-gallery",
+        "to": "c1",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "c1-enclosure",
+        "from": "c1",
+        "to": "c1-gallery",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "c1-gallery-in",
+        "from": "c1-gallery",
+        "to": "c1",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "c1-hub",
+        "from": "c1",
+        "to": "hub",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "hub-2",
+        "from": "hub",
+        "to": "c2",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "pavilion-front",
+        "from": "c2",
+        "to": "c2-archive",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "archive-west",
+        "from": "c2-archive",
+        "to": "c2",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "pavilion-rear",
+        "from": "c2",
+        "to": "c2-archive",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "archive-east",
+        "from": "c2-archive",
+        "to": "c2",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "c2-hub",
+        "from": "c2",
+        "to": "hub",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "hub-3",
+        "from": "hub",
+        "to": "c3",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "quarter-in",
+        "from": "c3",
+        "to": "c3-cabinet",
+        "scale": 0.25
+      },
+      {
+        "type": "crossing",
+        "portal": "quarter-out",
+        "from": "c3-cabinet",
+        "to": "c3",
+        "scale": 4
+      },
+      {
+        "type": "crossing",
+        "portal": "c3-hub",
+        "from": "c3",
+        "to": "hub",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "hub-4",
+        "from": "hub",
+        "to": "c4",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "garden-winter",
+        "from": "c4",
+        "to": "c4-winter",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "winter-return",
+        "from": "c4-winter",
+        "to": "c4",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "garden-summer",
+        "from": "c4",
+        "to": "c4-summer",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "summer-return",
+        "from": "c4-summer",
+        "to": "c4",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "c4-hub",
+        "from": "c4",
+        "to": "hub",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "hub-5",
+        "from": "hub",
+        "to": "c5",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "sight-in",
+        "from": "c5",
+        "to": "c5-beyond",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "sight-out",
+        "from": "c5-beyond",
+        "to": "c5",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "c5-hub",
+        "from": "c5",
+        "to": "hub",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "hub-6",
+        "from": "hub",
+        "to": "c6",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "wall6-in",
+        "from": "c6",
+        "to": "c6-record",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "wall6-out",
+        "from": "c6-record",
+        "to": "c6",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "c6-hub",
+        "from": "c6",
+        "to": "hub",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "hub-7",
+        "from": "hub",
+        "to": "c7",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "half7-in",
+        "from": "c7",
+        "to": "c7-loop",
+        "scale": 0.5
+      },
+      {
+        "type": "crossing",
+        "portal": "neutral7-out",
+        "from": "c7-loop",
+        "to": "c7",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "half7-in",
+        "from": "c7",
+        "to": "c7-loop",
+        "scale": 0.5
+      },
+      {
+        "type": "crossing",
+        "portal": "neutral7-out",
+        "from": "c7-loop",
+        "to": "c7",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "cabinet7-in",
+        "from": "c7",
+        "to": "c7-cabinet",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "cabinet7-out",
+        "from": "c7-cabinet",
+        "to": "c7",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "neutral7-in",
+        "from": "c7",
+        "to": "c7-loop",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "half7-out",
+        "from": "c7-loop",
+        "to": "c7",
+        "scale": 2
+      },
+      {
+        "type": "crossing",
+        "portal": "neutral7-in",
+        "from": "c7",
+        "to": "c7-loop",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "half7-out",
+        "from": "c7-loop",
+        "to": "c7",
+        "scale": 2
+      },
+      {
+        "type": "crossing",
+        "portal": "c7-hub",
+        "from": "c7",
+        "to": "hub",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "hub-8",
+        "from": "hub",
+        "to": "c8",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "transit-collection",
+        "from": "c8",
+        "to": "c8-collection",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "collection-return",
+        "from": "c8-collection",
+        "to": "c8",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "transit-conservation",
+        "from": "c8",
+        "to": "c8-conservation",
+        "scale": 0.5
+      },
+      {
+        "type": "crossing",
+        "portal": "conservation-return",
+        "from": "c8-conservation",
+        "to": "c8",
+        "scale": 2
+      },
+      {
+        "type": "crossing",
+        "portal": "c8-hub",
+        "from": "c8",
+        "to": "hub",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "hub-9",
+        "from": "hub",
+        "to": "c9",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "wall9-in",
+        "from": "c9",
+        "to": "c9-record",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "wall9-out",
+        "from": "c9-record",
+        "to": "c9",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "c9-hub",
+        "from": "c9",
+        "to": "hub",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "hub-10",
+        "from": "hub",
+        "to": "c10",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "final-pavilion",
+        "from": "c10",
+        "to": "c10-inside",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "final-half",
+        "from": "c10-inside",
+        "to": "c10-measure",
+        "scale": 0.5
+      },
+      {
+        "type": "crossing",
+        "portal": "final-restore",
+        "from": "c10-measure",
+        "to": "c10",
+        "scale": 2
+      },
+      {
+        "type": "crossing",
+        "portal": "final-hold-in",
+        "from": "c10",
+        "to": "c10-hold",
+        "scale": 1
+      },
+      {
+        "type": "crossing",
+        "portal": "exit-created",
+        "from": "c10-hold",
+        "to": "courtyard",
+        "scale": 1
+      }
+    ],
+    "renderedFrames": 5380,
+    "maxPasses": 12,
+    "budgetViolations": [],
+    "gameErrors": [],
+    "simulationSeconds": 538.9666666665051
+  },
+  "flatCrossingFrames": [],
+  "renderedRooms": [
+    "hub",
+    "c1",
+    "c1-gallery",
+    "c2",
+    "c2-archive",
+    "c3",
+    "c3-cabinet",
+    "c4",
+    "c4-winter",
+    "c4-summer",
+    "c5",
+    "c5-beyond",
+    "c6",
+    "c6-record",
+    "c7",
+    "c7-loop",
+    "c7-cabinet",
+    "c8",
+    "c8-collection",
+    "c8-conservation",
+    "c9",
+    "c9-record",
+    "c10",
+    "c10-inside",
+    "c10-measure",
+    "c10-hold",
+    "courtyard"
+  ],
+  "sampleTiming": {
+    "samples": 161,
+    "medianMs": 0.5,
+    "p95Ms": 1.6000000014901161,
+    "maxMs": 2.9000000059604645,
+    "meanMs": 0.6453416151289614
+  },
+  "sourceHashesAfter": {
+    "src/engine.mjs": "8ee07304679da40dfe5f3bd205608f23debe9dfa52832c977c8fb1ce187603de",
+    "src/campaign.mjs": "0e9e9e75478c8ccc275aeb5ce0052c40d531e89ec92fb2f92d71ebd9a24bb7b3",
+    "src/render.mjs": "afbaad1c60d2141120c1a7251814859522eb362c7ffa25ae33a18a61ae00b112",
+    "src/main.mjs": "7791e162b6ecef53a95e1f3f02149163079a6e4d75cf22812ca3262f38a8f366",
+    "tests/replay.mjs": "38f11bc52047d3f38bf2fd279db27e383e6c6e47b07f799b97f7e35dcc71ff4b"
+  },
+  "sourceChangedDuringRun": [],
+  "passed": true,
+  "finishedAt": "2026-09-09T05:21:43.798Z",
+  "publicSharing": {
+    "sanitizedCopy": true,
+    "note": "Public-sharing copy: machine-specific filesystem paths and antivirus-injected identifiers were replaced with labeled placeholders. Test outcomes, versions, source digests, timings, and limitations were retained. Original evidence remains in the verified local delivery."
+  }
+}

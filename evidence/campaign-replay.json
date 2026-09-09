@@ -1,0 +1,3750 @@
+{
+  "method": "Per-chamber simulation: initial pose at each safe entrance; all subsequent navigation uses step, all pickups/interactions require trace, actual campaign predicates",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "date": "2026-09-09T05:04:23.453Z",
+  "reports": [
+    {
+      "chapter": 1,
+      "title": "The Gallery of Two Norths",
+      "passed": true,
+      "simulationSeconds": 24.05,
+      "frames": 1443,
+      "portalCrossings": 4,
+      "finalRoom": "c1",
+      "finalScale": 1,
+      "actions": [
+        {
+          "action": "walk",
+          "room": "c1",
+          "p": [
+            5.2498,
+            1.6,
+            1.0001
+          ],
+          "label": "approach c1-east"
+        },
+        {
+          "action": "cross",
+          "portal": "c1-east",
+          "room": "c1-gallery",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c1-gallery",
+          "p": [
+            0,
+            1.6,
+            -10.2499
+          ],
+          "label": "approach c1-gallery-out"
+        },
+        {
+          "action": "cross",
+          "portal": "c1-gallery-out",
+          "room": "c1",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c1",
+          "p": [
+            -0.0104,
+            1.6,
+            -4.6515
+          ],
+          "label": "reach weight1"
+        },
+        {
+          "action": "take",
+          "id": "weight1"
+        },
+        {
+          "action": "walk",
+          "room": "c1",
+          "p": [
+            -5.2423,
+            1.6,
+            -5.4987
+          ],
+          "label": "approach c1-enclosure"
+        },
+        {
+          "action": "cross",
+          "portal": "c1-enclosure",
+          "room": "c1-gallery",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c1-gallery",
+          "p": [
+            0,
+            1.6,
+            10.2423
+          ],
+          "label": "approach c1-gallery-in"
+        },
+        {
+          "action": "cross",
+          "portal": "c1-gallery-in",
+          "room": "c1",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c1",
+          "p": [
+            -2.4,
+            1.6,
+            3.15
+          ],
+          "label": "reach plinth1"
+        },
+        {
+          "action": "interact",
+          "id": "plinth1",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c1",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "crossings": [
+        {
+          "portal": "c1-east",
+          "from": "c1",
+          "to": "c1-gallery",
+          "scale": 1
+        },
+        {
+          "portal": "c1-gallery-out",
+          "from": "c1-gallery",
+          "to": "c1",
+          "scale": 1
+        },
+        {
+          "portal": "c1-enclosure",
+          "from": "c1",
+          "to": "c1-gallery",
+          "scale": 1
+        },
+        {
+          "portal": "c1-gallery-in",
+          "from": "c1-gallery",
+          "to": "c1",
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "title": "The Small Pavilion",
+      "passed": true,
+      "simulationSeconds": 15.58,
+      "frames": 935,
+      "portalCrossings": 3,
+      "finalRoom": "c2-archive",
+      "finalScale": 1,
+      "actions": [
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            0,
+            1.6,
+            0.75
+          ],
+          "label": "approach pavilion-front"
+        },
+        {
+          "action": "cross",
+          "portal": "pavilion-front",
+          "room": "c2-archive",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c2-archive",
+          "p": [
+            -10,
+            1.6,
+            11.15
+          ],
+          "label": "reach weight2"
+        },
+        {
+          "action": "take",
+          "id": "weight2"
+        },
+        {
+          "action": "walk",
+          "room": "c2-archive",
+          "p": [
+            -10,
+            1.6,
+            19.25
+          ],
+          "label": "approach archive-west"
+        },
+        {
+          "action": "cross",
+          "portal": "archive-west",
+          "room": "c2",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            3,
+            1.6,
+            1
+          ],
+          "label": "around pavilion east"
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            3,
+            1.6,
+            -4
+          ],
+          "label": "behind pavilion"
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            0,
+            1.6,
+            -4
+          ],
+          "label": "waypoint"
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            0,
+            1.6,
+            -3.75
+          ],
+          "label": "approach pavilion-rear"
+        },
+        {
+          "action": "cross",
+          "portal": "pavilion-rear",
+          "room": "c2-archive",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c2-archive",
+          "p": [
+            10,
+            1.6,
+            11.15
+          ],
+          "label": "reach plinth2"
+        },
+        {
+          "action": "interact",
+          "id": "plinth2",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c2-archive",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "crossings": [
+        {
+          "portal": "pavilion-front",
+          "from": "c2",
+          "to": "c2-archive",
+          "scale": 1
+        },
+        {
+          "portal": "archive-west",
+          "from": "c2-archive",
+          "to": "c2",
+          "scale": 1
+        },
+        {
+          "portal": "pavilion-rear",
+          "from": "c2",
+          "to": "c2-archive",
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "title": "The Scale Cabinet",
+      "passed": true,
+      "simulationSeconds": 30.47,
+      "frames": 1828,
+      "portalCrossings": 2,
+      "finalRoom": "c3",
+      "finalScale": 1,
+      "actions": [
+        {
+          "action": "walk",
+          "room": "c3",
+          "p": [
+            2,
+            1.6,
+            -0.85
+          ],
+          "label": "reach weight3"
+        },
+        {
+          "action": "take",
+          "id": "weight3"
+        },
+        {
+          "action": "walk",
+          "room": "c3",
+          "p": [
+            0.0016,
+            1.6,
+            -7.245
+          ],
+          "label": "approach quarter-in"
+        },
+        {
+          "action": "cross",
+          "portal": "quarter-in",
+          "room": "c3-cabinet",
+          "scale": 0.25
+        },
+        {
+          "action": "save-restore",
+          "room": "c3-cabinet",
+          "scale": 0.25,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c3-cabinet",
+          "p": [
+            0,
+            0.4,
+            -2.7113
+          ],
+          "label": "reach plinth3"
+        },
+        {
+          "action": "interact",
+          "id": "plinth3",
+          "result": "socket"
+        },
+        {
+          "action": "walk",
+          "room": "c3-cabinet",
+          "p": [
+            0,
+            0.4,
+            6.8125
+          ],
+          "label": "approach quarter-out"
+        },
+        {
+          "action": "cross",
+          "portal": "quarter-out",
+          "room": "c3",
+          "scale": 1
+        },
+        {
+          "action": "save-restore",
+          "room": "c3",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "crossings": [
+        {
+          "portal": "quarter-in",
+          "from": "c3",
+          "to": "c3-cabinet",
+          "scale": 0.25
+        },
+        {
+          "portal": "quarter-out",
+          "from": "c3-cabinet",
+          "to": "c3",
+          "scale": 4
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "title": "The Unseen Garden",
+      "passed": true,
+      "simulationSeconds": 18.58,
+      "frames": 1115,
+      "portalCrossings": 3,
+      "finalRoom": "c4-summer",
+      "finalScale": 1,
+      "actions": [
+        {
+          "action": "walk",
+          "room": "c4",
+          "p": [
+            0,
+            1.6,
+            -8.25
+          ],
+          "label": "approach garden-winter"
+        },
+        {
+          "action": "cross",
+          "portal": "garden-winter",
+          "room": "c4-winter",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c4-winter",
+          "p": [
+            1.9994,
+            1.6,
+            0.1522
+          ],
+          "label": "reach weight4"
+        },
+        {
+          "action": "take",
+          "id": "weight4"
+        },
+        {
+          "action": "walk",
+          "room": "c4-winter",
+          "p": [
+            0,
+            1.6,
+            7.25
+          ],
+          "label": "approach winter-return"
+        },
+        {
+          "action": "cross",
+          "portal": "winter-return",
+          "room": "c4",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c4",
+          "p": [
+            2.3,
+            1.6,
+            -3.15
+          ],
+          "label": "reach garden-shutter"
+        },
+        {
+          "action": "interact",
+          "id": "garden-shutter",
+          "result": "toast"
+        },
+        {
+          "action": "look-away",
+          "id": "garden-shutter"
+        },
+        {
+          "action": "walk",
+          "room": "c4",
+          "p": [
+            1.2,
+            1.6,
+            -3.15
+          ],
+          "label": "step beside the arrangement stand"
+        },
+        {
+          "action": "walk",
+          "room": "c4",
+          "p": [
+            0,
+            1.6,
+            -8.25
+          ],
+          "label": "approach garden-summer"
+        },
+        {
+          "action": "cross",
+          "portal": "garden-summer",
+          "room": "c4-summer",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c4-summer",
+          "p": [
+            -1.9994,
+            1.6,
+            0.1522
+          ],
+          "label": "reach plinth4"
+        },
+        {
+          "action": "interact",
+          "id": "plinth4",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c4-summer",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "crossings": [
+        {
+          "portal": "garden-winter",
+          "from": "c4",
+          "to": "c4-winter",
+          "scale": 1
+        },
+        {
+          "portal": "winter-return",
+          "from": "c4-winter",
+          "to": "c4",
+          "scale": 1
+        },
+        {
+          "portal": "garden-summer",
+          "from": "c4",
+          "to": "c4-summer",
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "title": "The Sightline",
+      "passed": true,
+      "simulationSeconds": 16.98,
+      "frames": 1019,
+      "portalCrossings": 2,
+      "finalRoom": "c5",
+      "finalScale": 1,
+      "actions": [
+        {
+          "action": "walk",
+          "room": "c5",
+          "p": [
+            0,
+            1.6,
+            5
+          ],
+          "label": "observation mark sight-mark"
+        },
+        {
+          "action": "align",
+          "id": "sight-mark"
+        },
+        {
+          "action": "walk",
+          "room": "c5",
+          "p": [
+            0,
+            1.6,
+            -9.25
+          ],
+          "label": "approach sight-in"
+        },
+        {
+          "action": "cross",
+          "portal": "sight-in",
+          "room": "c5-beyond",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c5-beyond",
+          "p": [
+            2,
+            1.6,
+            0.15
+          ],
+          "label": "reach weight5"
+        },
+        {
+          "action": "take",
+          "id": "weight5"
+        },
+        {
+          "action": "walk",
+          "room": "c5-beyond",
+          "p": [
+            0,
+            1.6,
+            6.25
+          ],
+          "label": "approach sight-out"
+        },
+        {
+          "action": "cross",
+          "portal": "sight-out",
+          "room": "c5",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c5",
+          "p": [
+            -3,
+            1.6,
+            1.85
+          ],
+          "label": "reach plinth5"
+        },
+        {
+          "action": "interact",
+          "id": "plinth5",
+          "result": "socket"
+        },
+        {
+          "action": "walk",
+          "room": "c5",
+          "p": [
+            -1.7,
+            1.6,
+            1.85
+          ],
+          "label": "beside the filled sightline index"
+        },
+        {
+          "action": "walk",
+          "room": "c5",
+          "p": [
+            -1.7,
+            1.6,
+            4.15
+          ],
+          "label": "past the sightline index"
+        },
+        {
+          "action": "save-restore",
+          "room": "c5",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "crossings": [
+        {
+          "portal": "sight-in",
+          "from": "c5",
+          "to": "c5-beyond",
+          "scale": 1
+        },
+        {
+          "portal": "sight-out",
+          "from": "c5-beyond",
+          "to": "c5",
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "title": "The Gravity Atrium",
+      "passed": true,
+      "simulationSeconds": 15.6,
+      "frames": 936,
+      "portalCrossings": 2,
+      "finalRoom": "c6",
+      "finalScale": 1,
+      "actions": [
+        {
+          "action": "walk",
+          "room": "c6",
+          "p": [
+            0,
+            1.6,
+            3.15
+          ],
+          "label": "reach gravity6"
+        },
+        {
+          "action": "interact",
+          "id": "gravity6",
+          "result": "toast"
+        },
+        {
+          "action": "walk",
+          "room": "c6",
+          "p": [
+            4.4,
+            6,
+            -5
+          ],
+          "label": "walk up the former wall, beside its compass"
+        },
+        {
+          "action": "save-restore",
+          "room": "c6",
+          "scale": 1,
+          "up": [
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c6",
+          "p": [
+            4.4,
+            6.9999,
+            -8.2496
+          ],
+          "label": "approach wall6-in"
+        },
+        {
+          "action": "cross",
+          "portal": "wall6-in",
+          "room": "c6-record",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c6-record",
+          "p": [
+            0,
+            1.6,
+            -0.8497
+          ],
+          "label": "reach plate6"
+        },
+        {
+          "action": "interact",
+          "id": "plate6",
+          "result": "toast"
+        },
+        {
+          "action": "walk",
+          "room": "c6-record",
+          "p": [
+            0,
+            1.6,
+            6.25
+          ],
+          "label": "approach wall6-out"
+        },
+        {
+          "action": "cross",
+          "portal": "wall6-out",
+          "room": "c6",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c6",
+          "p": [
+            4.4,
+            7,
+            -6.55
+          ],
+          "label": "reach gravity6wall"
+        },
+        {
+          "action": "interact",
+          "id": "gravity6wall",
+          "result": "toast"
+        },
+        {
+          "action": "save-restore",
+          "room": "c6",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "crossings": [
+        {
+          "portal": "wall6-in",
+          "from": "c6",
+          "to": "c6-record",
+          "scale": 1
+        },
+        {
+          "portal": "wall6-out",
+          "from": "c6-record",
+          "to": "c6",
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "title": "The Hall of Measures",
+      "passed": true,
+      "simulationSeconds": 62.37,
+      "frames": 3742,
+      "portalCrossings": 5,
+      "finalRoom": "c7-cabinet",
+      "finalScale": 0.25,
+      "actions": [
+        {
+          "action": "walk",
+          "room": "c7",
+          "p": [
+            2,
+            1.6,
+            5.15
+          ],
+          "label": "reach weight7"
+        },
+        {
+          "action": "take",
+          "id": "weight7"
+        },
+        {
+          "action": "walk",
+          "room": "c7",
+          "p": [
+            3.5,
+            1.6,
+            -9.25
+          ],
+          "label": "approach half7-in"
+        },
+        {
+          "action": "cross",
+          "portal": "half7-in",
+          "room": "c7-loop",
+          "scale": 0.5
+        },
+        {
+          "action": "walk",
+          "room": "c7-loop",
+          "p": [
+            0,
+            0.8,
+            -6.625
+          ],
+          "label": "approach neutral7-out"
+        },
+        {
+          "action": "cross",
+          "portal": "neutral7-out",
+          "room": "c7",
+          "scale": 0.5
+        },
+        {
+          "action": "walk",
+          "room": "c7",
+          "p": [
+            3.5,
+            0.8,
+            -9.625
+          ],
+          "label": "approach half7-in"
+        },
+        {
+          "action": "cross",
+          "portal": "half7-in",
+          "room": "c7-loop",
+          "scale": 0.25
+        },
+        {
+          "action": "walk",
+          "room": "c7-loop",
+          "p": [
+            0,
+            0.4,
+            -6.8125
+          ],
+          "label": "approach neutral7-out"
+        },
+        {
+          "action": "cross",
+          "portal": "neutral7-out",
+          "room": "c7",
+          "scale": 0.25
+        },
+        {
+          "action": "save-restore",
+          "room": "c7",
+          "scale": 0.25,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c7",
+          "p": [
+            -7.8125,
+            0.4,
+            0
+          ],
+          "label": "approach cabinet7-in"
+        },
+        {
+          "action": "cross",
+          "portal": "cabinet7-in",
+          "room": "c7-cabinet",
+          "scale": 0.25
+        },
+        {
+          "action": "walk",
+          "room": "c7-cabinet",
+          "p": [
+            0,
+            0.4,
+            3.2875
+          ],
+          "label": "reach plinth7"
+        },
+        {
+          "action": "interact",
+          "id": "plinth7",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c7-cabinet",
+          "scale": 0.25,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "crossings": [
+        {
+          "portal": "half7-in",
+          "from": "c7",
+          "to": "c7-loop",
+          "scale": 0.5
+        },
+        {
+          "portal": "neutral7-out",
+          "from": "c7-loop",
+          "to": "c7",
+          "scale": 1
+        },
+        {
+          "portal": "half7-in",
+          "from": "c7",
+          "to": "c7-loop",
+          "scale": 0.5
+        },
+        {
+          "portal": "neutral7-out",
+          "from": "c7-loop",
+          "to": "c7",
+          "scale": 1
+        },
+        {
+          "portal": "cabinet7-in",
+          "from": "c7",
+          "to": "c7-cabinet",
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "title": "Blind Transit",
+      "passed": true,
+      "simulationSeconds": 20.82,
+      "frames": 1249,
+      "portalCrossings": 3,
+      "finalRoom": "c8-conservation",
+      "finalScale": 0.5,
+      "actions": [
+        {
+          "action": "walk",
+          "room": "c8",
+          "p": [
+            0,
+            1.6,
+            -9.25
+          ],
+          "label": "approach transit-collection"
+        },
+        {
+          "action": "cross",
+          "portal": "transit-collection",
+          "room": "c8-collection",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c8-collection",
+          "p": [
+            2,
+            1.6,
+            6.15
+          ],
+          "label": "reach weight8"
+        },
+        {
+          "action": "take",
+          "id": "weight8"
+        },
+        {
+          "action": "walk",
+          "room": "c8-collection",
+          "p": [
+            8.2452,
+            1.6,
+            5.0009
+          ],
+          "label": "approach collection-return"
+        },
+        {
+          "action": "cross",
+          "portal": "collection-return",
+          "room": "c8",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c8",
+          "p": [
+            2.4,
+            1.6,
+            -3.15
+          ],
+          "label": "reach transit-shutter"
+        },
+        {
+          "action": "interact",
+          "id": "transit-shutter",
+          "result": "toast"
+        },
+        {
+          "action": "look-away",
+          "id": "transit-shutter"
+        },
+        {
+          "action": "walk",
+          "room": "c8",
+          "p": [
+            1.3,
+            1.6,
+            -3.15
+          ],
+          "label": "step beside the arrangement stand"
+        },
+        {
+          "action": "walk",
+          "room": "c8",
+          "p": [
+            0,
+            1.6,
+            -9.25
+          ],
+          "label": "approach transit-conservation"
+        },
+        {
+          "action": "cross",
+          "portal": "transit-conservation",
+          "room": "c8-conservation",
+          "scale": 0.5
+        },
+        {
+          "action": "walk",
+          "room": "c8-conservation",
+          "p": [
+            0,
+            0.8,
+            5.575
+          ],
+          "label": "reach plinth8"
+        },
+        {
+          "action": "interact",
+          "id": "plinth8",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c8-conservation",
+          "scale": 0.5,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "crossings": [
+        {
+          "portal": "transit-collection",
+          "from": "c8",
+          "to": "c8-collection",
+          "scale": 1
+        },
+        {
+          "portal": "collection-return",
+          "from": "c8-collection",
+          "to": "c8",
+          "scale": 1
+        },
+        {
+          "portal": "transit-conservation",
+          "from": "c8",
+          "to": "c8-conservation",
+          "scale": 0.5
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "title": "The Ceiling Observatory",
+      "passed": true,
+      "simulationSeconds": 14,
+      "frames": 840,
+      "portalCrossings": 1,
+      "finalRoom": "c9-record",
+      "finalScale": 1,
+      "actions": [
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            -2,
+            1.6,
+            4.15
+          ],
+          "label": "reach weight9"
+        },
+        {
+          "action": "take",
+          "id": "weight9"
+        },
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            0,
+            1.6,
+            4.15
+          ],
+          "label": "reach gravity9"
+        },
+        {
+          "action": "interact",
+          "id": "gravity9",
+          "result": "toast"
+        },
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            4.4,
+            6,
+            2
+          ],
+          "label": "observation mark wall-mark9"
+        },
+        {
+          "action": "align",
+          "id": "wall-mark9"
+        },
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            4.4,
+            7.1,
+            -6.7
+          ],
+          "label": "walk beside the wall compass"
+        },
+        {
+          "action": "save-restore",
+          "room": "c9",
+          "scale": 1,
+          "up": [
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            4.4,
+            6,
+            -9.25
+          ],
+          "label": "approach wall9-in"
+        },
+        {
+          "action": "cross",
+          "portal": "wall9-in",
+          "room": "c9-record",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c9-record",
+          "p": [
+            0,
+            1.6,
+            -0.85
+          ],
+          "label": "reach plinth9"
+        },
+        {
+          "action": "interact",
+          "id": "plinth9",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c9-record",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "crossings": [
+        {
+          "portal": "wall9-in",
+          "from": "c9",
+          "to": "c9-record",
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "title": "Exit Without Exterior",
+      "passed": true,
+      "simulationSeconds": 49.88,
+      "frames": 2993,
+      "portalCrossings": 5,
+      "finalRoom": "courtyard",
+      "finalScale": 1,
+      "actions": [
+        {
+          "action": "walk",
+          "room": "c10",
+          "p": [
+            -4,
+            1.6,
+            0.75
+          ],
+          "label": "approach final-pavilion"
+        },
+        {
+          "action": "cross",
+          "portal": "final-pavilion",
+          "room": "c10-inside",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c10-inside",
+          "p": [
+            1.9994,
+            1.6,
+            8.1522
+          ],
+          "label": "reach weight10"
+        },
+        {
+          "action": "take",
+          "id": "weight10"
+        },
+        {
+          "action": "walk",
+          "room": "c10-inside",
+          "p": [
+            0,
+            1.6,
+            -15.25
+          ],
+          "label": "approach final-half"
+        },
+        {
+          "action": "cross",
+          "portal": "final-half",
+          "room": "c10-measure",
+          "scale": 0.5
+        },
+        {
+          "action": "walk",
+          "room": "c10-measure",
+          "p": [
+            0,
+            0.8,
+            0.575
+          ],
+          "label": "reach plinth10"
+        },
+        {
+          "action": "interact",
+          "id": "plinth10",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c10-measure",
+          "scale": 0.5,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c10-measure",
+          "p": [
+            1,
+            0.8,
+            1
+          ],
+          "label": "beside OPEN index"
+        },
+        {
+          "action": "walk",
+          "room": "c10-measure",
+          "p": [
+            1,
+            0.8,
+            -1
+          ],
+          "label": "past OPEN index"
+        },
+        {
+          "action": "walk",
+          "room": "c10-measure",
+          "p": [
+            0,
+            0.8,
+            -7.625
+          ],
+          "label": "approach final-restore"
+        },
+        {
+          "action": "cross",
+          "portal": "final-restore",
+          "room": "c10",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c10",
+          "p": [
+            2.5,
+            1.6,
+            -2.85
+          ],
+          "label": "reach final-shutter"
+        },
+        {
+          "action": "interact",
+          "id": "final-shutter",
+          "result": "toast"
+        },
+        {
+          "action": "look-away",
+          "id": "final-shutter"
+        },
+        {
+          "action": "walk",
+          "room": "c10",
+          "p": [
+            1.4,
+            1.6,
+            -2.85
+          ],
+          "label": "step beside the arrangement stand"
+        },
+        {
+          "action": "walk",
+          "room": "c10",
+          "p": [
+            0.0005,
+            1.6,
+            -12.2464
+          ],
+          "label": "approach final-hold-in"
+        },
+        {
+          "action": "cross",
+          "portal": "final-hold-in",
+          "room": "c10-hold",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c10-hold",
+          "p": [
+            0,
+            1.6,
+            4.1536
+          ],
+          "label": "reach gravity10"
+        },
+        {
+          "action": "interact",
+          "id": "gravity10",
+          "result": "toast"
+        },
+        {
+          "action": "walk",
+          "room": "c10-hold",
+          "p": [
+            4.4,
+            6,
+            2
+          ],
+          "label": "observation mark final-mark"
+        },
+        {
+          "action": "align",
+          "id": "final-mark"
+        },
+        {
+          "action": "walk",
+          "room": "c10-hold",
+          "p": [
+            4.4,
+            7.1,
+            -6.7
+          ],
+          "label": "walk beside the wall compass"
+        },
+        {
+          "action": "walk",
+          "room": "c10-hold",
+          "p": [
+            4.4,
+            6,
+            -9.25
+          ],
+          "label": "approach exit-created"
+        },
+        {
+          "action": "cross",
+          "portal": "exit-created",
+          "room": "courtyard",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "courtyard",
+          "p": [
+            0,
+            1.6,
+            -1.85
+          ],
+          "label": "reach last-ledger"
+        },
+        {
+          "action": "interact",
+          "id": "last-ledger",
+          "result": "ending"
+        },
+        {
+          "action": "save-restore",
+          "room": "courtyard",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "crossings": [
+        {
+          "portal": "final-pavilion",
+          "from": "c10",
+          "to": "c10-inside",
+          "scale": 1
+        },
+        {
+          "portal": "final-half",
+          "from": "c10-inside",
+          "to": "c10-measure",
+          "scale": 0.5
+        },
+        {
+          "portal": "final-restore",
+          "from": "c10-measure",
+          "to": "c10",
+          "scale": 2
+        },
+        {
+          "portal": "final-hold-in",
+          "from": "c10",
+          "to": "c10-hold",
+          "scale": 1
+        },
+        {
+          "portal": "exit-created",
+          "from": "c10-hold",
+          "to": "courtyard",
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "chapter": "complete campaign",
+      "title": "Hub to departure ledger",
+      "passed": true,
+      "simulationSeconds": 538.97,
+      "frames": 32338,
+      "portalCrossings": 58,
+      "finalRoom": "courtyard",
+      "finalScale": 1,
+      "actions": [
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            0,
+            1.6,
+            8
+          ],
+          "label": "the hub approach"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            -17.25,
+            1.6,
+            -12
+          ],
+          "label": "approach hub-1"
+        },
+        {
+          "action": "cross",
+          "portal": "hub-1",
+          "room": "c1",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c1",
+          "p": [
+            5.2439,
+            1.6,
+            1.008
+          ],
+          "label": "approach c1-east"
+        },
+        {
+          "action": "cross",
+          "portal": "c1-east",
+          "room": "c1-gallery",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c1-gallery",
+          "p": [
+            0,
+            1.6,
+            -10.244
+          ],
+          "label": "approach c1-gallery-out"
+        },
+        {
+          "action": "cross",
+          "portal": "c1-gallery-out",
+          "room": "c1",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c1",
+          "p": [
+            0,
+            1.6,
+            -4.65
+          ],
+          "label": "reach weight1"
+        },
+        {
+          "action": "take",
+          "id": "weight1"
+        },
+        {
+          "action": "walk",
+          "room": "c1",
+          "p": [
+            -5.25,
+            1.6,
+            -5.5
+          ],
+          "label": "approach c1-enclosure"
+        },
+        {
+          "action": "cross",
+          "portal": "c1-enclosure",
+          "room": "c1-gallery",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c1-gallery",
+          "p": [
+            0,
+            1.6,
+            10.25
+          ],
+          "label": "approach c1-gallery-in"
+        },
+        {
+          "action": "cross",
+          "portal": "c1-gallery-in",
+          "room": "c1",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c1",
+          "p": [
+            -2.4,
+            1.6,
+            3.15
+          ],
+          "label": "reach plinth1"
+        },
+        {
+          "action": "interact",
+          "id": "plinth1",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c1",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c1",
+          "p": [
+            -0.0004,
+            1.6,
+            7.2493
+          ],
+          "label": "approach c1-hub"
+        },
+        {
+          "action": "cross",
+          "portal": "c1-hub",
+          "room": "hub",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            -0.0036,
+            1.6,
+            7.9968
+          ],
+          "label": "the hub approach"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            -17.25,
+            1.6,
+            -6
+          ],
+          "label": "approach hub-2"
+        },
+        {
+          "action": "cross",
+          "portal": "hub-2",
+          "room": "c2",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            0,
+            1.6,
+            0.75
+          ],
+          "label": "approach pavilion-front"
+        },
+        {
+          "action": "cross",
+          "portal": "pavilion-front",
+          "room": "c2-archive",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c2-archive",
+          "p": [
+            -10,
+            1.6,
+            11.15
+          ],
+          "label": "reach weight2"
+        },
+        {
+          "action": "take",
+          "id": "weight2"
+        },
+        {
+          "action": "walk",
+          "room": "c2-archive",
+          "p": [
+            -10,
+            1.6,
+            19.25
+          ],
+          "label": "approach archive-west"
+        },
+        {
+          "action": "cross",
+          "portal": "archive-west",
+          "room": "c2",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            3,
+            1.6,
+            1
+          ],
+          "label": "around pavilion east"
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            3,
+            1.6,
+            -4
+          ],
+          "label": "behind pavilion"
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            0,
+            1.6,
+            -4
+          ],
+          "label": "waypoint"
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            0,
+            1.6,
+            -3.75
+          ],
+          "label": "approach pavilion-rear"
+        },
+        {
+          "action": "cross",
+          "portal": "pavilion-rear",
+          "room": "c2-archive",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c2-archive",
+          "p": [
+            10,
+            1.6,
+            11.15
+          ],
+          "label": "reach plinth2"
+        },
+        {
+          "action": "interact",
+          "id": "plinth2",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c2-archive",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c2-archive",
+          "p": [
+            10,
+            1.6,
+            19.25
+          ],
+          "label": "approach archive-east"
+        },
+        {
+          "action": "cross",
+          "portal": "archive-east",
+          "room": "c2",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            3,
+            1.6,
+            -4
+          ],
+          "label": "behind pavilion on return"
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            3,
+            1.6,
+            1
+          ],
+          "label": "around pavilion on return"
+        },
+        {
+          "action": "walk",
+          "room": "c2",
+          "p": [
+            0,
+            1.6,
+            10.25
+          ],
+          "label": "approach c2-hub"
+        },
+        {
+          "action": "cross",
+          "portal": "c2-hub",
+          "room": "hub",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            0,
+            1.6,
+            8
+          ],
+          "label": "the hub approach"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            -17.25,
+            1.6,
+            0
+          ],
+          "label": "approach hub-3"
+        },
+        {
+          "action": "cross",
+          "portal": "hub-3",
+          "room": "c3",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c3",
+          "p": [
+            2,
+            1.6,
+            -0.85
+          ],
+          "label": "reach weight3"
+        },
+        {
+          "action": "take",
+          "id": "weight3"
+        },
+        {
+          "action": "walk",
+          "room": "c3",
+          "p": [
+            0.0016,
+            1.6,
+            -7.245
+          ],
+          "label": "approach quarter-in"
+        },
+        {
+          "action": "cross",
+          "portal": "quarter-in",
+          "room": "c3-cabinet",
+          "scale": 0.25
+        },
+        {
+          "action": "save-restore",
+          "room": "c3-cabinet",
+          "scale": 0.25,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c3-cabinet",
+          "p": [
+            0,
+            0.4,
+            -2.7113
+          ],
+          "label": "reach plinth3"
+        },
+        {
+          "action": "interact",
+          "id": "plinth3",
+          "result": "socket"
+        },
+        {
+          "action": "walk",
+          "room": "c3-cabinet",
+          "p": [
+            0,
+            0.4,
+            6.8125
+          ],
+          "label": "approach quarter-out"
+        },
+        {
+          "action": "cross",
+          "portal": "quarter-out",
+          "room": "c3",
+          "scale": 1
+        },
+        {
+          "action": "save-restore",
+          "room": "c3",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c3",
+          "p": [
+            0,
+            1.6,
+            7.25
+          ],
+          "label": "approach c3-hub"
+        },
+        {
+          "action": "cross",
+          "portal": "c3-hub",
+          "room": "hub",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            -0.0019,
+            1.6,
+            7.9992
+          ],
+          "label": "the hub approach"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            -17.25,
+            1.6,
+            6
+          ],
+          "label": "approach hub-4"
+        },
+        {
+          "action": "cross",
+          "portal": "hub-4",
+          "room": "c4",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c4",
+          "p": [
+            0,
+            1.6,
+            -8.25
+          ],
+          "label": "approach garden-winter"
+        },
+        {
+          "action": "cross",
+          "portal": "garden-winter",
+          "room": "c4-winter",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c4-winter",
+          "p": [
+            1.9994,
+            1.6,
+            0.1522
+          ],
+          "label": "reach weight4"
+        },
+        {
+          "action": "take",
+          "id": "weight4"
+        },
+        {
+          "action": "walk",
+          "room": "c4-winter",
+          "p": [
+            0,
+            1.6,
+            7.25
+          ],
+          "label": "approach winter-return"
+        },
+        {
+          "action": "cross",
+          "portal": "winter-return",
+          "room": "c4",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c4",
+          "p": [
+            2.3,
+            1.6,
+            -3.15
+          ],
+          "label": "reach garden-shutter"
+        },
+        {
+          "action": "interact",
+          "id": "garden-shutter",
+          "result": "toast"
+        },
+        {
+          "action": "look-away",
+          "id": "garden-shutter"
+        },
+        {
+          "action": "walk",
+          "room": "c4",
+          "p": [
+            1.2,
+            1.6,
+            -3.15
+          ],
+          "label": "step beside the arrangement stand"
+        },
+        {
+          "action": "walk",
+          "room": "c4",
+          "p": [
+            0,
+            1.6,
+            -8.25
+          ],
+          "label": "approach garden-summer"
+        },
+        {
+          "action": "cross",
+          "portal": "garden-summer",
+          "room": "c4-summer",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c4-summer",
+          "p": [
+            -1.9994,
+            1.6,
+            0.1522
+          ],
+          "label": "reach plinth4"
+        },
+        {
+          "action": "interact",
+          "id": "plinth4",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c4-summer",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c4-summer",
+          "p": [
+            0,
+            1.6,
+            7.25
+          ],
+          "label": "approach summer-return"
+        },
+        {
+          "action": "cross",
+          "portal": "summer-return",
+          "room": "c4",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c4",
+          "p": [
+            0,
+            1.6,
+            8.25
+          ],
+          "label": "approach c4-hub"
+        },
+        {
+          "action": "cross",
+          "portal": "c4-hub",
+          "room": "hub",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            -0.011,
+            1.6,
+            7.9988
+          ],
+          "label": "the hub approach"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            -17.25,
+            1.6,
+            12
+          ],
+          "label": "approach hub-5"
+        },
+        {
+          "action": "cross",
+          "portal": "hub-5",
+          "room": "c5",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c5",
+          "p": [
+            0,
+            1.6,
+            5
+          ],
+          "label": "observation mark sight-mark"
+        },
+        {
+          "action": "align",
+          "id": "sight-mark"
+        },
+        {
+          "action": "walk",
+          "room": "c5",
+          "p": [
+            0,
+            1.6,
+            -9.25
+          ],
+          "label": "approach sight-in"
+        },
+        {
+          "action": "cross",
+          "portal": "sight-in",
+          "room": "c5-beyond",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c5-beyond",
+          "p": [
+            2,
+            1.6,
+            0.15
+          ],
+          "label": "reach weight5"
+        },
+        {
+          "action": "take",
+          "id": "weight5"
+        },
+        {
+          "action": "walk",
+          "room": "c5-beyond",
+          "p": [
+            0,
+            1.6,
+            6.25
+          ],
+          "label": "approach sight-out"
+        },
+        {
+          "action": "cross",
+          "portal": "sight-out",
+          "room": "c5",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c5",
+          "p": [
+            -3,
+            1.6,
+            1.85
+          ],
+          "label": "reach plinth5"
+        },
+        {
+          "action": "interact",
+          "id": "plinth5",
+          "result": "socket"
+        },
+        {
+          "action": "walk",
+          "room": "c5",
+          "p": [
+            -1.7,
+            1.6,
+            1.85
+          ],
+          "label": "beside the filled sightline index"
+        },
+        {
+          "action": "walk",
+          "room": "c5",
+          "p": [
+            -1.7,
+            1.6,
+            4.15
+          ],
+          "label": "past the sightline index"
+        },
+        {
+          "action": "save-restore",
+          "room": "c5",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c5",
+          "p": [
+            0,
+            1.6,
+            9.25
+          ],
+          "label": "approach c5-hub"
+        },
+        {
+          "action": "cross",
+          "portal": "c5-hub",
+          "room": "hub",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            0,
+            1.6,
+            8
+          ],
+          "label": "the hub approach"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            17.25,
+            1.6,
+            -12
+          ],
+          "label": "approach hub-6"
+        },
+        {
+          "action": "cross",
+          "portal": "hub-6",
+          "room": "c6",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c6",
+          "p": [
+            0,
+            1.6,
+            3.15
+          ],
+          "label": "reach gravity6"
+        },
+        {
+          "action": "interact",
+          "id": "gravity6",
+          "result": "toast"
+        },
+        {
+          "action": "walk",
+          "room": "c6",
+          "p": [
+            4.4,
+            6,
+            -5
+          ],
+          "label": "walk up the former wall, beside its compass"
+        },
+        {
+          "action": "save-restore",
+          "room": "c6",
+          "scale": 1,
+          "up": [
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c6",
+          "p": [
+            4.4,
+            6.9999,
+            -8.2496
+          ],
+          "label": "approach wall6-in"
+        },
+        {
+          "action": "cross",
+          "portal": "wall6-in",
+          "room": "c6-record",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c6-record",
+          "p": [
+            0,
+            1.6,
+            -0.8497
+          ],
+          "label": "reach plate6"
+        },
+        {
+          "action": "interact",
+          "id": "plate6",
+          "result": "toast"
+        },
+        {
+          "action": "walk",
+          "room": "c6-record",
+          "p": [
+            0,
+            1.6,
+            6.25
+          ],
+          "label": "approach wall6-out"
+        },
+        {
+          "action": "cross",
+          "portal": "wall6-out",
+          "room": "c6",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c6",
+          "p": [
+            4.4,
+            7,
+            -6.55
+          ],
+          "label": "reach gravity6wall"
+        },
+        {
+          "action": "interact",
+          "id": "gravity6wall",
+          "result": "toast"
+        },
+        {
+          "action": "save-restore",
+          "room": "c6",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c6",
+          "p": [
+            0.0013,
+            1.6,
+            8.2461
+          ],
+          "label": "approach c6-hub"
+        },
+        {
+          "action": "cross",
+          "portal": "c6-hub",
+          "room": "hub",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            0.0038,
+            1.6,
+            7.9966
+          ],
+          "label": "the hub approach"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            17.25,
+            1.6,
+            -6
+          ],
+          "label": "approach hub-7"
+        },
+        {
+          "action": "cross",
+          "portal": "hub-7",
+          "room": "c7",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c7",
+          "p": [
+            2,
+            1.6,
+            5.15
+          ],
+          "label": "reach weight7"
+        },
+        {
+          "action": "take",
+          "id": "weight7"
+        },
+        {
+          "action": "walk",
+          "room": "c7",
+          "p": [
+            3.5,
+            1.6,
+            -9.25
+          ],
+          "label": "approach half7-in"
+        },
+        {
+          "action": "cross",
+          "portal": "half7-in",
+          "room": "c7-loop",
+          "scale": 0.5
+        },
+        {
+          "action": "walk",
+          "room": "c7-loop",
+          "p": [
+            0,
+            0.8,
+            -6.625
+          ],
+          "label": "approach neutral7-out"
+        },
+        {
+          "action": "cross",
+          "portal": "neutral7-out",
+          "room": "c7",
+          "scale": 0.5
+        },
+        {
+          "action": "walk",
+          "room": "c7",
+          "p": [
+            3.5,
+            0.8,
+            -9.625
+          ],
+          "label": "approach half7-in"
+        },
+        {
+          "action": "cross",
+          "portal": "half7-in",
+          "room": "c7-loop",
+          "scale": 0.25
+        },
+        {
+          "action": "walk",
+          "room": "c7-loop",
+          "p": [
+            0,
+            0.4,
+            -6.8125
+          ],
+          "label": "approach neutral7-out"
+        },
+        {
+          "action": "cross",
+          "portal": "neutral7-out",
+          "room": "c7",
+          "scale": 0.25
+        },
+        {
+          "action": "save-restore",
+          "room": "c7",
+          "scale": 0.25,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c7",
+          "p": [
+            -7.8125,
+            0.4,
+            0
+          ],
+          "label": "approach cabinet7-in"
+        },
+        {
+          "action": "cross",
+          "portal": "cabinet7-in",
+          "room": "c7-cabinet",
+          "scale": 0.25
+        },
+        {
+          "action": "walk",
+          "room": "c7-cabinet",
+          "p": [
+            0,
+            0.4,
+            3.2875
+          ],
+          "label": "reach plinth7"
+        },
+        {
+          "action": "interact",
+          "id": "plinth7",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c7-cabinet",
+          "scale": 0.25,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c7-cabinet",
+          "p": [
+            0,
+            0.4,
+            8.8125
+          ],
+          "label": "approach cabinet7-out"
+        },
+        {
+          "action": "cross",
+          "portal": "cabinet7-out",
+          "room": "c7",
+          "scale": 0.25
+        },
+        {
+          "action": "walk",
+          "room": "c7",
+          "p": [
+            -3.501,
+            0.4,
+            -9.8103
+          ],
+          "label": "approach neutral7-in"
+        },
+        {
+          "action": "cross",
+          "portal": "neutral7-in",
+          "room": "c7-loop",
+          "scale": 0.25
+        },
+        {
+          "action": "walk",
+          "room": "c7-loop",
+          "p": [
+            0,
+            0.4,
+            6.8103
+          ],
+          "label": "approach half7-out"
+        },
+        {
+          "action": "cross",
+          "portal": "half7-out",
+          "room": "c7",
+          "scale": 0.5
+        },
+        {
+          "action": "walk",
+          "room": "c7",
+          "p": [
+            -3.4994,
+            0.8,
+            -9.625
+          ],
+          "label": "approach neutral7-in"
+        },
+        {
+          "action": "cross",
+          "portal": "neutral7-in",
+          "room": "c7-loop",
+          "scale": 0.5
+        },
+        {
+          "action": "walk",
+          "room": "c7-loop",
+          "p": [
+            0,
+            0.8,
+            6.625
+          ],
+          "label": "approach half7-out"
+        },
+        {
+          "action": "cross",
+          "portal": "half7-out",
+          "room": "c7",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c7",
+          "p": [
+            0,
+            1.6,
+            9.25
+          ],
+          "label": "approach c7-hub"
+        },
+        {
+          "action": "cross",
+          "portal": "c7-hub",
+          "room": "hub",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            0,
+            1.6,
+            8
+          ],
+          "label": "the hub approach"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            17.25,
+            1.6,
+            0
+          ],
+          "label": "approach hub-8"
+        },
+        {
+          "action": "cross",
+          "portal": "hub-8",
+          "room": "c8",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c8",
+          "p": [
+            0,
+            1.6,
+            -9.25
+          ],
+          "label": "approach transit-collection"
+        },
+        {
+          "action": "cross",
+          "portal": "transit-collection",
+          "room": "c8-collection",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c8-collection",
+          "p": [
+            2,
+            1.6,
+            6.15
+          ],
+          "label": "reach weight8"
+        },
+        {
+          "action": "take",
+          "id": "weight8"
+        },
+        {
+          "action": "walk",
+          "room": "c8-collection",
+          "p": [
+            8.2452,
+            1.6,
+            5.0009
+          ],
+          "label": "approach collection-return"
+        },
+        {
+          "action": "cross",
+          "portal": "collection-return",
+          "room": "c8",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c8",
+          "p": [
+            2.4,
+            1.6,
+            -3.15
+          ],
+          "label": "reach transit-shutter"
+        },
+        {
+          "action": "interact",
+          "id": "transit-shutter",
+          "result": "toast"
+        },
+        {
+          "action": "look-away",
+          "id": "transit-shutter"
+        },
+        {
+          "action": "walk",
+          "room": "c8",
+          "p": [
+            1.3,
+            1.6,
+            -3.15
+          ],
+          "label": "step beside the arrangement stand"
+        },
+        {
+          "action": "walk",
+          "room": "c8",
+          "p": [
+            0,
+            1.6,
+            -9.25
+          ],
+          "label": "approach transit-conservation"
+        },
+        {
+          "action": "cross",
+          "portal": "transit-conservation",
+          "room": "c8-conservation",
+          "scale": 0.5
+        },
+        {
+          "action": "walk",
+          "room": "c8-conservation",
+          "p": [
+            0,
+            0.8,
+            5.575
+          ],
+          "label": "reach plinth8"
+        },
+        {
+          "action": "interact",
+          "id": "plinth8",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c8-conservation",
+          "scale": 0.5,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c8-conservation",
+          "p": [
+            0,
+            0.8,
+            11.625
+          ],
+          "label": "approach conservation-return"
+        },
+        {
+          "action": "cross",
+          "portal": "conservation-return",
+          "room": "c8",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c8",
+          "p": [
+            0,
+            1.6,
+            9.25
+          ],
+          "label": "approach c8-hub"
+        },
+        {
+          "action": "cross",
+          "portal": "c8-hub",
+          "room": "hub",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            0.0019,
+            1.6,
+            7.9992
+          ],
+          "label": "the hub approach"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            17.25,
+            1.6,
+            6
+          ],
+          "label": "approach hub-9"
+        },
+        {
+          "action": "cross",
+          "portal": "hub-9",
+          "room": "c9",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            -2,
+            1.6,
+            4.15
+          ],
+          "label": "reach weight9"
+        },
+        {
+          "action": "take",
+          "id": "weight9"
+        },
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            0,
+            1.6,
+            4.15
+          ],
+          "label": "reach gravity9"
+        },
+        {
+          "action": "interact",
+          "id": "gravity9",
+          "result": "toast"
+        },
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            4.4,
+            6,
+            2
+          ],
+          "label": "observation mark wall-mark9"
+        },
+        {
+          "action": "align",
+          "id": "wall-mark9"
+        },
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            4.4,
+            7.1,
+            -6.7
+          ],
+          "label": "walk beside the wall compass"
+        },
+        {
+          "action": "save-restore",
+          "room": "c9",
+          "scale": 1,
+          "up": [
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            4.4,
+            6,
+            -9.25
+          ],
+          "label": "approach wall9-in"
+        },
+        {
+          "action": "cross",
+          "portal": "wall9-in",
+          "room": "c9-record",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c9-record",
+          "p": [
+            0,
+            1.6,
+            -0.85
+          ],
+          "label": "reach plinth9"
+        },
+        {
+          "action": "interact",
+          "id": "plinth9",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c9-record",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c9-record",
+          "p": [
+            0,
+            1.6,
+            7.25
+          ],
+          "label": "approach wall9-out"
+        },
+        {
+          "action": "cross",
+          "portal": "wall9-out",
+          "room": "c9",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            4.4,
+            6,
+            -7.15
+          ],
+          "label": "reach gravity9wall"
+        },
+        {
+          "action": "interact",
+          "id": "gravity9wall",
+          "result": "toast"
+        },
+        {
+          "action": "walk",
+          "room": "c9",
+          "p": [
+            0,
+            1.6,
+            9.25
+          ],
+          "label": "approach c9-hub"
+        },
+        {
+          "action": "cross",
+          "portal": "c9-hub",
+          "room": "hub",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            0.011,
+            1.6,
+            7.9988
+          ],
+          "label": "the hub approach"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            3,
+            1.6,
+            8
+          ],
+          "label": "beside the court reading stand"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            3,
+            1.6,
+            3
+          ],
+          "label": "past the court note stand"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            3,
+            1.6,
+            -6
+          ],
+          "label": "around the central exhibition"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            0,
+            1.6,
+            -6
+          ],
+          "label": "toward the final doorway"
+        },
+        {
+          "action": "walk",
+          "room": "hub",
+          "p": [
+            0,
+            1.6,
+            -17.25
+          ],
+          "label": "approach hub-10"
+        },
+        {
+          "action": "cross",
+          "portal": "hub-10",
+          "room": "c10",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c10",
+          "p": [
+            -4,
+            1.6,
+            0.75
+          ],
+          "label": "approach final-pavilion"
+        },
+        {
+          "action": "cross",
+          "portal": "final-pavilion",
+          "room": "c10-inside",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c10-inside",
+          "p": [
+            1.9994,
+            1.6,
+            8.1522
+          ],
+          "label": "reach weight10"
+        },
+        {
+          "action": "take",
+          "id": "weight10"
+        },
+        {
+          "action": "walk",
+          "room": "c10-inside",
+          "p": [
+            0,
+            1.6,
+            -15.25
+          ],
+          "label": "approach final-half"
+        },
+        {
+          "action": "cross",
+          "portal": "final-half",
+          "room": "c10-measure",
+          "scale": 0.5
+        },
+        {
+          "action": "walk",
+          "room": "c10-measure",
+          "p": [
+            0,
+            0.8,
+            0.575
+          ],
+          "label": "reach plinth10"
+        },
+        {
+          "action": "interact",
+          "id": "plinth10",
+          "result": "socket"
+        },
+        {
+          "action": "save-restore",
+          "room": "c10-measure",
+          "scale": 0.5,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "walk",
+          "room": "c10-measure",
+          "p": [
+            1,
+            0.8,
+            1
+          ],
+          "label": "beside OPEN index"
+        },
+        {
+          "action": "walk",
+          "room": "c10-measure",
+          "p": [
+            1,
+            0.8,
+            -1
+          ],
+          "label": "past OPEN index"
+        },
+        {
+          "action": "walk",
+          "room": "c10-measure",
+          "p": [
+            0,
+            0.8,
+            -7.625
+          ],
+          "label": "approach final-restore"
+        },
+        {
+          "action": "cross",
+          "portal": "final-restore",
+          "room": "c10",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c10",
+          "p": [
+            2.5,
+            1.6,
+            -2.85
+          ],
+          "label": "reach final-shutter"
+        },
+        {
+          "action": "interact",
+          "id": "final-shutter",
+          "result": "toast"
+        },
+        {
+          "action": "look-away",
+          "id": "final-shutter"
+        },
+        {
+          "action": "walk",
+          "room": "c10",
+          "p": [
+            1.4,
+            1.6,
+            -2.85
+          ],
+          "label": "step beside the arrangement stand"
+        },
+        {
+          "action": "walk",
+          "room": "c10",
+          "p": [
+            0.0005,
+            1.6,
+            -12.2464
+          ],
+          "label": "approach final-hold-in"
+        },
+        {
+          "action": "cross",
+          "portal": "final-hold-in",
+          "room": "c10-hold",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "c10-hold",
+          "p": [
+            0,
+            1.6,
+            4.1536
+          ],
+          "label": "reach gravity10"
+        },
+        {
+          "action": "interact",
+          "id": "gravity10",
+          "result": "toast"
+        },
+        {
+          "action": "walk",
+          "room": "c10-hold",
+          "p": [
+            4.4,
+            6,
+            2
+          ],
+          "label": "observation mark final-mark"
+        },
+        {
+          "action": "align",
+          "id": "final-mark"
+        },
+        {
+          "action": "walk",
+          "room": "c10-hold",
+          "p": [
+            4.4,
+            7.1,
+            -6.7
+          ],
+          "label": "walk beside the wall compass"
+        },
+        {
+          "action": "walk",
+          "room": "c10-hold",
+          "p": [
+            4.4,
+            6,
+            -9.25
+          ],
+          "label": "approach exit-created"
+        },
+        {
+          "action": "cross",
+          "portal": "exit-created",
+          "room": "courtyard",
+          "scale": 1
+        },
+        {
+          "action": "walk",
+          "room": "courtyard",
+          "p": [
+            0,
+            1.6,
+            -1.85
+          ],
+          "label": "reach last-ledger"
+        },
+        {
+          "action": "interact",
+          "id": "last-ledger",
+          "result": "ending"
+        },
+        {
+          "action": "save-restore",
+          "room": "courtyard",
+          "scale": 1,
+          "up": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "crossings": [
+        {
+          "portal": "hub-1",
+          "from": "hub",
+          "to": "c1",
+          "scale": 1
+        },
+        {
+          "portal": "c1-east",
+          "from": "c1",
+          "to": "c1-gallery",
+          "scale": 1
+        },
+        {
+          "portal": "c1-gallery-out",
+          "from": "c1-gallery",
+          "to": "c1",
+          "scale": 1
+        },
+        {
+          "portal": "c1-enclosure",
+          "from": "c1",
+          "to": "c1-gallery",
+          "scale": 1
+        },
+        {
+          "portal": "c1-gallery-in",
+          "from": "c1-gallery",
+          "to": "c1",
+          "scale": 1
+        },
+        {
+          "portal": "c1-hub",
+          "from": "c1",
+          "to": "hub",
+          "scale": 1
+        },
+        {
+          "portal": "hub-2",
+          "from": "hub",
+          "to": "c2",
+          "scale": 1
+        },
+        {
+          "portal": "pavilion-front",
+          "from": "c2",
+          "to": "c2-archive",
+          "scale": 1
+        },
+        {
+          "portal": "archive-west",
+          "from": "c2-archive",
+          "to": "c2",
+          "scale": 1
+        },
+        {
+          "portal": "pavilion-rear",
+          "from": "c2",
+          "to": "c2-archive",
+          "scale": 1
+        },
+        {
+          "portal": "archive-east",
+          "from": "c2-archive",
+          "to": "c2",
+          "scale": 1
+        },
+        {
+          "portal": "c2-hub",
+          "from": "c2",
+          "to": "hub",
+          "scale": 1
+        },
+        {
+          "portal": "hub-3",
+          "from": "hub",
+          "to": "c3",
+          "scale": 1
+        },
+        {
+          "portal": "quarter-in",
+          "from": "c3",
+          "to": "c3-cabinet",
+          "scale": 0.25
+        },
+        {
+          "portal": "quarter-out",
+          "from": "c3-cabinet",
+          "to": "c3",
+          "scale": 4
+        },
+        {
+          "portal": "c3-hub",
+          "from": "c3",
+          "to": "hub",
+          "scale": 1
+        },
+        {
+          "portal": "hub-4",
+          "from": "hub",
+          "to": "c4",
+          "scale": 1
+        },
+        {
+          "portal": "garden-winter",
+          "from": "c4",
+          "to": "c4-winter",
+          "scale": 1
+        },
+        {
+          "portal": "winter-return",
+          "from": "c4-winter",
+          "to": "c4",
+          "scale": 1
+        },
+        {
+          "portal": "garden-summer",
+          "from": "c4",
+          "to": "c4-summer",
+          "scale": 1
+        },
+        {
+          "portal": "summer-return",
+          "from": "c4-summer",
+          "to": "c4",
+          "scale": 1
+        },
+        {
+          "portal": "c4-hub",
+          "from": "c4",
+          "to": "hub",
+          "scale": 1
+        },
+        {
+          "portal": "hub-5",
+          "from": "hub",
+          "to": "c5",
+          "scale": 1
+        },
+        {
+          "portal": "sight-in",
+          "from": "c5",
+          "to": "c5-beyond",
+          "scale": 1
+        },
+        {
+          "portal": "sight-out",
+          "from": "c5-beyond",
+          "to": "c5",
+          "scale": 1
+        },
+        {
+          "portal": "c5-hub",
+          "from": "c5",
+          "to": "hub",
+          "scale": 1
+        },
+        {
+          "portal": "hub-6",
+          "from": "hub",
+          "to": "c6",
+          "scale": 1
+        },
+        {
+          "portal": "wall6-in",
+          "from": "c6",
+          "to": "c6-record",
+          "scale": 1
+        },
+        {
+          "portal": "wall6-out",
+          "from": "c6-record",
+          "to": "c6",
+          "scale": 1
+        },
+        {
+          "portal": "c6-hub",
+          "from": "c6",
+          "to": "hub",
+          "scale": 1
+        },
+        {
+          "portal": "hub-7",
+          "from": "hub",
+          "to": "c7",
+          "scale": 1
+        },
+        {
+          "portal": "half7-in",
+          "from": "c7",
+          "to": "c7-loop",
+          "scale": 0.5
+        },
+        {
+          "portal": "neutral7-out",
+          "from": "c7-loop",
+          "to": "c7",
+          "scale": 1
+        },
+        {
+          "portal": "half7-in",
+          "from": "c7",
+          "to": "c7-loop",
+          "scale": 0.5
+        },
+        {
+          "portal": "neutral7-out",
+          "from": "c7-loop",
+          "to": "c7",
+          "scale": 1
+        },
+        {
+          "portal": "cabinet7-in",
+          "from": "c7",
+          "to": "c7-cabinet",
+          "scale": 1
+        },
+        {
+          "portal": "cabinet7-out",
+          "from": "c7-cabinet",
+          "to": "c7",
+          "scale": 1
+        },
+        {
+          "portal": "neutral7-in",
+          "from": "c7",
+          "to": "c7-loop",
+          "scale": 1
+        },
+        {
+          "portal": "half7-out",
+          "from": "c7-loop",
+          "to": "c7",
+          "scale": 2
+        },
+        {
+          "portal": "neutral7-in",
+          "from": "c7",
+          "to": "c7-loop",
+          "scale": 1
+        },
+        {
+          "portal": "half7-out",
+          "from": "c7-loop",
+          "to": "c7",
+          "scale": 2
+        },
+        {
+          "portal": "c7-hub",
+          "from": "c7",
+          "to": "hub",
+          "scale": 1
+        },
+        {
+          "portal": "hub-8",
+          "from": "hub",
+          "to": "c8",
+          "scale": 1
+        },
+        {
+          "portal": "transit-collection",
+          "from": "c8",
+          "to": "c8-collection",
+          "scale": 1
+        },
+        {
+          "portal": "collection-return",
+          "from": "c8-collection",
+          "to": "c8",
+          "scale": 1
+        },
+        {
+          "portal": "transit-conservation",
+          "from": "c8",
+          "to": "c8-conservation",
+          "scale": 0.5
+        },
+        {
+          "portal": "conservation-return",
+          "from": "c8-conservation",
+          "to": "c8",
+          "scale": 2
+        },
+        {
+          "portal": "c8-hub",
+          "from": "c8",
+          "to": "hub",
+          "scale": 1
+        },
+        {
+          "portal": "hub-9",
+          "from": "hub",
+          "to": "c9",
+          "scale": 1
+        },
+        {
+          "portal": "wall9-in",
+          "from": "c9",
+          "to": "c9-record",
+          "scale": 1
+        },
+        {
+          "portal": "wall9-out",
+          "from": "c9-record",
+          "to": "c9",
+          "scale": 1
+        },
+        {
+          "portal": "c9-hub",
+          "from": "c9",
+          "to": "hub",
+          "scale": 1
+        },
+        {
+          "portal": "hub-10",
+          "from": "hub",
+          "to": "c10",
+          "scale": 1
+        },
+        {
+          "portal": "final-pavilion",
+          "from": "c10",
+          "to": "c10-inside",
+          "scale": 1
+        },
+        {
+          "portal": "final-half",
+          "from": "c10-inside",
+          "to": "c10-measure",
+          "scale": 0.5
+        },
+        {
+          "portal": "final-restore",
+          "from": "c10-measure",
+          "to": "c10",
+          "scale": 2
+        },
+        {
+          "portal": "final-hold-in",
+          "from": "c10",
+          "to": "c10-hold",
+          "scale": 1
+        },
+        {
+          "portal": "exit-created",
+          "from": "c10-hold",
+          "to": "courtyard",
+          "scale": 1
+        }
+      ],
+      "completedChapters": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "method": "One continuous journey from createState(world), with no player position assignment after initial spawn; normal movement and visible interactions throughout, plus save/restore at chapter checkpoints."
+    }
+  ],
+  "publicSharing": {
+    "sanitizedCopy": true,
+    "note": "Public-sharing copy: machine-specific filesystem paths and antivirus-injected identifiers were replaced with labeled placeholders. Test outcomes, versions, source digests, timings, and limitations were retained. Original evidence remains in the verified local delivery."
+  }
+}
