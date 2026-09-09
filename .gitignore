@@ -1,0 +1,23 @@
+# Generated packages and clean-install extractions
+/release/
+node_modules/
+**/node_modules/
+
+# Browser saves and local environment files
+Museum-Visit*.json
+*.museum-save.json
+.env
+.env.*
+!.env.example
+
+# Generated verification screenshots
+/evidence/*.png
+/evidence/browser-functional-screenshots/
+/evidence/rendered-replay/
+/evidence/visual-probes/
+
+# Local operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log

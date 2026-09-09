@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#13292f">
+  <meta name="description" content="An offline first-person spatial puzzle adventure in ten exhibitions.">
+  <title>The Museum of Impossible Rooms</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <canvas id="world" aria-label="First-person museum. Use W A S D to walk, mouse or arrow keys to look, E to interact."></canvas>
+  <div id="vignette" aria-hidden="true"></div>
+  <header id="hud" hidden>
+    <div class="identity"><span class="monogram">M<span>↗</span></span><div><span id="chapter-number" class="eyebrow">THE MUSEUM</span><div id="room-title">Court of Unfinished Plans</div></div></div>
+    <div class="hud-actions"><span id="plates">00 / 10</span><button id="journal-button" title="Notebook · J">Notebook <kbd>J</kbd></button><button id="pause-button" title="Pause · Escape">Ⅱ</button></div>
+  </header>
+  <div id="reticle" hidden aria-hidden="true"><i></i></div>
+  <div id="prompt" hidden><kbd>E</kbd><span></span></div>
+  <div id="alignment" hidden><span>Let the outline settle</span><div><i></i></div></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <div id="chapter-card" aria-live="polite"><span class="eyebrow"></span><h2></h2><p></p></div>
+  <footer id="play-footer" hidden><div id="measure">MEASURE <b>1 : 1</b><span id="held-label"></span></div><div class="control-strip"><span><kbd>W A S D</kbd> Walk</span><span><kbd>E</kbd> Use / take</span><span><kbd>Q</kbd> Set down</span><span><kbd>H</kbd> Hint</span><span><kbd>R</kbd> Recover</span></div><span id="save-status">Saved locally</span></footer>
+  <div id="start-screen" class="screen">
+    <div class="start-rule"><span>MUSEUM STUDIES</span><span>VOLUME 01</span></div>
+    <main class="start-copy">
+      <span class="eyebrow">AN EXHIBITION IN TEN IMPOSSIBILITIES</span>
+      <h1>The Museum<br>of <em>Impossible</em><br>Rooms<span class="title-period">.</span></h1>
+      <p class="start-description">The curator has left you a building<br>with no way out. Only a way to understand it.</p>
+      <button id="start-button" class="primary">Enter the museum <span>↗</span></button>
+      <button id="start-settings" class="text-button">Sound &amp; comfort</button>
+      <p class="start-help">Headphones welcome · Keyboard &amp; mouse<br>Progress saves on this device. No download during play.</p>
+    </main>
+    <aside class="start-caption"><span class="thin-line"></span><span>THE COURT OF<br>UNFINISHED PLANS</span><small>Architecture is a promise.<br>Read the small print.</small></aside>
+    <div class="start-bottom"><span>IONA VALE, CURATOR</span><span>PLEASE LEAVE ROOM FOR SOMEONE ELSE.</span></div>
+  </div>
+  <div id="modal-backdrop" hidden>
+    <section id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-top"><span id="modal-eyebrow" class="eyebrow">THE MUSEUM</span><button id="modal-close" aria-label="Close dialog">×</button></div><h2 id="modal-title"></h2><div id="modal-body"></div></section>
+  </div>
+  <aside id="developer" hidden aria-label="Developer spatial inspector"></aside>
+  <noscript><div class="fatal">JavaScript is required for this local 3D game. Enable it and reload.</div></noscript>
+  <script type="module" src="src/main.mjs"></script>
+</body>
+</html>

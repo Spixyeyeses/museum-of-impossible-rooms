@@ -1,0 +1,9 @@
+{
+  "name": "museum-of-impossible-rooms",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An offline first-person spatial puzzle adventure",
+  "scripts": { "start": "node tools/serve.mjs", "test": "node --test", "package": "node tools/package.mjs", "validate": "node tools/validate-world.mjs" },
+  "engines": { "node": ">=20" }
+}
