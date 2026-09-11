@@ -1,0 +1,9 @@
+{
+  "name": "Museum.Editor.Tests",
+  "rootNamespace": "Museum.Tests",
+  "references": ["Museum.Runtime", "Museum.Editor"],
+  "overrideReferences": true,
+  "precompiledReferences": ["nunit.framework.dll", "Newtonsoft.Json.dll"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}
