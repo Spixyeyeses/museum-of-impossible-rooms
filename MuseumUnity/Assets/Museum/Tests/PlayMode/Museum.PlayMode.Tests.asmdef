@@ -1,0 +1,10 @@
+{
+  "name": "Museum.PlayMode.Tests",
+  "rootNamespace": "Museum.Tests",
+  "references": ["Museum.Runtime"],
+  "overrideReferences": true,
+  "precompiledReferences": ["nunit.framework.dll", "Newtonsoft.Json.dll"],
+  "includePlatforms": [],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"]
+}
