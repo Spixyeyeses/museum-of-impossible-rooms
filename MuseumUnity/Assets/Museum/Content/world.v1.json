@@ -1,0 +1,4862 @@
+{
+  "schemaVersion": 1,
+  "source": "src/campaign.mjs",
+  "contentSha256": "54e58d3c3f632609421dfa081a1c64985c3c4f73be2119fa96aa4b77d32b8463",
+  "coordinates": {
+    "units": "meters",
+    "space": "room-local",
+    "unityMapping": "reflect-z",
+    "portalNormal": "into-room",
+    "spawnPosition": "eye"
+  },
+  "counts": {
+    "rooms": 27,
+    "portals": 60,
+    "objects": 9,
+    "interactables": 46,
+    "chapters": 10
+  },
+  "world": {
+    "title": "The Museum of Impossible Rooms",
+    "version": 1,
+    "startRoom": "hub",
+    "rooms": [
+      {
+        "id": "hub",
+        "name": "Court of Unfinished Plans",
+        "chapter": 0,
+        "bounds": {
+          "min": [
+            -18,
+            0,
+            -18
+          ],
+          "max": [
+            18,
+            9,
+            18
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            15
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "central-plinth",
+            "min": [
+              -2,
+              0,
+              -4
+            ],
+            "max": [
+              2,
+              0.65,
+              0
+            ]
+          },
+          {
+            "id": "furniture:welcome",
+            "min": [
+              -0.325,
+              0.25500000000000017,
+              6.75
+            ],
+            "max": [
+              0.325,
+              1.1050000000000002,
+              7.25
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:hub-map",
+            "min": [
+              -4.325,
+              0.25500000000000017,
+              3.75
+            ],
+            "max": [
+              -3.675,
+              1.1050000000000002,
+              4.25
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:hub-lore",
+            "min": [
+              3.675,
+              0.25500000000000017,
+              3.75
+            ],
+            "max": [
+              4.325,
+              1.1050000000000002,
+              4.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "rings",
+            "p": [
+              0,
+              3.7,
+              -2
+            ],
+            "size": 2.2,
+            "spin": true
+          },
+          {
+            "kind": "stairs",
+            "p": [
+              0,
+              1,
+              -2
+            ]
+          }
+        ],
+        "subtitle": "THE MUSEUM OF IMPOSSIBLE ROOMS",
+        "accent": 8570554
+      },
+      {
+        "id": "c1",
+        "name": "The Gallery of Two Norths",
+        "chapter": 1,
+        "bounds": {
+          "min": [
+            -6,
+            0,
+            -8
+          ],
+          "max": [
+            6,
+            6,
+            8
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            5
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "glass-divider",
+            "min": [
+              -6,
+              0,
+              -3
+            ],
+            "max": [
+              6,
+              6,
+              -2.8
+            ],
+            "material": "glass"
+          },
+          {
+            "id": "furniture:plinth1",
+            "min": [
+              -2.96,
+              0,
+              1.44
+            ],
+            "max": [
+              -1.8399999999999999,
+              1,
+              2.56
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:c1-note",
+            "min": [
+              -3.325,
+              0.25500000000000017,
+              4.75
+            ],
+            "max": [
+              -2.675,
+              1.1050000000000002,
+              5.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [],
+        "subtitle": "I · CONNECTION",
+        "accent": 9157828
+      },
+      {
+        "id": "c1-gallery",
+        "name": "The Other North",
+        "chapter": 1,
+        "bounds": {
+          "min": [
+            -6,
+            0,
+            -11
+          ],
+          "max": [
+            6,
+            7,
+            11
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            8
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:c1-lore",
+            "min": [
+              -3.325,
+              0.25500000000000017,
+              -4.25
+            ],
+            "max": [
+              -2.675,
+              1.1050000000000002,
+              -3.75
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "rings",
+            "p": [
+              0,
+              3,
+              -2
+            ],
+            "spin": true
+          }
+        ],
+        "accent": 12034678
+      },
+      {
+        "id": "c2",
+        "name": "The Small Pavilion",
+        "chapter": 2,
+        "bounds": {
+          "min": [
+            -10,
+            0,
+            -11
+          ],
+          "max": [
+            10,
+            7,
+            11
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            8
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "pavilion-left",
+            "min": [
+              -1.65,
+              0,
+              -3.15
+            ],
+            "max": [
+              -1.35,
+              4,
+              0.15
+            ]
+          },
+          {
+            "id": "pavilion-right",
+            "min": [
+              1.35,
+              0,
+              -3.15
+            ],
+            "max": [
+              1.65,
+              4,
+              0.15
+            ]
+          },
+          {
+            "id": "pavilion-roof",
+            "min": [
+              -1.65,
+              3.7,
+              -3.15
+            ],
+            "max": [
+              1.65,
+              4,
+              0.15
+            ]
+          },
+          {
+            "id": "furniture:c2-note",
+            "min": [
+              -3.325,
+              0.25500000000000017,
+              3.75
+            ],
+            "max": [
+              -2.675,
+              1.1050000000000002,
+              4.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [],
+        "subtitle": "II · INTERIOR",
+        "accent": 10666405
+      },
+      {
+        "id": "c2-archive",
+        "name": "The Archive Within",
+        "chapter": 2,
+        "bounds": {
+          "min": [
+            -18,
+            0,
+            -20
+          ],
+          "max": [
+            18,
+            12,
+            20
+          ]
+        },
+        "spawn": {
+          "p": [
+            -10,
+            1.6,
+            17
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "archive-divider",
+            "min": [
+              -0.12,
+              0,
+              -20
+            ],
+            "max": [
+              0.12,
+              12,
+              20
+            ],
+            "material": "glass"
+          },
+          {
+            "id": "shelf-15:-14",
+            "min": [
+              -16,
+              0,
+              -14.4
+            ],
+            "max": [
+              -14,
+              3.1,
+              -13.6
+            ]
+          },
+          {
+            "id": "shelf-15:-7",
+            "min": [
+              -16,
+              0,
+              -7.4
+            ],
+            "max": [
+              -14,
+              3.1,
+              -6.6
+            ]
+          },
+          {
+            "id": "shelf-15:0",
+            "min": [
+              -16,
+              0,
+              -0.4
+            ],
+            "max": [
+              -14,
+              3.1,
+              0.4
+            ]
+          },
+          {
+            "id": "shelf-15:7",
+            "min": [
+              -16,
+              0,
+              6.6
+            ],
+            "max": [
+              -14,
+              3.1,
+              7.4
+            ]
+          },
+          {
+            "id": "shelf-7:-14",
+            "min": [
+              -8,
+              0,
+              -14.4
+            ],
+            "max": [
+              -6,
+              3.1,
+              -13.6
+            ]
+          },
+          {
+            "id": "shelf-7:-7",
+            "min": [
+              -8,
+              0,
+              -7.4
+            ],
+            "max": [
+              -6,
+              3.1,
+              -6.6
+            ]
+          },
+          {
+            "id": "shelf-7:0",
+            "min": [
+              -8,
+              0,
+              -0.4
+            ],
+            "max": [
+              -6,
+              3.1,
+              0.4
+            ]
+          },
+          {
+            "id": "shelf-7:7",
+            "min": [
+              -8,
+              0,
+              6.6
+            ],
+            "max": [
+              -6,
+              3.1,
+              7.4
+            ]
+          },
+          {
+            "id": "shelf7:-14",
+            "min": [
+              6,
+              0,
+              -14.4
+            ],
+            "max": [
+              8,
+              3.1,
+              -13.6
+            ]
+          },
+          {
+            "id": "shelf7:-7",
+            "min": [
+              6,
+              0,
+              -7.4
+            ],
+            "max": [
+              8,
+              3.1,
+              -6.6
+            ]
+          },
+          {
+            "id": "shelf7:0",
+            "min": [
+              6,
+              0,
+              -0.4
+            ],
+            "max": [
+              8,
+              3.1,
+              0.4
+            ]
+          },
+          {
+            "id": "shelf7:7",
+            "min": [
+              6,
+              0,
+              6.6
+            ],
+            "max": [
+              8,
+              3.1,
+              7.4
+            ]
+          },
+          {
+            "id": "shelf15:-14",
+            "min": [
+              14,
+              0,
+              -14.4
+            ],
+            "max": [
+              16,
+              3.1,
+              -13.6
+            ]
+          },
+          {
+            "id": "shelf15:-7",
+            "min": [
+              14,
+              0,
+              -7.4
+            ],
+            "max": [
+              16,
+              3.1,
+              -6.6
+            ]
+          },
+          {
+            "id": "shelf15:0",
+            "min": [
+              14,
+              0,
+              -0.4
+            ],
+            "max": [
+              16,
+              3.1,
+              0.4
+            ]
+          },
+          {
+            "id": "shelf15:7",
+            "min": [
+              14,
+              0,
+              6.6
+            ],
+            "max": [
+              16,
+              3.1,
+              7.4
+            ]
+          },
+          {
+            "id": "furniture:plinth2",
+            "min": [
+              9.44,
+              0,
+              9.44
+            ],
+            "max": [
+              10.56,
+              1,
+              10.56
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:c2-lore",
+            "min": [
+              -4.325,
+              0.25500000000000017,
+              13.75
+            ],
+            "max": [
+              -3.675,
+              1.1050000000000002,
+              14.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "rings",
+            "p": [
+              -10,
+              4,
+              -9
+            ],
+            "size": 2,
+            "spin": true
+          },
+          {
+            "kind": "rings",
+            "p": [
+              10,
+              4,
+              -9
+            ],
+            "size": 2,
+            "spin": true
+          }
+        ],
+        "subtitle": "THE PAVILION · INTERIOR",
+        "accent": 13285518
+      },
+      {
+        "id": "c3",
+        "name": "The Scale Cabinet",
+        "chapter": 3,
+        "bounds": {
+          "min": [
+            -7,
+            0,
+            -8
+          ],
+          "max": [
+            7,
+            6,
+            8
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            5
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:c3-note",
+            "min": [
+              -2.825,
+              0.25500000000000017,
+              2.75
+            ],
+            "max": [
+              -2.175,
+              1.1050000000000002,
+              3.25
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:c3-lore",
+            "min": [
+              3.175,
+              0.25500000000000017,
+              2.75
+            ],
+            "max": [
+              3.825,
+              1.1050000000000002,
+              3.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "frame",
+            "p": [
+              -3,
+              2,
+              -2
+            ],
+            "size": 1.2
+          }
+        ],
+        "subtitle": "III · MEASURE",
+        "accent": 9550290
+      },
+      {
+        "id": "c3-cabinet",
+        "name": "Conservation Cabinet",
+        "chapter": 3,
+        "bounds": {
+          "min": [
+            -4,
+            0,
+            -7
+          ],
+          "max": [
+            4,
+            5,
+            7
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            4
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "cabinet-lip",
+            "min": [
+              -4,
+              0.9,
+              -0.25
+            ],
+            "max": [
+              4,
+              5,
+              0.25
+            ]
+          },
+          {
+            "id": "cabinet-left",
+            "min": [
+              -4,
+              0,
+              -0.25
+            ],
+            "max": [
+              -0.7,
+              0.9,
+              0.25
+            ]
+          },
+          {
+            "id": "cabinet-right",
+            "min": [
+              0.7,
+              0,
+              -0.25
+            ],
+            "max": [
+              4,
+              0.9,
+              0.25
+            ]
+          },
+          {
+            "id": "furniture:plinth3",
+            "min": [
+              -0.14,
+              0.020000000000000018,
+              -3.14
+            ],
+            "max": [
+              0.14,
+              0.27,
+              -2.86
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [],
+        "subtitle": "LIFE SIZE",
+        "accent": 10400718
+      },
+      {
+        "id": "c4",
+        "name": "The Unseen Garden",
+        "chapter": 4,
+        "bounds": {
+          "min": [
+            -7,
+            0,
+            -9
+          ],
+          "max": [
+            7,
+            7,
+            9
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            6
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:garden-shutter",
+            "min": [
+              1.9749999999999999,
+              0.30000000000000004,
+              -2.325
+            ],
+            "max": [
+              2.625,
+              1.1,
+              -1.675
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:c4-note",
+            "min": [
+              -2.825,
+              0.25500000000000017,
+              3.75
+            ],
+            "max": [
+              -2.175,
+              1.1050000000000002,
+              4.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "rings",
+            "p": [
+              -3,
+              2,
+              -2
+            ],
+            "spin": true
+          }
+        ],
+        "subtitle": "IV · ATTENTION",
+        "accent": 10993050
+      },
+      {
+        "id": "c4-winter",
+        "name": "Winter Conservatory",
+        "chapter": 4,
+        "bounds": {
+          "min": [
+            -5,
+            0,
+            -8
+          ],
+          "max": [
+            5,
+            7,
+            8
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            5
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [],
+        "art": [
+          {
+            "kind": "rings",
+            "p": [
+              0,
+              2,
+              -3
+            ],
+            "size": 1.4
+          }
+        ],
+        "accent": 10272216
+      },
+      {
+        "id": "c4-summer",
+        "name": "Summer Conservatory",
+        "chapter": 4,
+        "bounds": {
+          "min": [
+            -5,
+            0,
+            -8
+          ],
+          "max": [
+            5,
+            7,
+            8
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            5
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:plinth4",
+            "min": [
+              -2.56,
+              0,
+              -1.56
+            ],
+            "max": [
+              -1.44,
+              1,
+              -0.43999999999999995
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:c4-lore",
+            "min": [
+              1.675,
+              0.25500000000000017,
+              2.75
+            ],
+            "max": [
+              2.325,
+              1.1050000000000002,
+              3.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "rings",
+            "p": [
+              0,
+              2,
+              -3
+            ],
+            "size": 1.4,
+            "spin": true
+          }
+        ],
+        "accent": 14005628,
+        "wall": 13483414
+      },
+      {
+        "id": "c5",
+        "name": "The Sightline",
+        "chapter": 5,
+        "bounds": {
+          "min": [
+            -7,
+            0,
+            -10
+          ],
+          "max": [
+            7,
+            8,
+            10
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            7
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:plinth5",
+            "min": [
+              -3.56,
+              0,
+              2.44
+            ],
+            "max": [
+              -2.44,
+              1,
+              3.56
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:c5-note",
+            "min": [
+              2.675,
+              0.25500000000000017,
+              4.75
+            ],
+            "max": [
+              3.325,
+              1.1050000000000002,
+              5.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "partialFrame",
+            "p": [
+              0,
+              1.6933333333333334,
+              -2
+            ],
+            "width": 1.2133333333333334,
+            "height": 1.68,
+            "side": "left"
+          },
+          {
+            "kind": "partialFrame",
+            "p": [
+              0,
+              1.7466666666666668,
+              -6
+            ],
+            "width": 1.9066666666666667,
+            "height": 2.64,
+            "side": "right"
+          }
+        ],
+        "subtitle": "V · PERSPECTIVE",
+        "accent": 13020836
+      },
+      {
+        "id": "c5-beyond",
+        "name": "The Completed Outline",
+        "chapter": 5,
+        "bounds": {
+          "min": [
+            -5,
+            0,
+            -7
+          ],
+          "max": [
+            5,
+            6,
+            7
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            4
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:c5-lore",
+            "min": [
+              -2.325,
+              0.25500000000000017,
+              0.75
+            ],
+            "max": [
+              -1.675,
+              1.1050000000000002,
+              1.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "rings",
+            "p": [
+              0,
+              2,
+              -3
+            ],
+            "spin": true
+          }
+        ],
+        "accent": 11653070
+      },
+      {
+        "id": "c6",
+        "name": "The Gravity Atrium",
+        "chapter": 6,
+        "bounds": {
+          "min": [
+            -6,
+            0,
+            -9
+          ],
+          "max": [
+            6,
+            11,
+            9
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            6
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:gravity6",
+            "min": [
+              -0.25,
+              0.2500000000000001,
+              1.75
+            ],
+            "max": [
+              0.25,
+              0.7500000000000001,
+              2.25
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:gravity6wall",
+            "min": [
+              5.199999999999999,
+              6.75,
+              -5.65
+            ],
+            "max": [
+              5.699999999999999,
+              7.25,
+              -5.15
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:c6-note",
+            "min": [
+              -2.825,
+              0.25500000000000017,
+              3.75
+            ],
+            "max": [
+              -2.175,
+              1.1050000000000002,
+              4.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "stairs",
+            "p": [
+              -2,
+              4,
+              -3
+            ]
+          }
+        ],
+        "subtitle": "VI · ORIENTATION",
+        "accent": 11910089
+      },
+      {
+        "id": "c6-record",
+        "name": "The Other Floor",
+        "chapter": 6,
+        "bounds": {
+          "min": [
+            -5,
+            0,
+            -7
+          ],
+          "max": [
+            5,
+            6,
+            7
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            4
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:plate6",
+            "min": [
+              -0.3,
+              0.20500000000000002,
+              -2.3
+            ],
+            "max": [
+              0.3,
+              0.855,
+              -1.7
+            ],
+            "invisible": true,
+            "requires": [
+              true,
+              {
+                "not": "complete:6"
+              }
+            ]
+          },
+          {
+            "id": "furniture:c6-lore",
+            "min": [
+              1.675,
+              0.25500000000000017,
+              1.75
+            ],
+            "max": [
+              2.325,
+              1.1050000000000002,
+              2.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [],
+        "accent": 13481882
+      },
+      {
+        "id": "c7",
+        "name": "The Hall of Measures",
+        "chapter": 7,
+        "bounds": {
+          "min": [
+            -8,
+            0,
+            -10
+          ],
+          "max": [
+            8,
+            7,
+            10
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            7
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:c7-note",
+            "min": [
+              -2.825,
+              0.25500000000000017,
+              4.75
+            ],
+            "max": [
+              -2.175,
+              1.1050000000000002,
+              5.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [],
+        "subtitle": "VII · MEASURE × CONNECTION",
+        "accent": 10205908
+      },
+      {
+        "id": "c7-loop",
+        "name": "The Unmeasured Return",
+        "chapter": 7,
+        "bounds": {
+          "min": [
+            -5,
+            0,
+            -7
+          ],
+          "max": [
+            5,
+            6,
+            7
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            4
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:c7-lore",
+            "min": [
+              1.675,
+              0.25500000000000017,
+              0.75
+            ],
+            "max": [
+              2.325,
+              1.1050000000000002,
+              1.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [],
+        "accent": 9419463
+      },
+      {
+        "id": "c7-cabinet",
+        "name": "The Quarter Collection",
+        "chapter": 7,
+        "bounds": {
+          "min": [
+            -6,
+            0,
+            -9
+          ],
+          "max": [
+            6,
+            8,
+            9
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            6
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:plinth7",
+            "min": [
+              -0.14,
+              0.020000000000000018,
+              2.86
+            ],
+            "max": [
+              0.14,
+              0.27,
+              3.14
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "rings",
+            "p": [
+              0,
+              3,
+              -2
+            ],
+            "size": 2,
+            "spin": true
+          }
+        ],
+        "accent": 12957078
+      },
+      {
+        "id": "c8",
+        "name": "Blind Transit",
+        "chapter": 8,
+        "bounds": {
+          "min": [
+            -7,
+            0,
+            -10
+          ],
+          "max": [
+            7,
+            8,
+            10
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            7
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:transit-shutter",
+            "min": [
+              2.0749999999999997,
+              0.30000000000000004,
+              -2.325
+            ],
+            "max": [
+              2.725,
+              1.1,
+              -1.675
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:c8-note",
+            "min": [
+              -2.825,
+              0.25500000000000017,
+              4.75
+            ],
+            "max": [
+              -2.175,
+              1.1050000000000002,
+              5.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [],
+        "subtitle": "VIII · ATTENTION × MEASURE",
+        "accent": 10201791
+      },
+      {
+        "id": "c8-collection",
+        "name": "The Full Collection",
+        "chapter": 8,
+        "bounds": {
+          "min": [
+            -9,
+            0,
+            -12
+          ],
+          "max": [
+            9,
+            8,
+            12
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            9
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:c8-lore",
+            "min": [
+              -2.325,
+              0.25500000000000017,
+              2.75
+            ],
+            "max": [
+              -1.675,
+              1.1050000000000002,
+              3.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "stairs",
+            "p": [
+              -3,
+              2,
+              -4
+            ]
+          }
+        ],
+        "accent": 8959171
+      },
+      {
+        "id": "c8-conservation",
+        "name": "The Half Conservation",
+        "chapter": 8,
+        "bounds": {
+          "min": [
+            -9,
+            0,
+            -12
+          ],
+          "max": [
+            9,
+            8,
+            12
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            9
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:plinth8",
+            "min": [
+              -0.28,
+              0.050000000000000044,
+              4.72
+            ],
+            "max": [
+              0.28,
+              0.55,
+              5.28
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "rings",
+            "p": [
+              3,
+              3,
+              -4
+            ],
+            "size": 2
+          }
+        ],
+        "accent": 13611952
+      },
+      {
+        "id": "c9",
+        "name": "The Ceiling Observatory",
+        "chapter": 9,
+        "bounds": {
+          "min": [
+            -6,
+            0,
+            -10
+          ],
+          "max": [
+            6,
+            11,
+            10
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            7
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:gravity9",
+            "min": [
+              -0.25,
+              0.2500000000000001,
+              2.75
+            ],
+            "max": [
+              0.25,
+              0.7500000000000001,
+              3.25
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:gravity9wall",
+            "min": [
+              5.199999999999999,
+              5.75,
+              -6.25
+            ],
+            "max": [
+              5.699999999999999,
+              6.25,
+              -5.75
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:c9-note",
+            "min": [
+              -3.325,
+              0.25500000000000017,
+              4.75
+            ],
+            "max": [
+              -2.675,
+              1.1050000000000002,
+              5.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "partialFrame",
+            "p": [
+              4.333333333333334,
+              6,
+              -2
+            ],
+            "width": 0.8666666666666667,
+            "height": 1.2,
+            "side": "left",
+            "up": [
+              -1,
+              0,
+              0
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "kind": "partialFrame",
+            "p": [
+              4.266666666666667,
+              6,
+              -6
+            ],
+            "width": 1.7333333333333334,
+            "height": 2.4,
+            "side": "right",
+            "up": [
+              -1,
+              0,
+              0
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "subtitle": "IX · ORIENTATION × PERSPECTIVE",
+        "accent": 10596030
+      },
+      {
+        "id": "c9-record",
+        "name": "The Last Plan",
+        "chapter": 9,
+        "bounds": {
+          "min": [
+            -6,
+            0,
+            -8
+          ],
+          "max": [
+            6,
+            7,
+            8
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            5
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:plinth9",
+            "min": [
+              -0.56,
+              0,
+              -2.56
+            ],
+            "max": [
+              0.56,
+              1,
+              -1.44
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:c9-lore",
+            "min": [
+              2.675,
+              0.25500000000000017,
+              1.75
+            ],
+            "max": [
+              3.325,
+              1.1050000000000002,
+              2.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [],
+        "accent": 13812131
+      },
+      {
+        "id": "c10",
+        "name": "Exit Without Exterior",
+        "chapter": 10,
+        "bounds": {
+          "min": [
+            -10,
+            0,
+            -13
+          ],
+          "max": [
+            10,
+            10,
+            13
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            10
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "last-pavilion-left",
+            "min": [
+              -5.65,
+              0,
+              -3.1
+            ],
+            "max": [
+              -5.35,
+              4,
+              0.1
+            ]
+          },
+          {
+            "id": "last-pavilion-right",
+            "min": [
+              -2.65,
+              0,
+              -3.1
+            ],
+            "max": [
+              -2.35,
+              4,
+              0.1
+            ]
+          },
+          {
+            "id": "last-pavilion-roof",
+            "min": [
+              -5.65,
+              3.7,
+              -3.1
+            ],
+            "max": [
+              -2.35,
+              4,
+              0.1
+            ]
+          },
+          {
+            "id": "last-pavilion-back",
+            "min": [
+              -5.65,
+              0,
+              -3.1
+            ],
+            "max": [
+              -2.35,
+              3.7,
+              -2.9
+            ]
+          },
+          {
+            "id": "furniture:final-shutter",
+            "min": [
+              2.175,
+              0.30000000000000004,
+              -4.325
+            ],
+            "max": [
+              2.825,
+              1.1,
+              -3.675
+            ],
+            "invisible": true,
+            "requires": "final-open"
+          },
+          {
+            "id": "furniture:c10-note",
+            "min": [
+              -3.325,
+              0.25500000000000017,
+              7.75
+            ],
+            "max": [
+              -2.675,
+              1.1050000000000002,
+              8.25
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [],
+        "subtitle": "X · THE UNFINISHED PLAN",
+        "accent": 13351043
+      },
+      {
+        "id": "c10-inside",
+        "name": "An Interior Without a Plan",
+        "chapter": 10,
+        "bounds": {
+          "min": [
+            -14,
+            0,
+            -16
+          ],
+          "max": [
+            14,
+            10,
+            16
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            13
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [],
+        "art": [
+          {
+            "kind": "rings",
+            "p": [
+              0,
+              4,
+              -5
+            ],
+            "size": 3,
+            "spin": true
+          }
+        ],
+        "accent": 11189944
+      },
+      {
+        "id": "c10-measure",
+        "name": "The OPEN Index",
+        "chapter": 10,
+        "bounds": {
+          "min": [
+            -5,
+            0,
+            -8
+          ],
+          "max": [
+            5,
+            6,
+            8
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            5
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:plinth10",
+            "min": [
+              -0.28,
+              0.050000000000000044,
+              -0.28
+            ],
+            "max": [
+              0.28,
+              0.55,
+              0.28
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [],
+        "accent": 13152387
+      },
+      {
+        "id": "c10-hold",
+        "name": "The HOLD Gallery",
+        "chapter": 10,
+        "bounds": {
+          "min": [
+            -6,
+            0,
+            -10
+          ],
+          "max": [
+            6,
+            11,
+            10
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            7
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:gravity10",
+            "min": [
+              -0.25,
+              0.2500000000000001,
+              2.75
+            ],
+            "max": [
+              0.25,
+              0.7500000000000001,
+              3.25
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:gravity10wall",
+            "min": [
+              5.199999999999999,
+              5.75,
+              -6.25
+            ],
+            "max": [
+              5.699999999999999,
+              6.25,
+              -5.75
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "partialFrame",
+            "p": [
+              4.333333333333334,
+              6,
+              -2
+            ],
+            "width": 0.8666666666666667,
+            "height": 1.2,
+            "side": "left",
+            "up": [
+              -1,
+              0,
+              0
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "kind": "partialFrame",
+            "p": [
+              4.266666666666667,
+              6,
+              -6
+            ],
+            "width": 1.7333333333333334,
+            "height": 2.4,
+            "side": "right",
+            "up": [
+              -1,
+              0,
+              0
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "accent": 11646919
+      },
+      {
+        "id": "courtyard",
+        "name": "A Door into Morning",
+        "chapter": 10,
+        "bounds": {
+          "min": [
+            -12,
+            0,
+            -12
+          ],
+          "max": [
+            12,
+            14,
+            12
+          ]
+        },
+        "spawn": {
+          "p": [
+            0,
+            1.6,
+            9
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solids": [
+          {
+            "id": "furniture:last-ledger",
+            "min": [
+              -0.9,
+              0,
+              -3.45
+            ],
+            "max": [
+              0.9,
+              1.22,
+              -2.55
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:last-note",
+            "min": [
+              2.175,
+              0.25500000000000017,
+              -1.25
+            ],
+            "max": [
+              2.825,
+              1.1050000000000002,
+              -0.75
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:courtyard-planter:-9",
+            "min": [
+              -10,
+              0,
+              -7.5
+            ],
+            "max": [
+              -8,
+              0.46,
+              1.5
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:courtyard-planter:9",
+            "min": [
+              8,
+              0,
+              -7.5
+            ],
+            "max": [
+              10,
+              0.46,
+              1.5
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:courtyard-tea-table",
+            "min": [
+              -4.6,
+              0,
+              1.475
+            ],
+            "max": [
+              -3.4,
+              0.82,
+              2.525
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:courtyard-chair:-5.15",
+            "min": [
+              -5.510000000000001,
+              0,
+              1.6400000000000001
+            ],
+            "max": [
+              -4.79,
+              1.28,
+              2.36
+            ],
+            "invisible": true
+          },
+          {
+            "id": "furniture:courtyard-chair:-2.85",
+            "min": [
+              -3.21,
+              0,
+              1.6400000000000001
+            ],
+            "max": [
+              -2.49,
+              1.28,
+              2.36
+            ],
+            "invisible": true
+          }
+        ],
+        "art": [
+          {
+            "kind": "rings",
+            "p": [
+              -6,
+              3,
+              -5
+            ],
+            "size": 1.5
+          }
+        ],
+        "subtitle": "THE GATE REMAINS OPEN",
+        "openSky": true,
+        "wall": 13948609,
+        "floor": 6649205,
+        "fog": 10993347,
+        "accent": 14207389
+      }
+    ],
+    "portals": [
+      {
+        "id": "c1-east",
+        "room": "c1",
+        "center": [
+          6,
+          1.8,
+          1
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE OTHER NORTH",
+        "to": "c1-gallery-in"
+      },
+      {
+        "id": "c1-gallery-in",
+        "room": "c1-gallery",
+        "center": [
+          0,
+          1.8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "c1-east"
+      },
+      {
+        "id": "c1-gallery-out",
+        "room": "c1-gallery",
+        "center": [
+          0,
+          1.8,
+          -11
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "BEYOND THE GLASS",
+        "to": "c1-enclosure"
+      },
+      {
+        "id": "c1-enclosure",
+        "room": "c1",
+        "center": [
+          -6,
+          1.8,
+          -5.5
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "c1-gallery-out"
+      },
+      {
+        "id": "pavilion-front",
+        "room": "c2",
+        "center": [
+          0,
+          1.8,
+          0
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "WEST COLLECTION",
+        "to": "archive-west"
+      },
+      {
+        "id": "archive-west",
+        "room": "c2-archive",
+        "center": [
+          -10,
+          1.8,
+          20
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "pavilion-front"
+      },
+      {
+        "id": "pavilion-rear",
+        "room": "c2",
+        "center": [
+          0,
+          1.8,
+          -3
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "EAST COLLECTION",
+        "to": "archive-east"
+      },
+      {
+        "id": "archive-east",
+        "room": "c2-archive",
+        "center": [
+          10,
+          1.8,
+          20
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "pavilion-rear"
+      },
+      {
+        "id": "quarter-in",
+        "room": "c3",
+        "center": [
+          0,
+          1.8,
+          -8
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "1 : 4",
+        "subtitle": "Everything that crosses",
+        "to": "quarter-out"
+      },
+      {
+        "id": "quarter-out",
+        "room": "c3-cabinet",
+        "center": [
+          0,
+          0.45,
+          7
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 0.9,
+        "width": 0.65,
+        "label": "4 : 1",
+        "subtitle": "The return measure",
+        "to": "quarter-in"
+      },
+      {
+        "id": "garden-winter",
+        "room": "c4",
+        "center": [
+          0,
+          1.8,
+          -9
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "requires": {
+          "not": "summer"
+        },
+        "hideInactive": true,
+        "label": "WINTER",
+        "to": "winter-return"
+      },
+      {
+        "id": "winter-return",
+        "room": "c4-winter",
+        "center": [
+          0,
+          1.8,
+          8
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "garden-winter"
+      },
+      {
+        "id": "garden-summer",
+        "room": "c4",
+        "center": [
+          0,
+          1.8,
+          -9
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "requires": "summer",
+        "hideInactive": true,
+        "label": "SUMMER",
+        "to": "summer-return"
+      },
+      {
+        "id": "summer-return",
+        "room": "c4-summer",
+        "center": [
+          0,
+          1.8,
+          8
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "garden-summer"
+      },
+      {
+        "id": "sight-in",
+        "room": "c5",
+        "center": [
+          0,
+          1.8,
+          -10
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "requires": "sightline",
+        "label": "THE COMPLETED OUTLINE",
+        "to": "sight-out"
+      },
+      {
+        "id": "sight-out",
+        "room": "c5-beyond",
+        "center": [
+          0,
+          1.8,
+          7
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "sight-in"
+      },
+      {
+        "id": "wall6-in",
+        "room": "c6",
+        "center": [
+          4.2,
+          7,
+          -9
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE OTHER FLOOR",
+        "to": "wall6-out"
+      },
+      {
+        "id": "wall6-out",
+        "room": "c6-record",
+        "center": [
+          0,
+          1.8,
+          7
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "wall6-in"
+      },
+      {
+        "id": "half7-in",
+        "room": "c7",
+        "center": [
+          3.5,
+          1.8,
+          -10
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "1 : 2",
+        "to": "half7-out"
+      },
+      {
+        "id": "half7-out",
+        "room": "c7-loop",
+        "center": [
+          0,
+          0.9,
+          7
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 1.8,
+        "width": 1.3,
+        "label": "2 : 1",
+        "to": "half7-in"
+      },
+      {
+        "id": "neutral7-out",
+        "room": "c7-loop",
+        "center": [
+          0,
+          0.9,
+          -7
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 1.8,
+        "width": 1.3,
+        "label": "UNMEASURED",
+        "subtitle": "Preserve your measure",
+        "to": "neutral7-in"
+      },
+      {
+        "id": "neutral7-in",
+        "room": "c7",
+        "center": [
+          -3.5,
+          0.9,
+          -10
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 1.8,
+        "width": 1.3,
+        "label": "UNMEASURED",
+        "to": "neutral7-out"
+      },
+      {
+        "id": "cabinet7-in",
+        "room": "c7",
+        "center": [
+          -8,
+          0.45,
+          0
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 0.9,
+        "width": 0.65,
+        "label": "QUARTER COLLECTION",
+        "to": "cabinet7-out"
+      },
+      {
+        "id": "cabinet7-out",
+        "room": "c7-cabinet",
+        "center": [
+          0,
+          0.45,
+          9
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 0.9,
+        "width": 0.65,
+        "to": "cabinet7-in"
+      },
+      {
+        "id": "transit-collection",
+        "room": "c8",
+        "center": [
+          0,
+          1.8,
+          -10
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "requires": {
+          "not": "transit"
+        },
+        "hideInactive": true,
+        "label": "COLLECTION · 1 : 1",
+        "to": "collection-return"
+      },
+      {
+        "id": "collection-return",
+        "room": "c8-collection",
+        "center": [
+          9,
+          1.8,
+          5
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "transit-collection"
+      },
+      {
+        "id": "transit-conservation",
+        "room": "c8",
+        "center": [
+          0,
+          1.8,
+          -10
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "requires": "transit",
+        "hideInactive": true,
+        "label": "CONSERVATION · 1 : 2",
+        "to": "conservation-return"
+      },
+      {
+        "id": "conservation-return",
+        "room": "c8-conservation",
+        "center": [
+          0,
+          0.9,
+          12
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 1.8,
+        "width": 1.3,
+        "to": "transit-conservation"
+      },
+      {
+        "id": "wall9-in",
+        "room": "c9",
+        "center": [
+          4.2,
+          6,
+          -10
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "requires": "wall-sight",
+        "label": "THE LAST PLAN",
+        "to": "wall9-out"
+      },
+      {
+        "id": "wall9-out",
+        "room": "c9-record",
+        "center": [
+          0,
+          1.8,
+          8
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "wall9-in"
+      },
+      {
+        "id": "final-pavilion",
+        "room": "c10",
+        "center": [
+          -4,
+          1.8,
+          0
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "OPEN · THE INTERIOR",
+        "to": "final-inside"
+      },
+      {
+        "id": "final-inside",
+        "room": "c10-inside",
+        "center": [
+          0,
+          1.8,
+          16
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "final-pavilion"
+      },
+      {
+        "id": "final-half",
+        "room": "c10-inside",
+        "center": [
+          0,
+          1.8,
+          -16
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "1 : 2 · OPEN",
+        "to": "final-small"
+      },
+      {
+        "id": "final-small",
+        "room": "c10-measure",
+        "center": [
+          0,
+          0.9,
+          8
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 1.8,
+        "width": 1.3,
+        "to": "final-half"
+      },
+      {
+        "id": "final-restore",
+        "room": "c10-measure",
+        "center": [
+          0,
+          0.9,
+          -8
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 1.8,
+        "width": 1.3,
+        "label": "2 : 1 · RETURN",
+        "to": "final-restored"
+      },
+      {
+        "id": "final-restored",
+        "room": "c10",
+        "center": [
+          10,
+          1.8,
+          3
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "final-restore"
+      },
+      {
+        "id": "final-hold-in",
+        "room": "c10",
+        "center": [
+          0,
+          1.8,
+          -13
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "requires": "final-hold",
+        "label": "HOLD · THE OTHER FLOOR",
+        "to": "final-hold-out"
+      },
+      {
+        "id": "final-hold-out",
+        "room": "c10-hold",
+        "center": [
+          0,
+          1.8,
+          10
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "to": "final-hold-in"
+      },
+      {
+        "id": "exit-created",
+        "room": "c10-hold",
+        "center": [
+          4.2,
+          6,
+          -10
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          -1,
+          0,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "requires": "final-release",
+        "label": "RELEASE · MORNING",
+        "to": "courtyard-return"
+      },
+      {
+        "id": "courtyard-return",
+        "room": "courtyard",
+        "center": [
+          0,
+          1.8,
+          12
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE MUSEUM",
+        "subtitle": "The gate remains open",
+        "to": "exit-created"
+      },
+      {
+        "id": "hub-1",
+        "room": "hub",
+        "center": [
+          -18,
+          1.8,
+          -12
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "01 · The Gallery of Two Norths",
+        "subtitle": "BEGIN HERE",
+        "hideInactive": false,
+        "to": "c1-hub"
+      },
+      {
+        "id": "c1-hub",
+        "room": "c1",
+        "center": [
+          0,
+          1.8,
+          8
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE COURT",
+        "subtitle": "Return to the museum",
+        "to": "hub-1"
+      },
+      {
+        "id": "hub-2",
+        "room": "hub",
+        "center": [
+          -18,
+          1.8,
+          -6
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "02 · The Small Pavilion",
+        "subtitle": "Interior",
+        "requires": "solved:1",
+        "hideInactive": false,
+        "to": "c2-hub"
+      },
+      {
+        "id": "c2-hub",
+        "room": "c2",
+        "center": [
+          0,
+          1.8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE COURT",
+        "subtitle": "Return to the museum",
+        "to": "hub-2"
+      },
+      {
+        "id": "hub-3",
+        "room": "hub",
+        "center": [
+          -18,
+          1.8,
+          0
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "03 · The Scale Cabinet",
+        "subtitle": "Measure",
+        "requires": "solved:2",
+        "hideInactive": false,
+        "to": "c3-hub"
+      },
+      {
+        "id": "c3-hub",
+        "room": "c3",
+        "center": [
+          0,
+          1.8,
+          8
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE COURT",
+        "subtitle": "Return to the museum",
+        "to": "hub-3"
+      },
+      {
+        "id": "hub-4",
+        "room": "hub",
+        "center": [
+          -18,
+          1.8,
+          6
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "04 · The Unseen Garden",
+        "subtitle": "Attention",
+        "requires": "solved:3",
+        "hideInactive": false,
+        "to": "c4-hub"
+      },
+      {
+        "id": "c4-hub",
+        "room": "c4",
+        "center": [
+          0,
+          1.8,
+          9
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE COURT",
+        "subtitle": "Return to the museum",
+        "to": "hub-4"
+      },
+      {
+        "id": "hub-5",
+        "room": "hub",
+        "center": [
+          -18,
+          1.8,
+          12
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "05 · The Sightline",
+        "subtitle": "Perspective",
+        "requires": "solved:4",
+        "hideInactive": false,
+        "to": "c5-hub"
+      },
+      {
+        "id": "c5-hub",
+        "room": "c5",
+        "center": [
+          0,
+          1.8,
+          10
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE COURT",
+        "subtitle": "Return to the museum",
+        "to": "hub-5"
+      },
+      {
+        "id": "hub-6",
+        "room": "hub",
+        "center": [
+          18,
+          1.8,
+          -12
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "06 · The Gravity Atrium",
+        "subtitle": "Orientation",
+        "requires": "solved:5",
+        "hideInactive": false,
+        "to": "c6-hub"
+      },
+      {
+        "id": "c6-hub",
+        "room": "c6",
+        "center": [
+          0,
+          1.8,
+          9
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE COURT",
+        "subtitle": "Return to the museum",
+        "to": "hub-6"
+      },
+      {
+        "id": "hub-7",
+        "room": "hub",
+        "center": [
+          18,
+          1.8,
+          -6
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "07 · The Hall of Measures",
+        "subtitle": "Measure × connection",
+        "requires": "solved:6",
+        "hideInactive": false,
+        "to": "c7-hub"
+      },
+      {
+        "id": "c7-hub",
+        "room": "c7",
+        "center": [
+          0,
+          1.8,
+          10
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE COURT",
+        "subtitle": "Return to the museum",
+        "to": "hub-7"
+      },
+      {
+        "id": "hub-8",
+        "room": "hub",
+        "center": [
+          18,
+          1.8,
+          0
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "08 · Blind Transit",
+        "subtitle": "Attention × measure",
+        "requires": "solved:7",
+        "hideInactive": false,
+        "to": "c8-hub"
+      },
+      {
+        "id": "c8-hub",
+        "room": "c8",
+        "center": [
+          0,
+          1.8,
+          10
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE COURT",
+        "subtitle": "Return to the museum",
+        "to": "hub-8"
+      },
+      {
+        "id": "hub-9",
+        "room": "hub",
+        "center": [
+          18,
+          1.8,
+          6
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "09 · The Ceiling Observatory",
+        "subtitle": "Orientation × perspective",
+        "requires": "solved:8",
+        "hideInactive": false,
+        "to": "c9-hub"
+      },
+      {
+        "id": "c9-hub",
+        "room": "c9",
+        "center": [
+          0,
+          1.8,
+          10
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE COURT",
+        "subtitle": "Return to the museum",
+        "to": "hub-9"
+      },
+      {
+        "id": "hub-10",
+        "room": "hub",
+        "center": [
+          0,
+          1.8,
+          -18
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "10 · Exit Without Exterior",
+        "subtitle": "The six rules together",
+        "requires": "solved:9",
+        "hideInactive": true,
+        "to": "c10-hub"
+      },
+      {
+        "id": "c10-hub",
+        "room": "c10",
+        "center": [
+          0,
+          1.8,
+          13
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "height": 3.6,
+        "width": 2.6,
+        "label": "THE COURT",
+        "subtitle": "Return to the museum",
+        "to": "hub-10"
+      }
+    ],
+    "objects": [
+      {
+        "id": "weight1",
+        "room": "c1",
+        "p": [
+          0,
+          0.4,
+          -5.8
+        ],
+        "size": 0.8,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c1",
+          "p": [
+            0,
+            0.4,
+            -5.8
+          ],
+          "size": 0.8
+        }
+      },
+      {
+        "id": "weight2",
+        "room": "c2-archive",
+        "p": [
+          -10,
+          0.4,
+          10
+        ],
+        "size": 0.8,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c2-archive",
+          "p": [
+            -10,
+            0.4,
+            10
+          ],
+          "size": 0.8
+        }
+      },
+      {
+        "id": "weight3",
+        "room": "c3",
+        "p": [
+          2,
+          0.4,
+          -2
+        ],
+        "size": 0.8,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c3",
+          "p": [
+            2,
+            0.4,
+            -2
+          ],
+          "size": 0.8
+        }
+      },
+      {
+        "id": "weight4",
+        "room": "c4-winter",
+        "p": [
+          2,
+          0.4,
+          -1
+        ],
+        "size": 0.8,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c4-winter",
+          "p": [
+            2,
+            0.4,
+            -1
+          ],
+          "size": 0.8
+        }
+      },
+      {
+        "id": "weight5",
+        "room": "c5-beyond",
+        "p": [
+          2,
+          0.4,
+          -1
+        ],
+        "size": 0.8,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c5-beyond",
+          "p": [
+            2,
+            0.4,
+            -1
+          ],
+          "size": 0.8
+        }
+      },
+      {
+        "id": "weight7",
+        "room": "c7",
+        "p": [
+          2,
+          0.4,
+          4
+        ],
+        "size": 0.8,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c7",
+          "p": [
+            2,
+            0.4,
+            4
+          ],
+          "size": 0.8
+        }
+      },
+      {
+        "id": "weight8",
+        "room": "c8-collection",
+        "p": [
+          2,
+          0.4,
+          5
+        ],
+        "size": 0.8,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c8-collection",
+          "p": [
+            2,
+            0.4,
+            5
+          ],
+          "size": 0.8
+        }
+      },
+      {
+        "id": "weight9",
+        "room": "c9",
+        "p": [
+          -2,
+          0.4,
+          3
+        ],
+        "size": 0.8,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c9",
+          "p": [
+            -2,
+            0.4,
+            3
+          ],
+          "size": 0.8
+        }
+      },
+      {
+        "id": "weight10",
+        "room": "c10-inside",
+        "p": [
+          2,
+          0.4,
+          7
+        ],
+        "size": 0.8,
+        "label": "Index weight",
+        "color": 13282148,
+        "home": {
+          "room": "c10-inside",
+          "p": [
+            2,
+            0.4,
+            7
+          ],
+          "size": 0.8
+        }
+      }
+    ],
+    "interactables": [
+      {
+        "id": "welcome",
+        "room": "hub",
+        "p": [
+          0,
+          1.1,
+          7
+        ],
+        "type": "note",
+        "label": "To the visitor",
+        "radius": 0.65,
+        "title": "To the visitor",
+        "text": "My name is Iona Vale. I tried to draw a final plan of this museum. The plan became so exact that it left no room for an exit.\n\nI am still here, making corrections. Follow the numbered exhibitions. Bring each index weight to its matching plinth. Learn what a doorway actually promises.\n\nWhen you have understood the building, please leave a way out for both of us."
+      },
+      {
+        "id": "hub-map",
+        "room": "hub",
+        "p": [
+          -4,
+          1.1,
+          4
+        ],
+        "type": "note",
+        "label": "An unfinished plan",
+        "radius": 0.65,
+        "title": "An unfinished plan",
+        "text": "Ten exhibitions restore ten index plates. Each plate illuminates another doorway in this court.\n\nJ opens your notebook and exhibition map. H offers a hint, one step at a time. If a weight is misplaced, use Recall weight in the notebook. R returns you safely to the current exhibition entrance. Your discoveries are retained."
+      },
+      {
+        "id": "hub-lore",
+        "room": "hub",
+        "p": [
+          4,
+          1.1,
+          4
+        ],
+        "type": "lore",
+        "label": "Accession 000",
+        "radius": 0.65,
+        "title": "Accession 000",
+        "text": "A key, exhibited without a lock.\n\n“Before we collected rooms, we collected the things that made rooms possible.”"
+      },
+      {
+        "id": "plinth1",
+        "room": "c1",
+        "p": [
+          -2.4,
+          1,
+          2
+        ],
+        "type": "socket",
+        "label": "Index plinth",
+        "radius": 0.62,
+        "acceptSize": 0.8,
+        "flag": "complete:1"
+      },
+      {
+        "id": "c1-note",
+        "room": "c1",
+        "p": [
+          -3,
+          1.1,
+          5
+        ],
+        "type": "note",
+        "label": "Two norths",
+        "radius": 0.65,
+        "title": "Two norths",
+        "text": "The glass is continuous. The room is not. Follow the bronze frames, and carry the index weight back to the plinth."
+      },
+      {
+        "id": "c1-lore",
+        "room": "c1-gallery",
+        "p": [
+          -3,
+          1.1,
+          -4
+        ],
+        "type": "lore",
+        "label": "All points north",
+        "radius": 0.65,
+        "title": "All points north",
+        "text": "Four compasses, all labelled NORTH.\n\n“The plan was accurate. Its paper was the problem.” — I.V."
+      },
+      {
+        "id": "plinth2",
+        "room": "c2-archive",
+        "p": [
+          10,
+          1,
+          10
+        ],
+        "type": "socket",
+        "label": "Index plinth",
+        "radius": 0.62,
+        "acceptSize": 0.8,
+        "flag": "complete:2"
+      },
+      {
+        "id": "c2-note",
+        "room": "c2",
+        "p": [
+          -3,
+          1.1,
+          4
+        ],
+        "type": "note",
+        "label": "The inside exceeds the outside",
+        "radius": 0.65,
+        "title": "The inside exceeds the outside",
+        "text": "The west collection holds the weight. The east collection holds its plinth. The archive’s glass partition has no opening. Both collections belong to this little pavilion."
+      },
+      {
+        "id": "c2-lore",
+        "room": "c2-archive",
+        "p": [
+          -4,
+          1.1,
+          14
+        ],
+        "type": "lore",
+        "label": "A request for more drawers",
+        "radius": 0.65,
+        "title": "A request for more drawers",
+        "text": "June: interior enlarged.\nJuly: interior enlarged.\nAugust: exterior dimensions unchanged.\n\nNo planning permission was required for the additional inside."
+      },
+      {
+        "id": "plinth3",
+        "room": "c3-cabinet",
+        "p": [
+          0,
+          0.27,
+          -3
+        ],
+        "type": "socket",
+        "label": "Quarter measure",
+        "radius": 0.62,
+        "acceptSize": 0.2,
+        "flag": "complete:3"
+      },
+      {
+        "id": "c3-note",
+        "room": "c3",
+        "p": [
+          -2.5,
+          1.1,
+          3
+        ],
+        "type": "note",
+        "label": "Everything that crosses",
+        "radius": 0.65,
+        "title": "Everything that crosses",
+        "text": "Carry the weight into the measuring frame. Measure is shared by the visitor and the things they carry.\n\nA quarter-size weight belongs beyond the low cabinet lip. The inverse passage restores your size."
+      },
+      {
+        "id": "c3-lore",
+        "room": "c3",
+        "p": [
+          3.5,
+          1.1,
+          3
+        ],
+        "type": "lore",
+        "label": "Life size",
+        "radius": 0.65,
+        "title": "Life size",
+        "text": "An enormous pencil and a miniature tea service. Both catalogue cards read: LIFE SIZE.\n\n“I stopped calling one size the real one.” — I.V."
+      },
+      {
+        "id": "plinth4",
+        "room": "c4-summer",
+        "p": [
+          -2,
+          1,
+          -1
+        ],
+        "type": "socket",
+        "label": "Index plinth",
+        "radius": 0.62,
+        "acceptSize": 0.8,
+        "flag": "complete:4"
+      },
+      {
+        "id": "garden-shutter",
+        "room": "c4",
+        "p": [
+          2.3,
+          1.1,
+          -2
+        ],
+        "type": "shutter",
+        "label": "Release the arrangement",
+        "radius": 0.62,
+        "target": [
+          0,
+          1.8,
+          -9
+        ],
+        "flag": "summer"
+      },
+      {
+        "id": "c4-note",
+        "room": "c4",
+        "p": [
+          -2.5,
+          1.1,
+          4
+        ],
+        "type": "note",
+        "label": "A settled arrangement",
+        "radius": 0.65,
+        "title": "A settled arrangement",
+        "text": "Winter keeps the weight; summer holds its plinth.\n\nUse the brass stand to release the current arrangement. While the arch stays in view it cannot move. Turn your whole view away for a moment, then look back."
+      },
+      {
+        "id": "c4-lore",
+        "room": "c4-summer",
+        "p": [
+          2,
+          1.1,
+          3
+        ],
+        "type": "lore",
+        "label": "Maintenance log",
+        "radius": 0.65,
+        "title": "Maintenance log",
+        "text": "Watered the plants that were present.\n\n“I thought I was being watched. I was the one preventing change.” — I.V."
+      },
+      {
+        "id": "sight-mark",
+        "room": "c5",
+        "p": [
+          0,
+          1.6,
+          5
+        ],
+        "type": "align",
+        "label": "The observation mark",
+        "radius": 0.62,
+        "target": [
+          0,
+          1.8,
+          -10
+        ],
+        "flag": "sightline",
+        "hold": 1.1,
+        "tolerance": 0.992,
+        "spotRadius": 0.82
+      },
+      {
+        "id": "plinth5",
+        "room": "c5",
+        "p": [
+          -3,
+          1,
+          3
+        ],
+        "type": "socket",
+        "label": "Index plinth",
+        "radius": 0.62,
+        "acceptSize": 0.8,
+        "flag": "complete:5"
+      },
+      {
+        "id": "c5-note",
+        "room": "c5",
+        "p": [
+          3,
+          1.1,
+          5
+        ],
+        "type": "note",
+        "label": "One useful viewpoint",
+        "radius": 0.65,
+        "title": "One useful viewpoint",
+        "text": "Stand on the ivory rings. Let the scattered frames become a single outline. Hold that view for one quiet breath.\n\nA discovered connection remains available. You are free to look around after it settles."
+      },
+      {
+        "id": "c5-lore",
+        "room": "c5-beyond",
+        "p": [
+          -2,
+          1.1,
+          1
+        ],
+        "type": "lore",
+        "label": "Here",
+        "radius": 0.65,
+        "title": "Here",
+        "text": "A sculptor tried to represent every view of a doorway at once. The result had no opening.\n\n“A perspective is useful. It need not be universal.” — I.V."
+      },
+      {
+        "id": "gravity6",
+        "room": "c6",
+        "p": [
+          0,
+          1.1,
+          2
+        ],
+        "type": "gravity",
+        "label": "Change the floor",
+        "radius": 0.62,
+        "up": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "gravity6wall",
+        "room": "c6",
+        "p": [
+          4.85,
+          7,
+          -5.4
+        ],
+        "type": "gravity",
+        "label": "Change the floor",
+        "radius": 0.62,
+        "up": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "plate6",
+        "room": "c6-record",
+        "p": [
+          0,
+          1.25,
+          -2
+        ],
+        "type": "memory",
+        "label": "The orientation plate",
+        "radius": 0.62,
+        "flag": "complete:6",
+        "hideFlag": "complete:6"
+      },
+      {
+        "id": "c6-note",
+        "room": "c6",
+        "p": [
+          -2.5,
+          1.1,
+          4
+        ],
+        "type": "note",
+        "label": "The other floor",
+        "radius": 0.65,
+        "title": "The other floor",
+        "text": "The right-hand wall is another gallery floor. The compass changes the direction in which you fall.\n\nAfter you settle, W still walks forward; A and D walk across the new floor. The high north arch leads to the index plate. A second compass is mounted beside it for your return."
+      },
+      {
+        "id": "c6-lore",
+        "room": "c6-record",
+        "p": [
+          2,
+          1.1,
+          2
+        ],
+        "type": "lore",
+        "label": "Premature labels",
+        "radius": 0.65,
+        "title": "Premature labels",
+        "text": "The chair was not attached to the wall. The chair was standing on a floor we had not yet agreed to use."
+      },
+      {
+        "id": "plinth7",
+        "room": "c7-cabinet",
+        "p": [
+          0,
+          0.27,
+          3
+        ],
+        "type": "socket",
+        "label": "One quarter",
+        "radius": 0.62,
+        "acceptSize": 0.2,
+        "flag": "complete:7"
+      },
+      {
+        "id": "c7-note",
+        "room": "c7",
+        "p": [
+          -2.5,
+          1.1,
+          5
+        ],
+        "type": "note",
+        "label": "A route without a fixed scale",
+        "radius": 0.65,
+        "title": "A route without a fixed scale",
+        "text": "The measuring arch halves all that passes. Its reverse doubles. The blue return preserves measure.\n\nThe little collection accepts one quarter of the starting weight. Find a route whose two halves do not undo one another."
+      },
+      {
+        "id": "c7-lore",
+        "room": "c7-loop",
+        "p": [
+          2,
+          1.1,
+          1
+        ],
+        "type": "lore",
+        "label": "Same place",
+        "radius": 0.65,
+        "title": "Same place",
+        "text": "A visitor’s route: HALF → UNMEASURED → HALF → UNMEASURED.\n\nAt the bottom: “Same place. Different person.”"
+      },
+      {
+        "id": "plinth8",
+        "room": "c8-conservation",
+        "p": [
+          0,
+          0.55,
+          5
+        ],
+        "type": "socket",
+        "label": "Half measure",
+        "radius": 0.62,
+        "acceptSize": 0.4,
+        "flag": "complete:8"
+      },
+      {
+        "id": "transit-shutter",
+        "room": "c8",
+        "p": [
+          2.4,
+          1.1,
+          -2
+        ],
+        "type": "shutter",
+        "label": "Release the arrangement",
+        "radius": 0.62,
+        "target": [
+          0,
+          1.8,
+          -10
+        ],
+        "flag": "transit"
+      },
+      {
+        "id": "c8-note",
+        "room": "c8",
+        "p": [
+          -2.5,
+          1.1,
+          5
+        ],
+        "type": "note",
+        "label": "The same arch, another agreement",
+        "radius": 0.65,
+        "title": "The same arch, another agreement",
+        "text": "The collection keeps a full weight. Conservation needs a half measure.\n\nRelease the arrangement, give it a moment outside your view, and the same frame takes on another destination — and another measure."
+      },
+      {
+        "id": "c8-lore",
+        "room": "c8-collection",
+        "p": [
+          -2,
+          1.1,
+          3
+        ],
+        "type": "lore",
+        "label": "A correction",
+        "radius": 0.65,
+        "title": "A correction",
+        "text": "TRAPPED is struck out.\n\n“Connected to the wrong side.”\n\nBelow it, in a steadier hand: “I am alive. I can see the sky. Please finish the route.”"
+      },
+      {
+        "id": "gravity9",
+        "room": "c9",
+        "p": [
+          0,
+          1.1,
+          3
+        ],
+        "type": "gravity",
+        "label": "Change the floor",
+        "radius": 0.62,
+        "up": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "gravity9wall",
+        "room": "c9",
+        "p": [
+          4.85,
+          6,
+          -6
+        ],
+        "type": "gravity",
+        "label": "Change the floor",
+        "radius": 0.62,
+        "up": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "wall-mark9",
+        "room": "c9",
+        "p": [
+          4.4,
+          6,
+          2
+        ],
+        "type": "align",
+        "label": "The observation mark",
+        "radius": 0.62,
+        "target": [
+          4.2,
+          6,
+          -10
+        ],
+        "flag": "wall-sight",
+        "hold": 1.1,
+        "tolerance": 0.992,
+        "spotRadius": 0.95,
+        "up": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "plinth9",
+        "room": "c9-record",
+        "p": [
+          0,
+          1,
+          -2
+        ],
+        "type": "socket",
+        "label": "Index plinth",
+        "radius": 0.62,
+        "acceptSize": 0.8,
+        "flag": "complete:9"
+      },
+      {
+        "id": "c9-note",
+        "room": "c9",
+        "p": [
+          -3,
+          1.1,
+          5
+        ],
+        "type": "note",
+        "label": "The unreachable viewpoint",
+        "radius": 0.65,
+        "title": "The unreachable viewpoint",
+        "text": "Take the weight. Turn the wall into a floor, and the ivory observation mark becomes somewhere you can stand. From there, the scattered frames admit a route."
+      },
+      {
+        "id": "c9-lore",
+        "room": "c9-record",
+        "p": [
+          3,
+          1.1,
+          2
+        ],
+        "type": "lore",
+        "label": "The three corrections",
+        "radius": 0.65,
+        "title": "The three corrections",
+        "text": "The last plan has three corrections:\n\nOPEN — a room may be larger than its enclosure. Carry a half measure into its index.\nHOLD — attention holds an arrangement. Release it to reach the other floor.\nRELEASE — take that floor’s viewpoint. A complete outline admits the sky.\n\nThere is no combination to guess. Only a route to understand."
+      },
+      {
+        "id": "plinth10",
+        "room": "c10-measure",
+        "p": [
+          0,
+          0.55,
+          0
+        ],
+        "type": "socket",
+        "label": "OPEN · half measure",
+        "radius": 0.62,
+        "acceptSize": 0.4,
+        "flag": "final-open"
+      },
+      {
+        "id": "final-shutter",
+        "room": "c10",
+        "p": [
+          2.5,
+          1.1,
+          -4
+        ],
+        "type": "shutter",
+        "label": "Release the arrangement",
+        "radius": 0.62,
+        "target": [
+          0,
+          1.8,
+          -13
+        ],
+        "flag": "final-hold",
+        "requires": "final-open",
+        "latch": true
+      },
+      {
+        "id": "gravity10",
+        "room": "c10-hold",
+        "p": [
+          0,
+          1.1,
+          3
+        ],
+        "type": "gravity",
+        "label": "Change the floor",
+        "radius": 0.62,
+        "up": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "gravity10wall",
+        "room": "c10-hold",
+        "p": [
+          4.85,
+          6,
+          -6
+        ],
+        "type": "gravity",
+        "label": "Change the floor",
+        "radius": 0.62,
+        "up": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "final-mark",
+        "room": "c10-hold",
+        "p": [
+          4.4,
+          6,
+          2
+        ],
+        "type": "align",
+        "label": "The observation mark",
+        "radius": 0.62,
+        "target": [
+          4.2,
+          6,
+          -10
+        ],
+        "flag": "final-release",
+        "hold": 1.1,
+        "tolerance": 0.992,
+        "spotRadius": 0.95,
+        "up": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "last-ledger",
+        "room": "courtyard",
+        "p": [
+          0,
+          1.1,
+          -3
+        ],
+        "type": "finish",
+        "label": "Sign the departure ledger",
+        "radius": 0.75
+      },
+      {
+        "id": "c10-note",
+        "room": "c10",
+        "p": [
+          -3,
+          1.1,
+          8
+        ],
+        "type": "note",
+        "label": "Three corrections",
+        "radius": 0.65,
+        "title": "Three corrections",
+        "text": "OPEN — A half measure, carried through an impossible interior.\nHOLD — Release the arrangement from your attention.\nRELEASE — A view from the other floor.\n\nYou have already learned every part of this route. There is no secret sequence. Follow the named exhibitions."
+      },
+      {
+        "id": "last-note",
+        "room": "courtyard",
+        "p": [
+          2.5,
+          1.1,
+          -1
+        ],
+        "type": "note",
+        "label": "Iona Vale, outside",
+        "radius": 0.65,
+        "title": "Iona Vale, outside",
+        "text": "I am safely outside. The door held. I have left the gate open for you.\n\nI thought that preserving this museum meant finishing its plan. You have shown me that a building can remain unfinished and still make room for someone.\n\nThe second cup is yours.\n— Iona Vale"
+      }
+    ],
+    "chapters": [
+      {
+        "id": 1,
+        "title": "The Gallery of Two Norths",
+        "rule": "Connection",
+        "objective": "Bring the weight behind the glass to the entrance plinth.",
+        "hints": [
+          "A doorway promises a destination. It does not promise a direction.",
+          "The weight is behind the glass. The east arch and the arch beyond it reach the other side.",
+          "Enter the arch on the right, then the far arch in the long gallery. Take the weight behind the glass. Retrace both arches and place it on the entrance plinth."
+        ],
+        "reflection": "A plan can be accurate and still fail to fit on paper.",
+        "entry": "c1",
+        "completeFlag": "complete:1"
+      },
+      {
+        "id": 2,
+        "title": "The Small Pavilion",
+        "rule": "Interior",
+        "objective": "Move the archive weight from the west collection to the east plinth.",
+        "hints": [
+          "The exterior of a room does not determine its interior.",
+          "The two pavilion doors lead to opposite sides of the archive’s glass wall.",
+          "Enter the pavilion’s front door, take the weight on the west side, and return outside. Walk around the little pavilion and enter its rear door. Place the weight on the east plinth."
+        ],
+        "reflection": "Storage exceeded the building. We retained the building.",
+        "entry": "c2",
+        "completeFlag": "complete:2"
+      },
+      {
+        "id": 3,
+        "title": "The Scale Cabinet",
+        "rule": "Measure",
+        "objective": "Carry a quarter-size weight through the low cabinet opening.",
+        "hints": [
+          "The measure applies to everything that crosses with you.",
+          "Take the weight through the measuring arch. Your body, reach and weight become one quarter of their former size.",
+          "Pick up the weight beside the plinth, enter the 1:4 measuring arch, and walk under the low cabinet lip ahead. Place the tiny weight on the tiny plinth. Reverse the arch to become full size again."
+        ],
+        "reflection": "I stopped calling one size the real one.",
+        "entry": "c3",
+        "completeFlag": "complete:3"
+      },
+      {
+        "id": 4,
+        "title": "The Unseen Garden",
+        "rule": "Attention",
+        "objective": "Carry the winter weight into the summer conservatory.",
+        "hints": [
+          "An observed arrangement remains settled.",
+          "Release the arrangement at the brass stand, then turn fully away from the arch. It changes only while you are not looking.",
+          "Enter WINTER and take its weight. Return, use Release the arrangement, and face the entrance until the latch sounds. Turn back and enter SUMMER. Fill its plinth."
+        ],
+        "reflection": "I was the one preventing change.",
+        "entry": "c4",
+        "completeFlag": "complete:4"
+      },
+      {
+        "id": 5,
+        "title": "The Sightline",
+        "rule": "Perspective",
+        "objective": "Complete the broken outline and retrieve its index weight.",
+        "hints": [
+          "Separate frames can share a single outline.",
+          "Stand on the ivory observation mark and look through the bronze frames. Hold the view until the connection settles.",
+          "Stand inside the marked ring near the entrance. Aim at the centre of the far bronze frame and hold for a moment. The doorway stays open. Cross it, take the weight, return and fill the entrance plinth."
+        ],
+        "reflection": "A perspective is useful. It need not be universal.",
+        "entry": "c5",
+        "completeFlag": "complete:5"
+      },
+      {
+        "id": 6,
+        "title": "The Gravity Atrium",
+        "rule": "Orientation",
+        "objective": "Reach the high gallery by walking on its other floor.",
+        "hints": [
+          "Floor describes an agreement, not a material.",
+          "The compass makes the east wall down. The high arch then becomes a doorway at walking height.",
+          "Use Change the floor. Let yourself settle on the right wall. Move along that wall to the elevated north arch, at height seven on the old wall. Cross to the record gallery and take the index plate. Use the wall compass after returning to restore the floor."
+        ],
+        "reflection": "An object is not falling wrongly. We labelled the room prematurely.",
+        "entry": "c6",
+        "completeFlag": "complete:6"
+      },
+      {
+        "id": 7,
+        "title": "The Hall of Measures",
+        "rule": "Measure × connection",
+        "objective": "Choose a route that makes the weight one quarter without undoing it.",
+        "hints": [
+          "You can return to a place without returning to your former measure.",
+          "The blue UNMEASURED arch keeps your size. Two trips through the half-size arch make a quarter.",
+          "Carry the weight through 1:2. Return through UNMEASURED, not through 2:1. Repeat this loop once. At quarter size, enter the little cabinet on the left and fill its plinth. Reverse the measuring route twice to grow back, or use entrance recovery."
+        ],
+        "reflection": "Same place. Different person.",
+        "entry": "c7",
+        "completeFlag": "complete:7"
+      },
+      {
+        "id": 8,
+        "title": "Blind Transit",
+        "rule": "Attention × measure",
+        "objective": "Reach the conservation side with the correctly measured weight.",
+        "hints": [
+          "The arrangement selects both a destination and a measure.",
+          "COLLECTION holds a full weight. CONSERVATION measures everything to one half.",
+          "Take the weight from COLLECTION and return. Release the arrangement and turn away. Enter the newly revealed 1:2 CONSERVATION route while carrying the weight. Place the half-size weight on its plinth."
+        ],
+        "reflection": "Not trapped. Connected to the wrong side.",
+        "entry": "c8",
+        "completeFlag": "complete:8"
+      },
+      {
+        "id": 9,
+        "title": "The Ceiling Observatory",
+        "rule": "Orientation × perspective",
+        "objective": "Reach the wall viewpoint and carry its weight into the record room.",
+        "hints": [
+          "Some viewpoints have to be reached before they can be understood.",
+          "The observation mark is on the other floor. Change gravity and walk to it.",
+          "Take the weight, use the compass, then walk on the east wall to the ivory mark at old height six, near the centre. Aim at the high north frame until it opens. Carry the weight through and fill the record-room plinth."
+        ],
+        "reflection": "I can see the outside. I need a route that admits it.",
+        "entry": "c9",
+        "completeFlag": "complete:9"
+      },
+      {
+        "id": 10,
+        "title": "Exit Without Exterior",
+        "rule": "The six rules together",
+        "objective": "Complete OPEN, HOLD and RELEASE to make a route into the morning.",
+        "hints": [
+          "The unfinished plan asks for an interior, a measure, an arrangement and a viewpoint you already understand.",
+          "OPEN: take the weight inside the little pavilion, then through its half-measure passage. HOLD: release the arrangement after filling OPEN. RELEASE: reach the other floor’s viewpoint.",
+          "Enter the pavilion, take its weight, carry it through 1:2 and fill OPEN. Use 2:1 RETURN to restore your size. Release the main arrangement and look away. Enter HOLD, use its compass, reach the wall’s ivory mark and align the far frame. Walk through RELEASE into the courtyard, then sign the ledger."
+        ],
+        "reflection": "A way out is something we make possible for one another.",
+        "entry": "c10",
+        "completeFlag": "complete:10"
+      }
+    ]
+  }
+}

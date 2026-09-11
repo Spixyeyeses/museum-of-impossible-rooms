@@ -1,0 +1,6342 @@
+{
+  "schemaVersion": 1,
+  "source": "src/engine.mjs",
+  "worldFile": "world.v1.json",
+  "worldContentSha256": "54e58d3c3f632609421dfa081a1c64985c3c4f73be2119fa96aa4b77d32b8463",
+  "coordinates": "source-room-local",
+  "tolerance": {
+    "position": 0.0001,
+    "direction": 0.00001,
+    "scalar": 0.00001
+  },
+  "contract": {
+    "transforms": "Resolve both portal IDs from world.v1.json.world.portals. Apply portalTransform to each supplied point and direction; compare output arrays and scale with expected.",
+    "simulations": "Deep-clone initialState, then execute actions in order against the campaign world. A step repeats engine.step(world,state,input,dt) frames times. Do not call updateCampaign. Compare expected state after all actions.",
+    "actions": "look uses yaw/pitch radians; setGravity uses source cardinal up; crossPortal uses portalId; pickUp uses objectId; drop has no arguments. returns records the boolean result of these last four operations, with zero-based actionIndex.",
+    "expected": "Full source state is supplied, including events and untouched objects. IDs, flags, event kinds and booleans compare exactly; continuous numeric values compare with the documented tolerances. Initial held state is an explicit test setup, not proof of pickup reach.",
+    "precision": "Source computation is JavaScript double precision. Native render transforms may use floats; cross-language acceptance is tolerance-based, not byte-for-byte JSON equality."
+  },
+  "transforms": [
+    {
+      "id": "c1-east",
+      "sourcePortal": "c1-east",
+      "destinationPortal": "c1-gallery-in",
+      "points": [
+        [
+          6,
+          1.8,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1.125,
+          2.75,
+          -3.5
+        ],
+        [
+          100,
+          -20,
+          0.025
+        ]
+      ],
+      "directions": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0.42426406871192845,
+          -0.565685424949238,
+          -0.7071067811865475
+        ]
+      ],
+      "expected": {
+        "scale": 1,
+        "points": [
+          [
+            0,
+            1.8,
+            11
+          ],
+          [
+            -1,
+            0,
+            17
+          ],
+          [
+            -4.5,
+            2.75,
+            15.875
+          ],
+          [
+            -0.975,
+            -20,
+            -83
+          ]
+        ],
+        "directions": [
+          [
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            -0.7071067811865475,
+            -0.565685424949238,
+            -0.42426406871192845
+          ]
+        ]
+      }
+    },
+    {
+      "id": "c1-gallery-in",
+      "sourcePortal": "c1-gallery-in",
+      "destinationPortal": "c1-east",
+      "points": [
+        [
+          0,
+          1.8,
+          11
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1.125,
+          2.75,
+          -3.5
+        ],
+        [
+          100,
+          -20,
+          0.025
+        ]
+      ],
+      "directions": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0.42426406871192845,
+          -0.565685424949238,
+          -0.7071067811865475
+        ]
+      ],
+      "expected": {
+        "scale": 1,
+        "points": [
+          [
+            6,
+            1.8,
+            1
+          ],
+          [
+            17,
+            0,
+            1
+          ],
+          [
+            20.5,
+            2.75,
+            2.125
+          ],
+          [
+            16.975,
+            -20,
+            101
+          ]
+        ],
+        "directions": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0.7071067811865475,
+            -0.565685424949238,
+            0.42426406871192845
+          ]
+        ]
+      }
+    },
+    {
+      "id": "quarter-in",
+      "sourcePortal": "quarter-in",
+      "destinationPortal": "quarter-out",
+      "points": [
+        [
+          0,
+          1.8,
+          -8
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1.125,
+          2.75,
+          -3.5
+        ],
+        [
+          100,
+          -20,
+          0.025
+        ]
+      ],
+      "directions": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0.42426406871192845,
+          -0.565685424949238,
+          -0.7071067811865475
+        ]
+      ],
+      "expected": {
+        "scale": 0.25,
+        "points": [
+          [
+            0,
+            0.45,
+            7
+          ],
+          [
+            0,
+            0,
+            9
+          ],
+          [
+            0.28125,
+            0.6875,
+            8.125
+          ],
+          [
+            25,
+            -5,
+            9.00625
+          ]
+        ],
+        "directions": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0.42426406871192845,
+            -0.565685424949238,
+            -0.7071067811865475
+          ]
+        ]
+      }
+    },
+    {
+      "id": "quarter-out",
+      "sourcePortal": "quarter-out",
+      "destinationPortal": "quarter-in",
+      "points": [
+        [
+          0,
+          0.45,
+          7
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1.125,
+          2.75,
+          -3.5
+        ],
+        [
+          100,
+          -20,
+          0.025
+        ]
+      ],
+      "directions": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0.42426406871192845,
+          -0.565685424949238,
+          -0.7071067811865475
+        ]
+      ],
+      "expected": {
+        "scale": 4,
+        "points": [
+          [
+            0,
+            1.8,
+            -8
+          ],
+          [
+            0,
+            0,
+            -36
+          ],
+          [
+            4.5,
+            11,
+            -50
+          ],
+          [
+            400,
+            -80,
+            -35.9
+          ]
+        ],
+        "directions": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0.42426406871192845,
+            -0.565685424949238,
+            -0.7071067811865475
+          ]
+        ]
+      }
+    },
+    {
+      "id": "wall6-in",
+      "sourcePortal": "wall6-in",
+      "destinationPortal": "wall6-out",
+      "points": [
+        [
+          4.2,
+          7,
+          -9
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1.125,
+          2.75,
+          -3.5
+        ],
+        [
+          100,
+          -20,
+          0.025
+        ]
+      ],
+      "directions": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0.42426406871192845,
+          -0.565685424949238,
+          -0.7071067811865475
+        ]
+      ],
+      "expected": {
+        "scale": 1,
+        "points": [
+          [
+            0,
+            1.8,
+            7
+          ],
+          [
+            -7,
+            6,
+            16
+          ],
+          [
+            -4.25,
+            4.875,
+            12.5
+          ],
+          [
+            -27,
+            -94,
+            16.025
+          ]
+        ],
+        "directions": [
+          [
+            0,
+            -1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            -0.565685424949238,
+            -0.42426406871192845,
+            -0.7071067811865475
+          ]
+        ]
+      }
+    },
+    {
+      "id": "wall6-out",
+      "sourcePortal": "wall6-out",
+      "destinationPortal": "wall6-in",
+      "points": [
+        [
+          0,
+          1.8,
+          7
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1.125,
+          2.75,
+          -3.5
+        ],
+        [
+          100,
+          -20,
+          0.025
+        ]
+      ],
+      "directions": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0.42426406871192845,
+          -0.565685424949238,
+          -0.7071067811865475
+        ]
+      ],
+      "expected": {
+        "scale": 1,
+        "points": [
+          [
+            4.2,
+            7,
+            -9
+          ],
+          [
+            6,
+            7,
+            -16
+          ],
+          [
+            3.25,
+            8.125,
+            -19.5
+          ],
+          [
+            26,
+            107,
+            -15.975
+          ]
+        ],
+        "directions": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0.565685424949238,
+            0.42426406871192845,
+            -0.7071067811865475
+          ]
+        ]
+      }
+    }
+  ],
+  "simulations": [
+    {
+      "id": "ordinary-continuous-crossing",
+      "description": "Walk through the authored east wall into the other north.",
+      "initialState": {
+        "version": 1,
+        "player": {
+          "room": "c1",
+          "p": [
+            5,
+            1.6,
+            1
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {},
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c1",
+        "events": []
+      },
+      "actions": [
+        {
+          "kind": "step",
+          "frames": 40,
+          "dt": 0.016666666666666666,
+          "input": {
+            "forward": 1,
+            "strafe": 0,
+            "sprint": false
+          }
+        }
+      ],
+      "world": "campaign",
+      "expected": {
+        "version": 1,
+        "player": {
+          "room": "c1-gallery",
+          "p": [
+            0,
+            1.6,
+            9.999991999999972
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            -3
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {
+          "gravity:c1-gallery": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0.6666666666666671,
+        "checkpoint": "c1",
+        "events": [
+          {
+            "type": "crossing",
+            "portal": "c1-east",
+            "from": "c1",
+            "to": "c1-gallery",
+            "scale": 1
+          }
+        ]
+      },
+      "returns": []
+    },
+    {
+      "id": "ordinary-continuous-return",
+      "description": "Cross and walk backward through the reciprocal aperture.",
+      "initialState": {
+        "version": 1,
+        "player": {
+          "room": "c1",
+          "p": [
+            5,
+            1.6,
+            1
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {},
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c1",
+        "events": []
+      },
+      "actions": [
+        {
+          "kind": "step",
+          "frames": 40,
+          "dt": 0.016666666666666666,
+          "input": {
+            "forward": 1,
+            "strafe": 0,
+            "sprint": false
+          }
+        },
+        {
+          "kind": "step",
+          "frames": 40,
+          "dt": 0.016666666666666666,
+          "input": {
+            "forward": -1,
+            "strafe": 0,
+            "sprint": false
+          }
+        }
+      ],
+      "world": "campaign",
+      "expected": {
+        "version": 1,
+        "player": {
+          "room": "c1",
+          "p": [
+            4.999999999999999,
+            1.6,
+            1
+          ],
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            -3,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {
+          "gravity:c1-gallery": [
+            0,
+            1,
+            0
+          ],
+          "gravity:c1": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 1.3333333333333335,
+        "checkpoint": "c1",
+        "events": [
+          {
+            "type": "crossing",
+            "portal": "c1-east",
+            "from": "c1",
+            "to": "c1-gallery",
+            "scale": 1
+          },
+          {
+            "type": "crossing",
+            "portal": "c1-gallery-in",
+            "from": "c1-gallery",
+            "to": "c1",
+            "scale": 1
+          }
+        ]
+      },
+      "returns": []
+    },
+    {
+      "id": "quarter-continuous-held-crossing",
+      "description": "Walk through the 1:4 arch while a weight crosses ahead of the eye.",
+      "initialState": {
+        "version": 1,
+        "player": {
+          "room": "c3",
+          "p": [
+            0,
+            1.6,
+            -7
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              0.37,
+              1.28,
+              -7.5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {},
+        "solved": [],
+        "held": "weight3",
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c3",
+        "events": [],
+        "heldRatio": 0.8
+      },
+      "actions": [
+        {
+          "kind": "step",
+          "frames": 40,
+          "dt": 0.016666666666666666,
+          "input": {
+            "forward": 1,
+            "strafe": 0,
+            "sprint": false
+          }
+        }
+      ],
+      "world": "campaign",
+      "expected": {
+        "version": 1,
+        "player": {
+          "room": "c3-cabinet",
+          "p": [
+            0,
+            0.4,
+            6.74999200000001
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            -0.75
+          ],
+          "scale": 0.25
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3-cabinet",
+            "p": [
+              0.0925,
+              0.32,
+              6.43749200000001
+            ],
+            "size": 0.2,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {
+          "gravity:c3-cabinet": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solved": [],
+        "held": "weight3",
+        "journal": [],
+        "elapsed": 0.6666666666666671,
+        "checkpoint": "c3",
+        "events": [
+          {
+            "type": "crossing",
+            "portal": "quarter-in",
+            "from": "c3",
+            "to": "c3-cabinet",
+            "scale": 0.25
+          }
+        ],
+        "heldRatio": 0.8
+      },
+      "returns": []
+    },
+    {
+      "id": "quarter-explicit-velocity-crossing",
+      "description": "The explicit primitive transforms player and held-object velocity and scale.",
+      "initialState": {
+        "version": 1,
+        "player": {
+          "room": "c3",
+          "p": [
+            0,
+            1.6,
+            -8
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0.5,
+            -1.25,
+            -3
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              0.37,
+              1.28,
+              -7.5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0.1,
+              -0.2,
+              -0.3
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {},
+        "solved": [],
+        "held": "weight3",
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c3",
+        "events": [],
+        "heldRatio": 0.8
+      },
+      "actions": [
+        {
+          "kind": "crossPortal",
+          "portalId": "quarter-in"
+        }
+      ],
+      "world": "campaign",
+      "expected": {
+        "version": 1,
+        "player": {
+          "room": "c3-cabinet",
+          "p": [
+            0,
+            0.4,
+            7
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0.125,
+            -0.3125,
+            -0.75
+          ],
+          "scale": 0.25
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3-cabinet",
+            "p": [
+              0.0925,
+              0.32,
+              7.125
+            ],
+            "size": 0.2,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0.025,
+              -0.05,
+              -0.075
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {
+          "gravity:c3-cabinet": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solved": [],
+        "held": "weight3",
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c3",
+        "events": [
+          {
+            "type": "crossing",
+            "portal": "quarter-in",
+            "from": "c3",
+            "to": "c3-cabinet",
+            "scale": 0.25
+          }
+        ],
+        "heldRatio": 0.8
+      },
+      "returns": [
+        {
+          "actionIndex": 0,
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "wall-gravity-continuous-crossing",
+      "description": "Walk on the east wall through the authored elevated aperture into an ordinary floor.",
+      "initialState": {
+        "version": 1,
+        "player": {
+          "room": "c6",
+          "p": [
+            4.4,
+            7,
+            -8
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            -1,
+            0,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {
+          "gravity:c6": [
+            -1,
+            0,
+            0
+          ]
+        },
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c6",
+        "events": []
+      },
+      "actions": [
+        {
+          "kind": "step",
+          "frames": 40,
+          "dt": 0.016666666666666666,
+          "input": {
+            "forward": 1,
+            "strafe": 0,
+            "sprint": false
+          }
+        }
+      ],
+      "world": "campaign",
+      "expected": {
+        "version": 1,
+        "player": {
+          "room": "c6-record",
+          "p": [
+            0,
+            1.5999999999999999,
+            5.999991999999971
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            -3
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {
+          "gravity:c6": [
+            -1,
+            0,
+            0
+          ],
+          "gravity:c6-record": [
+            0,
+            1,
+            0
+          ]
+        },
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0.6666666666666671,
+        "checkpoint": "c6",
+        "events": [
+          {
+            "type": "crossing",
+            "portal": "wall6-in",
+            "from": "c6",
+            "to": "c6-record",
+            "scale": 1
+          }
+        ]
+      },
+      "returns": []
+    },
+    {
+      "id": "floor-look",
+      "description": "Yaw then pitch with ordinary up.",
+      "initialState": {
+        "version": 1,
+        "player": {
+          "room": "c1",
+          "p": [
+            0,
+            1.6,
+            5
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {},
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c1",
+        "events": []
+      },
+      "actions": [
+        {
+          "kind": "look",
+          "yaw": 0.3,
+          "pitch": -0.2
+        }
+      ],
+      "world": "campaign",
+      "expected": {
+        "version": 1,
+        "player": {
+          "room": "c1",
+          "p": [
+            0,
+            1.6,
+            5
+          ],
+          "forward": [
+            0.2896294776255155,
+            0.1986693307950612,
+            -0.936293363584199
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {},
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c1",
+        "events": []
+      },
+      "returns": []
+    },
+    {
+      "id": "wall-look",
+      "description": "Yaw then pitch relative to east-wall up.",
+      "initialState": {
+        "version": 1,
+        "player": {
+          "room": "c6",
+          "p": [
+            4.4,
+            7,
+            -8
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            -1,
+            0,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {
+          "gravity:c6": [
+            -1,
+            0,
+            0
+          ]
+        },
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c6",
+        "events": []
+      },
+      "actions": [
+        {
+          "kind": "look",
+          "yaw": 0.3,
+          "pitch": -0.2
+        }
+      ],
+      "world": "campaign",
+      "expected": {
+        "version": 1,
+        "player": {
+          "room": "c6",
+          "p": [
+            4.4,
+            7,
+            -8
+          ],
+          "forward": [
+            -0.1986693307950612,
+            0.2896294776255155,
+            -0.936293363584199
+          ],
+          "up": [
+            -1,
+            0,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {
+          "gravity:c6": [
+            -1,
+            0,
+            0
+          ]
+        },
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c6",
+        "events": []
+      },
+      "returns": []
+    },
+    {
+      "id": "gravity-change-and-settle",
+      "description": "Rotate the body about its centre, then fall onto the east wall.",
+      "initialState": {
+        "version": 1,
+        "player": {
+          "room": "c6",
+          "p": [
+            0,
+            1.6,
+            2
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {},
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c6",
+        "events": []
+      },
+      "actions": [
+        {
+          "kind": "setGravity",
+          "up": [
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "step",
+          "frames": 120,
+          "dt": 0.016666666666666666,
+          "input": {
+            "forward": 0,
+            "strafe": 0,
+            "sprint": false
+          }
+        }
+      ],
+      "world": "campaign",
+      "expected": {
+        "version": 1,
+        "player": {
+          "room": "c6",
+          "p": [
+            4.39999981350369,
+            0.9000000000000001,
+            2
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            -1,
+            0,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {
+          "gravity:c6": [
+            -1,
+            0,
+            0
+          ]
+        },
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 1.9999999999999978,
+        "checkpoint": "c6",
+        "events": [
+          {
+            "type": "gravity",
+            "room": "c6",
+            "up": [
+              -1,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "returns": [
+        {
+          "actionIndex": 0,
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "solid-blocks-movement",
+      "description": "The continuous glass partition blocks forward movement.",
+      "initialState": {
+        "version": 1,
+        "player": {
+          "room": "c1",
+          "p": [
+            0,
+            1.6,
+            -1.8
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {},
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c1",
+        "events": []
+      },
+      "actions": [
+        {
+          "kind": "step",
+          "frames": 90,
+          "dt": 0.016666666666666666,
+          "input": {
+            "forward": 1,
+            "strafe": 0,
+            "sprint": false
+          }
+        }
+      ],
+      "world": "campaign",
+      "expected": {
+        "version": 1,
+        "player": {
+          "room": "c1",
+          "p": [
+            0,
+            1.6,
+            -2.559997558593748
+          ],
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {},
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 1.4999999999999996,
+        "checkpoint": "c1",
+        "events": []
+      },
+      "returns": []
+    },
+    {
+      "id": "weight-pickup-drop",
+      "description": "Ray-validated pickup, collision-safe hand placement and drop.",
+      "initialState": {
+        "version": 1,
+        "player": {
+          "room": "c3",
+          "p": [
+            2,
+            1.6,
+            -0.85
+          ],
+          "forward": [
+            0,
+            -0.7219882051154242,
+            -0.6919053632356148
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2,
+              0.4,
+              -2
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {},
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0,
+        "checkpoint": "c3",
+        "events": []
+      },
+      "actions": [
+        {
+          "kind": "pickUp",
+          "objectId": "weight3"
+        },
+        {
+          "kind": "drop"
+        },
+        {
+          "kind": "step",
+          "frames": 30,
+          "dt": 0.016666666666666666,
+          "input": {
+            "forward": 0,
+            "strafe": 0,
+            "sprint": false
+          }
+        }
+      ],
+      "world": "campaign",
+      "expected": {
+        "version": 1,
+        "player": {
+          "room": "c3",
+          "p": [
+            2,
+            1.6,
+            -0.85
+          ],
+          "forward": [
+            0,
+            -0.7219882051154242,
+            -0.6919053632356148
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        },
+        "objects": {
+          "weight1": {
+            "id": "weight1",
+            "room": "c1",
+            "p": [
+              0,
+              0.4,
+              -5.8
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c1",
+              "p": [
+                0,
+                0.4,
+                -5.8
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight2": {
+            "id": "weight2",
+            "room": "c2-archive",
+            "p": [
+              -10,
+              0.4,
+              10
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c2-archive",
+              "p": [
+                -10,
+                0.4,
+                10
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight3": {
+            "id": "weight3",
+            "room": "c3",
+            "p": [
+              2.363194046020508,
+              0.40000083062362607,
+              -1.6989726633001085
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c3",
+              "p": [
+                2,
+                0.4,
+                -2
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight4": {
+            "id": "weight4",
+            "room": "c4-winter",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c4-winter",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight5": {
+            "id": "weight5",
+            "room": "c5-beyond",
+            "p": [
+              2,
+              0.4,
+              -1
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c5-beyond",
+              "p": [
+                2,
+                0.4,
+                -1
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight7": {
+            "id": "weight7",
+            "room": "c7",
+            "p": [
+              2,
+              0.4,
+              4
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c7",
+              "p": [
+                2,
+                0.4,
+                4
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight8": {
+            "id": "weight8",
+            "room": "c8-collection",
+            "p": [
+              2,
+              0.4,
+              5
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c8-collection",
+              "p": [
+                2,
+                0.4,
+                5
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight9": {
+            "id": "weight9",
+            "room": "c9",
+            "p": [
+              -2,
+              0.4,
+              3
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c9",
+              "p": [
+                -2,
+                0.4,
+                3
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          },
+          "weight10": {
+            "id": "weight10",
+            "room": "c10-inside",
+            "p": [
+              2,
+              0.4,
+              7
+            ],
+            "size": 0.8,
+            "label": "Index weight",
+            "color": 13282148,
+            "home": {
+              "room": "c10-inside",
+              "p": [
+                2,
+                0.4,
+                7
+              ],
+              "size": 0.8
+            },
+            "velocity": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "flags": {},
+        "solved": [],
+        "held": null,
+        "journal": [],
+        "elapsed": 0.49999999999999994,
+        "checkpoint": "c3",
+        "events": [
+          {
+            "type": "pickup",
+            "id": "weight3"
+          },
+          {
+            "type": "drop",
+            "id": "weight3",
+            "room": "c3"
+          }
+        ]
+      },
+      "returns": [
+        {
+          "actionIndex": 0,
+          "value": true
+        },
+        {
+          "actionIndex": 1,
+          "value": true
+        }
+      ]
+    }
+  ]
+}
