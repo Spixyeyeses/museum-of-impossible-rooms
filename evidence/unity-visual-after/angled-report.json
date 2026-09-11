@@ -1,0 +1,379 @@
+{
+  "unityVersion": "6000.6.0f1",
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "angled": true,
+  "routes": [
+    {
+      "portal": "c1-east",
+      "frames": [
+        {
+          "distanceInVisitorMeters": 0.2,
+          "room": "c1",
+          "nearClip": 0.035,
+          "views": 2,
+          "meanLinearLuminance": 0.046971785539703458
+        },
+        {
+          "distanceInVisitorMeters": 0.05,
+          "room": "c1",
+          "nearClip": 0.035,
+          "views": 2,
+          "meanLinearLuminance": 0.047028082641644015
+        },
+        {
+          "distanceInVisitorMeters": 0.01,
+          "room": "c1",
+          "nearClip": 0.035,
+          "views": 2,
+          "meanLinearLuminance": 0.047034458688553972
+        },
+        {
+          "distanceInVisitorMeters": 0.001,
+          "room": "c1",
+          "nearClip": 0.035,
+          "views": 2,
+          "meanLinearLuminance": 0.047019749746077207
+        },
+        {
+          "distanceInVisitorMeters": -0.001,
+          "room": "c1-gallery",
+          "nearClip": 0.035,
+          "views": 4,
+          "meanLinearLuminance": 0.047049554683604188
+        },
+        {
+          "distanceInVisitorMeters": -0.01,
+          "room": "c1-gallery",
+          "nearClip": 0.035,
+          "views": 4,
+          "meanLinearLuminance": 0.047054382115290144
+        },
+        {
+          "distanceInVisitorMeters": -0.05,
+          "room": "c1-gallery",
+          "nearClip": 0.035,
+          "views": 4,
+          "meanLinearLuminance": 0.047064725681456414
+        },
+        {
+          "distanceInVisitorMeters": -0.2,
+          "room": "c1-gallery",
+          "nearClip": 0.035,
+          "views": 4,
+          "meanLinearLuminance": 0.047110807076542131
+        }
+      ],
+      "crossingMeanAbsoluteRgbDifference": 0.00013249346626149233
+    },
+    {
+      "portal": "c1-gallery-in",
+      "frames": [
+        {
+          "distanceInVisitorMeters": 0.2,
+          "room": "c1-gallery",
+          "nearClip": 0.035,
+          "views": 2,
+          "meanLinearLuminance": 0.061053216795945005
+        },
+        {
+          "distanceInVisitorMeters": 0.05,
+          "room": "c1-gallery",
+          "nearClip": 0.035,
+          "views": 2,
+          "meanLinearLuminance": 0.060896714440214911
+        },
+        {
+          "distanceInVisitorMeters": 0.01,
+          "room": "c1-gallery",
+          "nearClip": 0.035,
+          "views": 2,
+          "meanLinearLuminance": 0.060841039409479505
+        },
+        {
+          "distanceInVisitorMeters": 0.001,
+          "room": "c1-gallery",
+          "nearClip": 0.035,
+          "views": 2,
+          "meanLinearLuminance": 0.060726331977325632
+        },
+        {
+          "distanceInVisitorMeters": -0.001,
+          "room": "c1",
+          "nearClip": 0.035,
+          "views": 3,
+          "meanLinearLuminance": 0.0608475542656986
+        },
+        {
+          "distanceInVisitorMeters": -0.01,
+          "room": "c1",
+          "nearClip": 0.035,
+          "views": 3,
+          "meanLinearLuminance": 0.060837539168433659
+        },
+        {
+          "distanceInVisitorMeters": -0.05,
+          "room": "c1",
+          "nearClip": 0.035,
+          "views": 3,
+          "meanLinearLuminance": 0.060791466151518488
+        },
+        {
+          "distanceInVisitorMeters": -0.2,
+          "room": "c1",
+          "nearClip": 0.035,
+          "views": 3,
+          "meanLinearLuminance": 0.060612785432411484
+        }
+      ],
+      "crossingMeanAbsoluteRgbDifference": 0.00023144652814040815
+    },
+    {
+      "portal": "quarter-in",
+      "frames": [
+        {
+          "distanceInVisitorMeters": 0.2,
+          "room": "c3",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.074507000921624544
+        },
+        {
+          "distanceInVisitorMeters": 0.05,
+          "room": "c3",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.074576917099925435
+        },
+        {
+          "distanceInVisitorMeters": 0.01,
+          "room": "c3",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.07459673111057788
+        },
+        {
+          "distanceInVisitorMeters": 0.001,
+          "room": "c3",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.074599797319731723
+        },
+        {
+          "distanceInVisitorMeters": -0.001,
+          "room": "c3-cabinet",
+          "nearClip": 0.00875,
+          "views": 1,
+          "meanLinearLuminance": 0.074601241052491454
+        },
+        {
+          "distanceInVisitorMeters": -0.01,
+          "room": "c3-cabinet",
+          "nearClip": 0.00875,
+          "views": 1,
+          "meanLinearLuminance": 0.074604503231616354
+        },
+        {
+          "distanceInVisitorMeters": -0.05,
+          "room": "c3-cabinet",
+          "nearClip": 0.00875,
+          "views": 1,
+          "meanLinearLuminance": 0.074622782522390255
+        },
+        {
+          "distanceInVisitorMeters": -0.2,
+          "room": "c3-cabinet",
+          "nearClip": 0.00875,
+          "views": 1,
+          "meanLinearLuminance": 0.074688543995966861
+        }
+      ],
+      "crossingMeanAbsoluteRgbDifference": 5.2752256884005186E-06
+    },
+    {
+      "portal": "quarter-out",
+      "frames": [
+        {
+          "distanceInVisitorMeters": 0.2,
+          "room": "c3-cabinet",
+          "nearClip": 0.00875,
+          "views": 1,
+          "meanLinearLuminance": 0.048895047146751552
+        },
+        {
+          "distanceInVisitorMeters": 0.05,
+          "room": "c3-cabinet",
+          "nearClip": 0.00875,
+          "views": 1,
+          "meanLinearLuminance": 0.048935455640666772
+        },
+        {
+          "distanceInVisitorMeters": 0.01,
+          "room": "c3-cabinet",
+          "nearClip": 0.00875,
+          "views": 1,
+          "meanLinearLuminance": 0.048943806448006846
+        },
+        {
+          "distanceInVisitorMeters": 0.001,
+          "room": "c3-cabinet",
+          "nearClip": 0.00875,
+          "views": 1,
+          "meanLinearLuminance": 0.049053806395058179
+        },
+        {
+          "distanceInVisitorMeters": -0.001,
+          "room": "c3",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.048948982371049991
+        },
+        {
+          "distanceInVisitorMeters": -0.01,
+          "room": "c3",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.048951078365524273
+        },
+        {
+          "distanceInVisitorMeters": -0.05,
+          "room": "c3",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.048960260206330222
+        },
+        {
+          "distanceInVisitorMeters": -0.2,
+          "room": "c3",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.048990356778863445
+        }
+      ],
+      "crossingMeanAbsoluteRgbDifference": 0.00011488887876149624
+    },
+    {
+      "portal": "wall6-in",
+      "frames": [
+        {
+          "distanceInVisitorMeters": 0.2,
+          "room": "c6",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.061283137050923336
+        },
+        {
+          "distanceInVisitorMeters": 0.05,
+          "room": "c6",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.061401651447288166
+        },
+        {
+          "distanceInVisitorMeters": 0.01,
+          "room": "c6",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.061432379607887506
+        },
+        {
+          "distanceInVisitorMeters": 0.001,
+          "room": "c6",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.061438646554569924
+        },
+        {
+          "distanceInVisitorMeters": -0.001,
+          "room": "c6-record",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.061441164402768769
+        },
+        {
+          "distanceInVisitorMeters": -0.01,
+          "room": "c6-record",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.061448384311539921
+        },
+        {
+          "distanceInVisitorMeters": -0.05,
+          "room": "c6-record",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.061476515554407793
+        },
+        {
+          "distanceInVisitorMeters": -0.2,
+          "room": "c6-record",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.061574370325441358
+        }
+      ],
+      "crossingMeanAbsoluteRgbDifference": 2.3434387803570316E-05
+    },
+    {
+      "portal": "wall6-out",
+      "frames": [
+        {
+          "distanceInVisitorMeters": 0.2,
+          "room": "c6-record",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.04912937754115012
+        },
+        {
+          "distanceInVisitorMeters": 0.05,
+          "room": "c6-record",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.04934214404845496
+        },
+        {
+          "distanceInVisitorMeters": 0.01,
+          "room": "c6-record",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.04939226843928
+        },
+        {
+          "distanceInVisitorMeters": 0.001,
+          "room": "c6-record",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.049427263772651345
+        },
+        {
+          "distanceInVisitorMeters": -0.001,
+          "room": "c6",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.049408869188981679
+        },
+        {
+          "distanceInVisitorMeters": -0.01,
+          "room": "c6",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.049421206554776456
+        },
+        {
+          "distanceInVisitorMeters": -0.05,
+          "room": "c6",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.049471744484318264
+        },
+        {
+          "distanceInVisitorMeters": -0.2,
+          "room": "c6",
+          "nearClip": 0.035,
+          "views": 1,
+          "meanLinearLuminance": 0.049650888454997176
+        }
+      ],
+      "crossingMeanAbsoluteRgbDifference": 4.3813326231247395E-05
+    }
+  ]
+}
