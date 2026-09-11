@@ -1,9 +1,20 @@
 {
   "name": "museum-of-impossible-rooms",
-  "version": "1.0.0",
+  "version": "1.1.0-unity-preview.1",
   "private": true,
   "type": "module",
   "description": "An offline first-person spatial puzzle adventure",
-  "scripts": { "start": "node tools/serve.mjs", "test": "node --test", "package": "node tools/package.mjs", "validate": "node tools/validate-world.mjs" },
-  "engines": { "node": ">=20" }
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node tools/test.mjs",
+    "package": "node tools/package.mjs",
+    "validate": "node tools/validate-world.mjs",
+    "unity:export": "node tools/export-unity-world.mjs",
+    "unity:check": "node tools/export-unity-world.mjs --check",
+    "unity:fixtures": "node tools/export-unity-fixtures.mjs",
+    "unity:fixtures:check": "node tools/export-unity-fixtures.mjs --check"
+  },
+  "engines": {
+    "node": ">=20"
+  }
 }

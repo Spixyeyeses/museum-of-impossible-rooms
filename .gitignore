@@ -15,9 +15,34 @@ Museum-Visit*.json
 /evidence/browser-functional-screenshots/
 /evidence/rendered-replay/
 /evidence/visual-probes/
+/evidence/unity-visual-before/*.png
+/evidence/unity-visual-after/*.png
 
 # Local operating-system files
 .DS_Store
 Thumbs.db
 Desktop.ini
 *.log
+
+# Unity regenerates these locally; Library also contains CLI connection credentials.
+/MuseumUnity/[Ll]ibrary/
+/MuseumUnity/[Tt]emp/
+/MuseumUnity/[Oo]bj/
+/MuseumUnity/[Ll]ogs/
+/MuseumUnity/[Uu]ser[Ss]ettings/
+/MuseumUnity/[Bb]uild/
+/MuseumUnity/[Bb]uilds/
+/MuseumUnity/[Mm]emoryCaptures/
+/MuseumUnity/[Rr]ecordings/
+/MuseumUnity/.vs/
+/MuseumUnity/*.csproj
+/MuseumUnity/*.sln
+/MuseumUnity/*.slnx
+/MuseumUnity/*.user
+/MuseumUnity/*.pidb
+/MuseumUnity/*.opendb
+/MuseumUnity/*.VC.db
+/MuseumUnity/Assets/StreamingAssets/aa/
+
+# Published visual regression reference
+!/evidence/unity-visual-fixes-doorway.png

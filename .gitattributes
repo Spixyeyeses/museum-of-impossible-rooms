@@ -1,0 +1,26 @@
+* text=auto
+.gitignore text eol=lf
+.gitattributes text eol=lf
+*.mjs text eol=lf
+*.cs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.unity text eol=lf
+*.prefab text eol=lf
+*.asset text eol=lf
+*.mat text eol=lf
+*.meta text eol=lf
+*.asmdef text eol=lf
+*.shader text eol=lf
+*.cmd text eol=crlf
+
+# New native art uses LFS. Keep scenes, prefabs, and metadata reviewable as text.
+MuseumUnity/Assets/Museum/Art/**/*.[pP][nN][gG] filter=lfs diff=lfs merge=lfs -text
+MuseumUnity/Assets/Museum/Art/**/*.[jJ][pP][gG] filter=lfs diff=lfs merge=lfs -text
+MuseumUnity/Assets/Museum/Art/**/*.[tT][gG][aA] filter=lfs diff=lfs merge=lfs -text
+MuseumUnity/Assets/Museum/Art/**/*.[pP][sS][dD] filter=lfs diff=lfs merge=lfs -text
+MuseumUnity/Assets/Museum/Art/**/*.[eE][xX][rR] filter=lfs diff=lfs merge=lfs -text
+MuseumUnity/Assets/Museum/Art/**/*.[fF][bB][xX] filter=lfs diff=lfs merge=lfs -text
+MuseumUnity/Assets/Museum/Art/**/*.blend filter=lfs diff=lfs merge=lfs -text
+MuseumUnity/Assets/Museum/Art/**/*.[wW][aA][vV] filter=lfs diff=lfs merge=lfs -text
+MuseumUnity/Assets/Museum/Art/**/*.[oO][gG][gG] filter=lfs diff=lfs merge=lfs -text
