@@ -1,0 +1,7 @@
+{
+  "name": "Museum.Runtime",
+  "rootNamespace": "Museum",
+  "references": ["Unity.InputSystem", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Core.Runtime"],
+  "overrideReferences": true,
+  "precompiledReferences": ["Newtonsoft.Json.dll"]
+}
