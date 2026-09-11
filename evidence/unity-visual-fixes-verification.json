@@ -1,0 +1,103 @@
+{
+  "milestone": "Unity visual stability fixes",
+  "verifiedAtUtc": "2026-09-09T16:26:01.0720386Z",
+  "unityVersion": "6000.6.0f1",
+  "renderPipeline": "Universal Render Pipeline 17.6.0",
+  "sourceWorldSha256": "54e58d3c3f632609421dfa081a1c64985c3c4f73be2119fa96aa4b77d32b8463",
+  "fixes": [
+    "Raised thresholds avoid coplanar floor faces.",
+    "Stable camera near distance with projection-preserving aperture depth clamping.",
+    "Expanded aperture bounds keep close portals in CPU culling.",
+    "Room-scoped lights and courtyard-only directional daylight.",
+    "Shadowed downward spotlights with low unshadowed ceiling fill.",
+    "Screen-space AO removed from the PC renderer feature list.",
+    "Up to 4x MSAA in the PC pipeline and portal targets.",
+    "Overlapping wall partitions seal small edge gaps."
+  ],
+  "checks": {
+    "editor": {
+      "total": 42,
+      "passed": 42,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "playMode": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "worldAndFixtureDrift": "Both check commands pass.",
+    "renderedPoses": 96,
+    "portalDirections": [
+      "c1-east",
+      "c1-gallery-in",
+      "quarter-in",
+      "quarter-out",
+      "wall6-in",
+      "wall6-out"
+    ],
+    "viewAngles": [
+      "straight",
+      "diagonal"
+    ],
+    "maximumCentralCropLinearRgbDifferenceAtCrossing": 0.0003707824604501821,
+    "comparisonThreshold": 0.012,
+    "standaloneExitCode": 0,
+    "runtimeErrors": 0
+  },
+  "standaloneSmoke": {
+    "success": true,
+    "unityVersion": "6000.6.0f1",
+    "gpu": "NVIDIA GeForce RTX 4080",
+    "rooms27": 27,
+    "activePortalViews": 2,
+    "renderingAvailable": true,
+    "portalShaderSupported": true,
+    "travellerShaderSupported": true,
+    "portalTextureCreated": true,
+    "pixelRangeRGB": [
+      0.9972915649414062,
+      0.9956016540527344,
+      0.9934310913085938
+    ],
+    "error": ""
+  },
+  "build": {
+    "result": "Succeeded",
+    "target": "StandaloneWindows64",
+    "sizeBytes": 116796787,
+    "totalErrors": 0,
+    "totalWarnings": 1,
+    "warnings": [
+      {
+        "message": "Pipeline: No RuntimePipelineConfig asset found (Project Settings > Pipeline > Runtime). Pipeline will be disabled in Player builds."
+      }
+    ],
+    "buildStartedAt": "2026-09-09T16:24:36.2431873Z",
+    "buildEndedAt": "2026-09-09T16:24:45.1036395Z"
+  },
+  "package": {
+    "archive": "Museum-Unity-1.1.0-unity-preview.1-Windows-x64.zip",
+    "sizeBytes": 44504163,
+    "sha256": "370154921d1d42cb2da5885588518fe2e9b0ec48e9a61e7d7e568326b4776bce",
+    "entries": 202,
+    "requiredFilesPresent": true,
+    "developmentArtifactsExcluded": true
+  },
+  "evidence": [
+    "evidence/unity-visual-fixes-doorway.png",
+    "evidence/unity-visual-before/report.json",
+    "evidence/unity-visual-after/report.json",
+    "evidence/unity-visual-after/angled-report.json"
+  ],
+  "limits": [
+    "Placeholder materials and final art remain unfinished.",
+    "Deep recursion still ends in a dark fallback.",
+    "Measurements cover selected portal poses and routes, not every possible camera path.",
+    "Verified on this Windows RTX 4080 system; broader hardware and performance testing remains outstanding."
+  ],
+  "publication": "Published artifact for v1.1.0-unity-preview.1; see the GitHub release for the source tag and download."
+}
