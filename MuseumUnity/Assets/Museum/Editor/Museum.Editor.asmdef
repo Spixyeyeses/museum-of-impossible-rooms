@@ -1,0 +1,8 @@
+{
+  "name": "Museum.Editor",
+  "rootNamespace": "Museum.Editor",
+  "references": ["Museum.Runtime", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Core.Runtime"],
+  "overrideReferences": true,
+  "precompiledReferences": ["Newtonsoft.Json.dll"],
+  "includePlatforms": ["Editor"]
+}

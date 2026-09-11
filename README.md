@@ -6,7 +6,15 @@ Quiet, curious, and slightly uncanny. No combat, jump scares, death, or time lim
 
 Source repository: [Spixyeyeses/museum-of-impossible-rooms](https://github.com/Spixyeyeses/museum-of-impossible-rooms).
 
-## Download and play
+## Unity Windows preview
+
+[Download v1.1.0-unity-preview.1](https://github.com/Spixyeyeses/museum-of-impossible-rooms/releases/tag/v1.1.0-unity-preview.1) for the native Unity edition. Extract **Museum-Unity-1.1.0-unity-preview.1-Windows-x64.zip**, then run **Museum of Impossible Rooms.exe**. Keep the entire extracted folder together. Unity and Node.js are not required to play this download.
+
+This preview adds native portal traversal, nested portal views, carrying, scale and gravity mechanics, and the doorway/lighting stability fixes. It includes entry points for the Gallery of Two Norths, Scale Cabinet and Gravity Atrium. **Placeholder art, no saved progress, and incomplete campaign parity:** the original browser edition below remains the complete ten-exhibition version.
+
+Developers: open **MuseumUnity** from Unity Hub using **6000.6.0f1**, then choose **Museum > Open Playable Scene**. See [controls and preview limits](docs/UNITY-PLAYABLE.md), [the migration guide](docs/UNITY-MIGRATION.md), and [release changes](CHANGELOG.md).
+
+## Browser edition — download and play
 
 1. Open [release v1.0.0](https://github.com/Spixyeyeses/museum-of-impossible-rooms/releases/tag/v1.0.0) and download **Museum-of-Impossible-Rooms.zip**.
 2. Install **Node.js 20 or newer** if needed, then extract the entire archive.
@@ -30,7 +38,7 @@ No `npm install`, account, paid service, or internet connection is needed to pla
 
 ## Verification and guides
 
-The verified build passed **92 source tests** and **17 real browser interface checks**, including actual mouse movement with pointer lock. A deterministic continuous campaign completed all ten indices and **58 crossings**. Its browser-rendered replay visited all **27 spaces**, sampled **161 views**, and found no flat crossing frames or WebGL errors. A separate clean extraction verified file digests, launcher behavior, resource loading, and cleanup.
+The browser v1.0.0 build passed **92 source tests** and **17 real browser interface checks**, including actual mouse movement with pointer lock. A deterministic continuous campaign completed all ten indices and **58 crossings**. Its browser-rendered replay visited all **27 spaces**, sampled **161 views**, and found no flat crossing frames or WebGL errors. A separate clean extraction verified file digests, launcher behavior, resource loading, and cleanup.
 
 These results came from Windows, Node.js v24.19.0, Edge 152, and an RTX 4080. The complete route is an accelerated deterministic replay, **not a human-paced ten-chamber playthrough**. Broader hardware compatibility, difficulty, enjoyment, and comfort remain unverified. Doorway rendering has bounded depth and resolution; see the [verification report and deliberate limitations](docs/VERIFICATION.md).
 

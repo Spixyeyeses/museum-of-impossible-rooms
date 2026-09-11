@@ -1,5 +1,11 @@
 # Public-sharing copy
 
+## Unity preview publication
+
+The Unity preview adds the native project, export tools, tests, release docs and selected visual evidence. Only Assets, Packages and ProjectSettings are included from the Unity project. Local service associations, caches, connection credentials, build folders and personal saves are excluded. The Windows build is distributed as a versioned GitHub release asset with its verification record and SHA-256.
+
+## Browser v1.0.0 provenance
+
 This repository source was prepared from the verified local release archive whose SHA-256 is `159cc8a35b8c58ba3f3bfa6196c29294db8afa4dade6e9c04b5be8e3b8ea9aab`. The original local archive and original evidence were preserved unchanged.
 
 All gameplay source, assets, bundled dependencies and license, launchers, server, tools, and tests are byte-for-byte copies of the verified release. Repository metadata and documents are the only changed files.
